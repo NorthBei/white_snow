@@ -9,14 +9,12 @@
   margin: 0
 
 section
-  +wh(100%, 900px)
+  width: 100%
   background: rgba(#F39EB2, 0.2)
   display: flex
   justify-content: flex-start
   align-items: center
   flex-direction: column
-  @media screen and (max-width: 375px)
-    height: 560px
 nav
   +wh(100%, 70px)
   background: rgba(0,0,0,.2)
@@ -39,165 +37,376 @@ nav
 
 .page_bg
   background-image: radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba)
-.hero_title
-  +wh(556px, 112px)
-  font-size: 4.75em
-  letter-spacing: 3.3px
-  color: white
-  margin: 0 auto
-  text-shadow: 0px 0 8px white
-  font-family: 'NotoSansCJKtc-Medium'
-  font-weight: 500
-  text-align: center
-  position: relative
-  margin-top: 95px
+.hero
+  height: 900px
   @media screen and (max-width: 375px)
-    width: 90%
-    font-size: 46px
-    letter-spacing: 2px
-    height: 68px
-    margin-top: 63px
-  &::after
-    content: 'Love Mummy'
-    +wh(193px, 42px)
-    font-family: 'PinyonScript'
-    font-size: 34px
-    letter-spacing: 1.5px
-    opacity: .75
+    height: 560px
+  .hero_title
+    +wh(556px, 112px)
+    font-size: 4.75em
+    letter-spacing: 3.3px
+    color: white
+    margin: 0 auto
+    text-shadow: 0px 0 8px white
+    font-family: 'NotoSansCJKtc-Medium'
+    font-weight: 500
     text-align: center
-    position: absolute
-    text-shadow: none
-    left: 180px
-    top: -33px
-    @media screen and (max-width: 375px)
-      +wh(136px, 30px)
-      font-size: 24px
-      letter-spacing: 1.05px
-      left: 104px
-      top: -30px
-.during
-  +wh(199px, 108px)
-  display: flex
-  justify-content: space-around
-  flex-direction: row
-  margin-top: 12px
-  @media screen and (max-width: 375px)
-    +wh(152px, 82px)
-    margin-top: 6px
-  .during_item
-    +wh(76px, 100%)
-    opacity: 0.5
-    @media screen and (max-width: 375px)
-      width: 58px
-    &.from
-      opacity: 0.5
-      background: url(../../asset/601.png) no-repeat
-      animation: time 1.5s infinite
-      background-size: 100% 100%
-    &.to
-      background: url(../../asset/731.png) no-repeat
-      animation: time 1.5s .9s infinite
-      background-size: 100% 100%
-  .right_arrow
-    width: 15.9px
-    opacity: 0.5
-    background: url(../../asset/right.png) no-repeat
-    background-position: center 48px
-    animation: time 1.5s .6s infinite
-    @media screen and (max-width: 375px)
-      width: 12px
-      background-size: 12px 22px
-      background-position: center 40px
-.hero_product
-  +wh(719px, 149px)
-  display: flex
-  justify-content: space-around
-  flex-direction: row
-  margin-top: 52px
-  @media screen and (max-width: 375px)
-    +wh(348px, 73px)
-    margin-top: 19px
-  .hero_product_item
-    width: 111px
-    cursor: pointer
-    @media screen and (max-width: 375px)
-      width: 54px
-  .milk
-    background: url(../../asset/milk-icon-btn.png) no-repeat
-    background-size: 86px 135px
-    background-position: left center
-    @media screen and (max-width: 375px)
-      background-size: 42px 66px
-  .acid
-    background: url(../../asset/acid-icon-btn.png) no-repeat
-    background-size: 110px 109px
-    background-position: center center
-    @media screen and (max-width: 375px)
-      background-size: 54px
-      background-position: center bottom
-  .moisturizer
-    background: url(../../asset/moisturizer-icon-btn.png) no-repeat
-    background-size: 56px 122px
-    background-position: center center
-    @media screen and (max-width: 375px)
-      background-size: 35px 72px
-  .zen
-    background: url(../../asset/zen-icon-btn.png) no-repeat
-    background-size: 82px 126px
-    background-position: center center
-    @media screen and (max-width: 375px)
-      background-size: 40px 62px
-      background-position: center bottom
-  .sandalwood
-    background: url(../../asset/sandalwood-icon-btn.png) no-repeat
-    background-size: 89px 110px
-    background-position: center center
     position: relative
+    margin-top: 95px
     @media screen and (max-width: 375px)
-      background-size: 43px 54px
-      background-position: center bottom
+      width: 90%
+      font-size: 46px
+      letter-spacing: 2px
+      height: 68px
+      margin-top: 63px
     &::after
-      content: url(../../asset/hero_icon_text.png)
+      content: 'Love Mummy'
+      +wh(193px, 42px)
+      font-family: 'PinyonScript'
+      font-size: 34px
+      letter-spacing: 1.5px
+      opacity: .75
+      text-align: center
       position: absolute
-      top: -17px
-      right: -28px
-      opacity: 0
+      text-shadow: none
+      left: 180px
+      top: -33px
       @media screen and (max-width: 375px)
-        display: none
-    &:hover::after
-      opacity: 1
-      animation: bounce 2s ease
+        +wh(136px, 30px)
+        font-size: 24px
+        letter-spacing: 1.05px
+        left: 104px
+        top: -30px
+  .during
+    +wh(199px, 108px)
+    display: flex
+    justify-content: space-around
+    flex-direction: row
+    margin-top: 12px
+    @media screen and (max-width: 375px)
+      +wh(152px, 82px)
+      margin-top: 6px
+    .during_item
+      +wh(76px, 100%)
+      opacity: 0.5
+      @media screen and (max-width: 375px)
+        width: 58px
+      &.from
+        opacity: 0.5
+        background: url(../../asset/601.png) no-repeat
+        animation: time 1.5s infinite
+        background-size: 100% 100%
+      &.to
+        background: url(../../asset/731.png) no-repeat
+        animation: time 1.5s .9s infinite
+        background-size: 100% 100%
+    .right_arrow
+      width: 15.9px
+      opacity: 0.5
+      background: url(../../asset/right.png) no-repeat
+      background-position: center 48px
+      animation: time 1.5s .6s infinite
+      @media screen and (max-width: 375px)
+        width: 12px
+        background-size: 12px 22px
+        background-position: center 40px
+  .hero_product
+    +wh(719px, 149px)
+    display: flex
+    justify-content: space-around
+    flex-direction: row
+    margin-top: 52px
+    @media screen and (max-width: 375px)
+      +wh(348px, 73px)
+      margin-top: 19px
+    .hero_product_item
+      width: 111px
+      cursor: pointer
+      @media screen and (max-width: 375px)
+        width: 54px
+    .milk
+      background: url(../../asset/milk-icon-btn.png) no-repeat
+      background-size: 86px 135px
+      background-position: left center
+      @media screen and (max-width: 375px)
+        background-size: 42px 66px
+    .acid
+      background: url(../../asset/acid-icon-btn.png) no-repeat
+      background-size: 110px 109px
+      background-position: center center
+      @media screen and (max-width: 375px)
+        background-size: 54px
+        background-position: center bottom
+    .moisturizer
+      background: url(../../asset/moisturizer-icon-btn.png) no-repeat
+      background-size: 56px 122px
+      background-position: center center
+      @media screen and (max-width: 375px)
+        background-size: 35px 72px
+    .zen
+      background: url(../../asset/zen-icon-btn.png) no-repeat
+      background-size: 82px 126px
+      background-position: center center
+      @media screen and (max-width: 375px)
+        background-size: 40px 62px
+        background-position: center bottom
+    .sandalwood
+      background: url(../../asset/sandalwood-icon-btn.png) no-repeat
+      background-size: 89px 110px
+      background-position: center center
+      position: relative
+      @media screen and (max-width: 375px)
+        background-size: 43px 54px
+        background-position: center bottom
+      &::after
+        content: url(../../asset/hero_icon_text.png)
+        position: absolute
+        top: -17px
+        right: -28px
+        opacity: 0
+        @media screen and (max-width: 375px)
+          display: none
+      &:hover::after
+        opacity: 1
+        animation: bounce 2s ease
 
-.hero_des
-  font-family: 'NotoSansCJKtc'
-  margin-top: 24px
-  text-align: center
-  font-size: 20px
-  letter-spacing: 0.6px
-  color: white
+  .hero_des
+    font-family: 'NotoSansCJKtc'
+    margin-top: 24px
+    text-align: center
+    font-size: 20px
+    letter-spacing: 0.6px
+    color: white
+    @media screen and (max-width: 375px)
+      font-size: 14px
+      padding: 0 25px 0 24px
+      margin-top: 22px
+  .rigester
+    +wh(200px, 56px)
+    border-radius: 100px
+    border: 1px solid white
+    margin-top: 50px
+    font-size: 18px
+    letter-spacing: 0.5px
+    color: white
+    line-height: 27px
+    @media screen and (max-width: 375px)
+      +wh(180px, 36px)
+      margin-top: 28px
+      font-size: 14px
+  .next_page
+    +wh(50px, 50px)
+    background: url(../../asset/next_page.png) no-repeat
+    background-size: 50px 50px
+    margin-top: 62px
+    @media screen and (max-width: 375px)
+      +wh(36px, 36px)
+      margin-top: 22px
+      background-size: 36px 36px
+.about
+  height: 1732px
   @media screen and (max-width: 375px)
-    font-size: 14px
-    padding: 0 25px 0 24px
-    margin-top: 22px
-.rigester
-  +wh(200px, 56px)
-  border-radius: 100px
-  border: 1px solid white
-  margin-top: 50px
-  font-size: 18px
-  letter-spacing: 0.5px
-  color: white
-  line-height: 27px
-  @media screen and (max-width: 375px)
-    +wh(180px, 36px)
-    margin-top: 28px
-    font-size: 14px
-.next_page
-  +wh(50px, 50px)
-  background: url(../../asset/next_page.png) no-repeat
-  background-size: 50px 50px
-  margin-top: 62px
-  @media screen and (max-width: 375px)
-    +wh(36px, 36px)
-    margin-top: 22px
-    background-size: 36px 36px
+    height: 714px
+  .grid
+    // width: 74%
+    width: 1062px
+    max-width: 1062px
+    border-radius: 10px
+    @media screen and (max-width: 375px)
+      width: 348px
+    &:nth-of-type(1)
+      margin: 78px 0 22px
+      @media screen and (max-width: 375px)
+        margin: 18px 0 12px
+    &:nth-of-type(2),&:nth-of-type(3)
+      margin-bottom: 10px
+    &:nth-of-type(4)
+      margin-bottom: 20px
+    &.two_grid, &.date
+      background-image: radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba)
+    &.two_grid
+      display: flex
+      flex-direction: column
+      &.method
+        height: 222px
+        @media screen and (max-width: 375px)
+          height: 125px
+        .method_title
+          height: 31%
+        .method_des
+          height: calc(66% - 3px)
+          @media screen and (max-width: 375px)
+            height: calc(69% - 3px)
+      &.date
+        height: 294px
+        @media screen and (max-width: 375px)
+          height: 190px
+        .method_title
+          height: 26%
+          @media screen and (max-width: 375px)
+            height: 21%
+        .method_des
+          height: calc(74% - 3px)
+          @media screen and (max-width: 375px)
+            height: calc(79% - 4px)
+      .method_title
+        color: white
+        font-size: 38px
+        letter-spacing: 0.78px
+        padding: 14px 45px 6px 34px
+        @media screen and (max-width: 375px)
+          font-size: 16px
+          padding: 9px 20px 6px 14px
+        span
+          float: right
+      .method_des
+        font-family: 'NotoSansCJKtc'
+        background: white
+        width: calc(100% - 6px)
+        margin: 0 auto
+        border-radius: 10px
+        color: black
+        line-height: 1.54
+        letter-spacing: 0.37px
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        padding: 0 29px 0 34px
+        flex-direction: row
+        @media screen and (max-width: 375px)
+          font-size: 12px
+          padding: 14px 13px 0 11px
+        .date_group
+          +wh(978px, 166px)
+          display: flex
+          flex-direction: column
+          justify-content: center
+          align-items: flex-start
+          line-height: 37px
+          @media screen and (max-width: 375px)
+            height: 100%
+            line-height: 18px
+          &.left
+            width: 584px
+            @media screen and (max-width: 375px)
+              width: 148px
+          &.right
+            width: 267px
+            margin-left: 127px
+            @media screen and (max-width: 375px)
+              width: 148px
+              height: 80px
+              margin: 22px 0 0 2px
+          .date_item
+            height: 74px
+            // line-height: 37px
+            display: flex
+            flex-direction: row
+            font-size: 24px
+            display: flex
+            flex-direction: column
+            @media screen and (max-width: 375px)
+              height: 36px
+              font-size: 12px
+              &.full_width
+                width: 318px
+                display: block
+
+            & p
+              font-size: 28px
+              @media screen and (max-width: 375px)
+                font-size: 12px
+          .gap
+            margin-top: 18px
+          .date_item_group
+            display: flex
+            flex-direction: row
+            margin-top: 18px
+            @media screen and (max-width: 375px)
+              flex-direction: column
+              margin-top: 8px
+            .date_item_group_item
+              width: 214px
+              height: 74px
+              font-size: 24px
+              display: flex
+              flex-direction: column
+              @media screen and (max-width: 375px)
+                font-size: 12px
+    &.gift
+      height: 332px
+      display: flex
+      align-items: center
+      flex-direction: row
+      @media screen and (max-width: 375px)
+        height: 108px
+      &.gift1
+        background: url(../../asset/gift1_bg.png) 40px center, linear-gradient(253deg, #ffbb00, #c28e00)
+        background-repeat: no-repeat
+      &.gift2
+        background: url(../../asset/gift2_bg.png) 40px center, radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba)
+        background-repeat: no-repeat
+      &.gift3
+        background: url(../../asset/gift3_bg.png) 40px center, radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba)
+        background-repeat: no-repeat
+      .gift_name
+        +wh(630px, 180px)
+        border-radius: 10px
+        border: solid 2px white
+        border-left: none
+        border-top-left-radius: 0
+        border-bottom-left-radius: 0
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        color: white
+        text-align: center
+        align-items: center
+        @media screen and (max-width: 375px)
+          +wh(218px, 60px)
+        .left
+          font-size: 50px
+          +wh(139px, 108px)
+          @media screen and (max-width: 375px)
+            font-size: 20px
+            +wh(46px, 45px)
+          & p
+            font-size: 24px
+            @media screen and (max-width: 375px)
+              font-size: 11px
+        .border
+          +wh(2px, 115px)
+          border-left: 2px solid white
+          @media screen and (max-width: 375px)
+            +wh(1px, 37px)
+        .right
+          font-size: 32px
+          @media screen and (max-width: 375px)
+            font-size: 12px
+          &.washer
+            font-size: 27px
+            @media screen and (max-width: 375px)
+              font-size: 10px
+          &.dozs
+            font-size: 24px
+            @media screen and (max-width: 375px)
+              font-size: 10px
+      .gift_img
+        &.money
+          +wh(372px, 269px)
+          margin-left: 33px
+          @media screen and (max-width: 375px)
+            +wh(121px, 88px)
+            margin-left: 11px
+        &.washer
+          +wh(292px, 268px)
+          margin-left: 97px
+          @media screen and (max-width: 375px)
+            +wh(102px, 88px)
+            margin-left: 28px
+        &.dazs
+          +wh(359px, 255px)
+          margin-left: 45px
+          @media screen and (max-width: 375px)
+            +wh(123px, 88px)
+            margin-left: 12px
