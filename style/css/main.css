@@ -55,8 +55,31 @@ nav {
     transform: translateY(-15px);
   }
 }
+@keyframes bottom_down {
+  0% {
+    transform: skewY(0);
+  }
+  50% {
+    transform: rotate(315deg) translateY(-30px) translateX(-30px);
+  }
+  100% {
+    transform: rotate(270deg) translateY(-60px) translateX(-30px);
+  }
+}
+@keyframes bubble_show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .page_bg {
   background-image: radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba);
+}
+
+.default_height {
+  height: 900px;
 }
 
 .hero {
@@ -83,10 +106,10 @@ nav {
 }
 @media screen and (max-width: 375px) {
   .hero .hero_title {
-    width: 90%;
+    width: 338px;
+    height: 68px;
     font-size: 46px;
     letter-spacing: 2px;
-    height: 68px;
     margin-top: 63px;
   }
 }
@@ -645,5 +668,178 @@ nav {
     width: 123px;
     height: 88px;
     margin-left: 12px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .notice {
+    height: 450px;
+  }
+}
+.notice_title {
+  width: 392px;
+  height: 59px;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 86px;
+  letter-spacing: 1.2px;
+}
+@media screen and (max-width: 375px) {
+  .notice_title {
+    width: 185px;
+    height: 29px;
+    font-size: 20px;
+    margin-top: 24px;
+  }
+}
+.notice_title::before, .notice_title::after {
+  content: "";
+  width: 73px;
+  height: 59px;
+  background-size: 73px 26px;
+  display: inline-block;
+  background-position: center bottom;
+}
+@media screen and (max-width: 375px) {
+  .notice_title::before, .notice_title::after {
+    width: 40px;
+    height: 14px;
+  }
+}
+.notice_title::before {
+  background: url(../../asset/cloud_right.png) no-repeat;
+  margin-right: 40.5px;
+}
+@media screen and (max-width: 375px) {
+  .notice_title::before {
+    margin-right: 10px;
+    background-size: 40px 14px;
+  }
+}
+.notice_title::after {
+  background: url(../../asset/cloud_left.png) no-repeat;
+  margin-left: 40.5px;
+}
+@media screen and (max-width: 375px) {
+  .notice_title::after {
+    background-size: 40px 14px;
+    margin-left: 10px;
+  }
+}
+.notice_content {
+  width: 1111px;
+  height: 369px;
+  margin-top: 100px;
+  color: white;
+  font-size: 28px;
+  letter-spacing: 1.4px;
+  line-height: 41px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 375px) {
+  .notice_content {
+    width: 340px;
+    height: 198px;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.6px;
+    margin-top: 35px;
+  }
+}
+.notice_content .content_group {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.notice_content .content_group .dot {
+  width: 15px;
+  height: 40px;
+  background: url(../../asset/dot.png) no-repeat;
+  background-size: 15px 15px;
+  background-position: center center;
+}
+@media screen and (max-width: 375px) {
+  .notice_content .content_group .dot {
+    width: 9.8px;
+    height: 18px;
+    background-size: 9.8px 10px;
+  }
+}
+.notice_content .content_group .line {
+  width: calc(100% - 31px);
+  padding-left: 16px;
+  padding-bottom: 41px;
+}
+@media screen and (max-width: 375px) {
+  .notice_content .content_group .line {
+    padding-left: 12.74px;
+  }
+}
+.notice_content .content_group .line:last-child {
+  padding-bottom: none;
+}
+.notice_animation {
+  width: 716px;
+  height: 199px;
+  background: url(../../asset/notice_animat_bg.png) no-repeat;
+  background-size: 438px 199px;
+  background-position: right center;
+  position: relative;
+  left: 155px;
+  top: 47px;
+}
+@media screen and (max-width: 375px) {
+  .notice_animation {
+    width: 347px;
+    height: 100px;
+    background-size: 220px 100px;
+    left: 0;
+    top: 0;
+    margin-top: 40px;
+  }
+}
+.notice_animation .animation_group {
+  width: 284px;
+  height: 124px;
+  position: absolute;
+  left: 0;
+  bottom: 25px;
+}
+@media screen and (max-width: 375px) {
+  .notice_animation .animation_group {
+    width: 129px;
+    height: 27px;
+  }
+}
+.notice_animation .animation_group .bottom {
+  position: absolute;
+  right: 0;
+  animation: bottom_down 2.5s infinite;
+}
+@media screen and (max-width: 375px) {
+  .notice_animation .animation_group .bottom {
+    width: 20px;
+    height: 56px;
+    animation: none;
+    transform: rotate(270deg);
+    right: 18px;
+    top: -5px;
+  }
+}
+.notice_animation .animation_group .bubble {
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  animation: bubble_show 2s 2s infinite;
+}
+@media screen and (max-width: 375px) {
+  .notice_animation .animation_group .bubble {
+    width: 76px;
+    height: 17px;
+    animation: none;
+    opacity: 1;
+    bottom: -13px;
   }
 }
