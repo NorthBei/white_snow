@@ -182,6 +182,7 @@ nav {
   opacity: 0.5;
   background: url(../../asset/right.png) no-repeat;
   background-position: center 48px;
+  background-size: 16px 29px;
   animation: time 1.5s 0.6s infinite;
 }
 @media screen and (max-width: 375px) {
@@ -721,6 +722,7 @@ nav {
 .notice_title::before {
   background: url(../../asset/cloud_left.png) no-repeat;
   margin-right: 40.5px;
+  background-size: 73px 26px;
   background-position: center bottom;
 }
 @media screen and (max-width: 375px) {
@@ -732,6 +734,7 @@ nav {
 .notice_title::after {
   background: url(../../asset/cloud_right.png) no-repeat;
   margin-left: 40.5px;
+  background-size: 73px 26px;
   background-position: center bottom;
 }
 @media screen and (max-width: 375px) {
@@ -879,6 +882,7 @@ nav {
 .register_title::before {
   background: url(../../asset/p_cloud_left.png) no-repeat;
   margin-right: 41px;
+  background-size: 73px 26px;
   background-position: center bottom;
 }
 @media screen and (max-width: 375px) {
@@ -890,6 +894,7 @@ nav {
 .register_title::after {
   background: url(../../asset/p_cloud_right.png) no-repeat;
   margin-left: 40px;
+  background-size: 73px 26px;
   background-position: center bottom;
 }
 @media screen and (max-width: 375px) {
@@ -1159,6 +1164,7 @@ input[type="checkbox"] {
 .sale_title::before {
   background: url(../../asset/p_cloud_left.png) no-repeat;
   margin-right: 41px;
+  background-size: 73px 26px;
   background-position: center bottom;
 }
 @media screen and (max-width: 375px) {
@@ -1170,6 +1176,7 @@ input[type="checkbox"] {
 .sale_title::after {
   background: url(../../asset/p_cloud_right.png) no-repeat;
   margin-left: 40px;
+  background-size: 73px 26px;
   background-position: center bottom;
 }
 @media screen and (max-width: 375px) {
@@ -1181,8 +1188,8 @@ input[type="checkbox"] {
 .sale_content {
   width: 907px;
   height: 149px;
-  background-size: 899px 136px;
   background: url(../../asset/sale_logo.png) no-repeat;
+  background-size: 899px 136px;
   margin-top: 80px;
 }
 @media screen and (max-width: 375px) {
@@ -1270,8 +1277,10 @@ footer .social_icon {
 }
 footer .social_icon.fb {
   background: url(../../asset/facebook-icon.png) no-repeat;
+  background-size: 44px 44px;
 }
 footer .social_icon.mail {
   background: url(../../asset/mail-icon.png) no-repeat;
+  background-size: 44px 44px;
   margin-left: 15px;
 }
