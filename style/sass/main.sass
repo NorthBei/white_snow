@@ -723,6 +723,210 @@ input[type="checkbox"]
   box-sizing: content-box
   position: relative
 
+.product
+  @media screen and (max-width: 375px)
+    height: 560px
+  &_title
+    margin-top: 90px
+    color: white
+    @media screen and (max-width: 375px)
+      margin-top: 24px
+    &::before
+      background: url(../../asset/cloud_left.png) no-repeat
+      margin-right: 41px
+      background-size: 73px 26px
+      background-position: center bottom
+      @media screen and (max-width: 375px)
+        margin-right: 10px
+        background-size: 40px 14px
+    &::after
+      background: url(../../asset/cloud_right.png) no-repeat
+      margin-left: 40px
+      background-size: 73px 26px
+      background-position: center bottom
+      @media screen and (max-width: 375px)
+        margin-left: 10px
+        background-size: 40px 14px
+  &_group
+    +wh(1070px, 732px)
+    margin: 0 auto
+    @media screen and (max-width: 375px)
+      +wh(360px, 478px)
+      margin-top: 13px
+    .product_list
+      +wh(100%, 204px)
+      display: flex
+      flex-direction: row
+      @media screen and (max-width: 375px)
+        height: 77px
+      .item_group
+        +wh(204px, 204px)
+        display: flex
+        justify-content: center
+        align-items: center
+        @media screen and (max-width: 375px)
+          +wh(70px, 77px)
+        .item
+          +wh(130px, 130px)
+          cursor: pointer
+          @media screen and (max-width: 375px)
+            +wh(70px, 70px)
+          &.item1
+            background: url(../../asset/product_item1.png) no-repeat
+            background-size: 50%
+            background-position: center center
+            @media screen and (max-width: 375px)
+              background-size: 38px 54px
+          &.item2
+            background: url(../../asset/product_item2.png) no-repeat
+            background-size: 92px 92px
+            background-position: center center
+            @media screen and (max-width: 375px)
+              background-size: 50px 49px
+          &.item3
+            background: url(../../asset/product_item3.png) no-repeat
+            background-size: 62px 96px
+            background-position: center center
+            @media screen and (max-width: 375px)
+              background-size: 31px 66px
+          &.item4
+            background: url(../../asset/product_item4.png) no-repeat
+            background-size: 67px 104px
+            background-position: center center
+            @media screen and (max-width: 375px)
+              background-size: 35px 53px
+          &.item5
+            background: url(../../asset/product_item5.png) no-repeat
+            background-size: 77px 95px
+            background-position: center center
+            @media screen and (max-width: 375px)
+              background-size: 40px 49px
+    .product_content
+      +wh(100%, 492px)
+      display: flex
+      flex-direction: row
+      position: relative
+      @media screen and (max-width: 375px)
+        height: 390px
+        margin-top: 11px
+        flex-direction: column
+      .product_section_title
+        display: none
+        @media screen and (max-width: 375px)
+          display: block
+          font-size: 18px
+          height: 27px
+          color: white
+          text-align: center
+          letter-spacing: 0.9px
+      .product_des
+        +wh(410px, 379px)
+        margin-top: 74px
+        @media screen and (max-width: 375px)
+          +wh(332px, 110px)
+          margin: 32px auto 0
+          order: 1
+        .des_text
+          +wh(410px, auto)
+          color: white
+          display: flex
+          flex-direction: column
+          @media screen and (max-width: 375px)
+            width: 100%
+            flex-direction: row
+            justify-content: space-around
+          h2
+            font-size: 28px
+            letter-spacing: 1.4px
+            font-weight: 500
+            @media screen and (max-width: 375px)
+              display: none
+          h3
+            font-size: 20px
+            font-weight: 500
+            line-height: 29px
+            padding-top: 29px
+            @media screen and (max-width: 375px)
+              font-size: 12px
+              padding-top: 0
+              line-height: 18px
+          p
+            font-size: 18px
+            line-height: 27px
+            @media screen and (max-width: 375px)
+              font-size: 12px
+              line-height: 18px
+        .des_spec
+          +wh(360px, 75px)
+          display: flex
+          flex-direction: row
+          justify-content: space-around
+          margin-top: 39px
+          @media screen and (max-width: 375px)
+            +wh(190px, 40px)
+            margin: 16px auto 0
+          .spec_item
+            +wh(74px, 74px)
+            @media screen and (max-width: 375px)
+              +wh(40px, 40px)
+            img
+              +wh(100%, 100%)
+      .product_img
+        +wh(290px, 490px)
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-left: 61px
+        @media screen and (max-width: 375px)
+          +wh(200px, 200px)
+          margin: 20px auto 0
+        .item1
+          +wh(184px, 490px)
+          @media screen and (max-width: 375px)
+            +wh(76px, 200px)
+        .item5
+          +wh(283px, 453px)
+      .arrow_group
+        .arrow
+          +wh(36px, 74px)
+          position: absolute
+          &.right
+            right: 0
+            top: 50%
+      .product_type
+        // +wh(192px, 126px)
+        +wh(163px, 126px)
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        flex-grow: 1
+        align-self: flex-end
+        text-align: right
+        margin-bottom: 40px
+        @media screen and (max-width: 375px)
+          display: none
+        .type_item
+          +wh(100%, 27px)
+          color: white
+          line-height: 27px
+          font-size: 12px
+          &.chose
+            font-size: 18px
+          &.chose::after
+            background: url(../../asset/type_chose.png) no-repeat
+            background-size: 22px 22px
+            background-position: center 5px
+          &::after
+            width: 22px
+            height: 27px
+            content: ''
+            display: inline-block
+            background: url(../../asset/type_origin.png) no-repeat
+            background-size: 16px 16px
+            background-position: center bottom
+            margin-left: 10px
+
+
 .sale
   height: 474px
   background: url(../../asset/register_bg.png) no-repeat
