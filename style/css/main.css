@@ -93,18 +93,6 @@ input[type="checkbox"] {
   align-items: center;
   flex-direction: row;
 }
-.grid.gift.gift1 {
-  background: url(../../asset/gift1_bg.png) 40px center, linear-gradient(253deg, #ffbb00, #c28e00);
-  background-repeat: no-repeat;
-}
-.grid.gift.gift2 {
-  background: url(../../asset/gift2_bg.png) 40px center, radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba);
-  background-repeat: no-repeat;
-}
-.grid.gift.gift3 {
-  background: url(../../asset/gift3_bg.png) 40px center, radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba);
-  background-repeat: no-repeat;
-}
 .grid.gift .gift_name {
   width: 630px;
   height: 180px;
@@ -715,6 +703,30 @@ input[type="checkbox"] {
   .about .grid.gift {
     height: 108px;
   }
+}
+.about .grid.gift.gift1 {
+  background: url(../../asset/gift1_bg.png) 40px center, radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba);
+  background-repeat: no-repeat;
+}
+.about .grid.gift.gift1:hover {
+  background: url(../../asset/gift1_bg.png) 40px center, linear-gradient(253deg, #ffbb00, #c28e00);
+  background-repeat: no-repeat;
+}
+.about .grid.gift.gift2 {
+  background: url(../../asset/gift2_bg.png) 40px center, radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba);
+  background-repeat: no-repeat;
+}
+.about .grid.gift.gift2:hover {
+  background: url(../../asset/gift2_bg.png) 40px center, linear-gradient(253deg, #a3a3a3, #4b4b4b);
+  background-repeat: no-repeat;
+}
+.about .grid.gift.gift3 {
+  background: url(../../asset/gift3_bg.png) 40px center, radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba);
+  background-repeat: no-repeat;
+}
+.about .grid.gift.gift3:hover {
+  background: url(../../asset/gift3_bg.png) 40px center, linear-gradient(253deg, #a49164, #4a3d25);
+  background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 375px) {
@@ -1682,6 +1694,7 @@ input[type="checkbox"] {
   height: 332px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  background: url(../../asset/gift1_bg.png) 40px center, url(../../asset/gift1_bg.png) 40px center, linear-gradient(253deg, #ffbb00, #c28e00);
 }
 @media screen and (max-width: 375px) {
   .winners_content .open .winners_group.group1 .gift1 {
@@ -1858,6 +1871,7 @@ input[type="checkbox"] {
   position: absolute;
   bottom: 15px;
   right: 80px;
+  cursor: pointer;
 }
 @media screen and (max-width: 375px) {
   .winners .totop {
@@ -1938,6 +1952,7 @@ footer .social {
 footer .social_icon {
   width: 44px;
   height: 44px;
+  cursor: pointer;
 }
 footer .social_icon.fb {
   background: url(../../asset/facebook-icon.png) no-repeat;

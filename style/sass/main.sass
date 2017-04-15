@@ -58,14 +58,8 @@ input[type="checkbox"]
     align-items: center
     flex-direction: row
     &.gift1
-      background: url(../../asset/gift1_bg.png) 40px center, linear-gradient(253deg, #ffbb00, #c28e00)
-      background-repeat: no-repeat
     &.gift2
-      background: url(../../asset/gift2_bg.png) 40px center, radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba)
-      background-repeat: no-repeat
     &.gift3
-      background: url(../../asset/gift3_bg.png) 40px center, radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba)
-      background-repeat: no-repeat
     .gift_name
       +wh(630px, 180px)
       border-radius: 10px
@@ -455,6 +449,24 @@ input[type="checkbox"]
       height: 332px
       @media screen and (max-width: 375px)
         height: 108px
+      &.gift1
+        background: url(../../asset/gift1_bg.png) 40px center, radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba)
+        background-repeat: no-repeat
+        &:hover
+          background: url(../../asset/gift1_bg.png) 40px center, linear-gradient(253deg, #ffbb00, #c28e00)
+          background-repeat: no-repeat
+      &.gift2
+        background: url(../../asset/gift2_bg.png) 40px center, radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba)
+        background-repeat: no-repeat
+        &:hover
+          background: url(../../asset/gift2_bg.png) 40px center, linear-gradient(253deg, #a3a3a3, #4b4b4b)
+          background-repeat: no-repeat
+      &.gift3
+        background: url(../../asset/gift3_bg.png) 40px center, radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba)
+        background-repeat: no-repeat
+        &:hover
+          background: url(../../asset/gift3_bg.png) 40px center, linear-gradient(253deg, #a49164, #4a3d25)
+          background-repeat: no-repeat
 .notice
   @media screen and (max-width: 375px)
     height: 450px
@@ -1052,6 +1064,7 @@ input[type="checkbox"]
             height: 332px
             border-bottom-left-radius: 0
             border-bottom-right-radius: 0
+            background: url(../../asset/gift1_bg.png) 40px center, url(../../asset/gift1_bg.png) 40px center, linear-gradient(253deg, #ffbb00, #c28e00)
             @media screen and (max-width: 375px)
               height: 108px
         &.group2
@@ -1173,6 +1186,7 @@ input[type="checkbox"]
     position: absolute
     bottom: 15px
     right: 80px
+    cursor: pointer
     @media screen and (max-width: 375px)
       bottom: 10px
       right: calc((100% - 50px) / 2)
@@ -1223,6 +1237,7 @@ footer
     flex-direction: row
     &_icon
       +wh(44px, 44px)
+      cursor: pointer
       &.fb
         background: url(../../asset/facebook-icon.png) no-repeat
         background-size: 44px 44px
