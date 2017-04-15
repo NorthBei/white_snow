@@ -8,6 +8,7 @@
   padding: 0
   margin: 0
 
+// Global
 section
   width: 100%
   background: rgba(#F39EB2, 0.2)
@@ -20,6 +21,112 @@ nav
   background: rgba(0,0,0,.2)
   @media screen and (max-width: 375px)
     height: 44px
+
+input[type="checkbox"]
+  +wh(20px, 20px)
+  border-radius: 2px
+  background: #34495E
+  box-sizing: content-box
+  position: relative
+
+.section_title
+  +wh(392px, 59px)
+  font-size: 40px
+  text-align: center
+  letter-spacing: 1.2px
+  @media screen and (max-width: 375px)
+    +wh(185px, 29px)
+    font-size: 20px
+  &::before, &::after
+    content: ""
+    +wh(73px, 59px)
+    background-size: 73px 26px
+    display: inline-block
+    background-position: center bottom
+    @media screen and (max-width: 375px)
+      +wh(40px, 14px)
+
+// gift
+.grid
+  width: 1062px
+  max-width: 1062px
+  border-radius: 10px
+  @media screen and (max-width: 375px)
+    width: 348px
+  &.gift
+    display: flex
+    align-items: center
+    flex-direction: row
+    &.gift1
+      background: url(../../asset/gift1_bg.png) 40px center, linear-gradient(253deg, #ffbb00, #c28e00)
+      background-repeat: no-repeat
+    &.gift2
+      background: url(../../asset/gift2_bg.png) 40px center, radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba)
+      background-repeat: no-repeat
+    &.gift3
+      background: url(../../asset/gift3_bg.png) 40px center, radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba)
+      background-repeat: no-repeat
+    .gift_name
+      +wh(630px, 180px)
+      border-radius: 10px
+      border: solid 2px white
+      border-left: none
+      border-top-left-radius: 0
+      border-bottom-left-radius: 0
+      display: flex
+      flex-direction: row
+      justify-content: space-around
+      color: white
+      text-align: center
+      align-items: center
+      @media screen and (max-width: 375px)
+        +wh(218px, 60px)
+      .left
+        font-size: 50px
+        +wh(139px, 108px)
+        @media screen and (max-width: 375px)
+          font-size: 20px
+          +wh(46px, 45px)
+        & p
+          font-size: 24px
+          @media screen and (max-width: 375px)
+            font-size: 11px
+      .border
+        +wh(2px, 115px)
+        border-left: 2px solid white
+        @media screen and (max-width: 375px)
+          +wh(1px, 37px)
+      .right
+        font-size: 32px
+        @media screen and (max-width: 375px)
+          font-size: 12px
+        &.washer
+          font-size: 27px
+          @media screen and (max-width: 375px)
+            font-size: 10px
+        &.dozs
+          font-size: 24px
+          @media screen and (max-width: 375px)
+            font-size: 10px
+    .gift_img
+      &.money
+        +wh(372px, 269px)
+        margin-left: 33px
+        @media screen and (max-width: 375px)
+          +wh(121px, 88px)
+          margin-left: 11px
+      &.washer
+        +wh(292px, 268px)
+        margin-left: 97px
+        @media screen and (max-width: 375px)
+          +wh(102px, 88px)
+          margin-left: 28px
+      &.dazs
+        +wh(359px, 255px)
+        margin-left: 45px
+        @media screen and (max-width: 375px)
+          +wh(123px, 88px)
+          margin-left: 12px
 
 @keyframes time
   0%
@@ -225,12 +332,6 @@ nav
   @media screen and (max-width: 375px)
     height: 714px
   .grid
-    // width: 74%
-    width: 1062px
-    max-width: 1062px
-    border-radius: 10px
-    @media screen and (max-width: 375px)
-      width: 348px
     &:nth-of-type(1)
       margin: 78px 0 22px
       @media screen and (max-width: 375px)
@@ -352,99 +453,8 @@ nav
                 font-size: 12px
     &.gift
       height: 332px
-      display: flex
-      align-items: center
-      flex-direction: row
       @media screen and (max-width: 375px)
         height: 108px
-      &.gift1
-        background: url(../../asset/gift1_bg.png) 40px center, linear-gradient(253deg, #ffbb00, #c28e00)
-        background-repeat: no-repeat
-      &.gift2
-        background: url(../../asset/gift2_bg.png) 40px center, radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba)
-        background-repeat: no-repeat
-      &.gift3
-        background: url(../../asset/gift3_bg.png) 40px center, radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba)
-        background-repeat: no-repeat
-      .gift_name
-        +wh(630px, 180px)
-        border-radius: 10px
-        border: solid 2px white
-        border-left: none
-        border-top-left-radius: 0
-        border-bottom-left-radius: 0
-        display: flex
-        flex-direction: row
-        justify-content: space-around
-        color: white
-        text-align: center
-        align-items: center
-        @media screen and (max-width: 375px)
-          +wh(218px, 60px)
-        .left
-          font-size: 50px
-          +wh(139px, 108px)
-          @media screen and (max-width: 375px)
-            font-size: 20px
-            +wh(46px, 45px)
-          & p
-            font-size: 24px
-            @media screen and (max-width: 375px)
-              font-size: 11px
-        .border
-          +wh(2px, 115px)
-          border-left: 2px solid white
-          @media screen and (max-width: 375px)
-            +wh(1px, 37px)
-        .right
-          font-size: 32px
-          @media screen and (max-width: 375px)
-            font-size: 12px
-          &.washer
-            font-size: 27px
-            @media screen and (max-width: 375px)
-              font-size: 10px
-          &.dozs
-            font-size: 24px
-            @media screen and (max-width: 375px)
-              font-size: 10px
-      .gift_img
-        &.money
-          +wh(372px, 269px)
-          margin-left: 33px
-          @media screen and (max-width: 375px)
-            +wh(121px, 88px)
-            margin-left: 11px
-        &.washer
-          +wh(292px, 268px)
-          margin-left: 97px
-          @media screen and (max-width: 375px)
-            +wh(102px, 88px)
-            margin-left: 28px
-        &.dazs
-          +wh(359px, 255px)
-          margin-left: 45px
-          @media screen and (max-width: 375px)
-            +wh(123px, 88px)
-            margin-left: 12px
-
-.section_title
-  +wh(392px, 59px)
-  font-size: 40px
-  text-align: center
-  letter-spacing: 1.2px
-  @media screen and (max-width: 375px)
-    +wh(185px, 29px)
-    font-size: 20px
-  &::before, &::after
-    content: ""
-    +wh(73px, 59px)
-    background-size: 73px 26px
-    display: inline-block
-    background-position: center bottom
-    @media screen and (max-width: 375px)
-      +wh(40px, 14px)
-
 .notice
   @media screen and (max-width: 375px)
     height: 450px
@@ -716,12 +726,6 @@ nav
         +wh(181px, 36px)
         margin-top: 40px
         font-size: 14px
-input[type="checkbox"]
-  +wh(20px, 20px)
-  border-radius: 2px
-  background: #34495E
-  box-sizing: content-box
-  position: relative
 
 .product
   @media screen and (max-width: 375px)
@@ -926,7 +930,6 @@ input[type="checkbox"]
             background-position: center bottom
             margin-left: 10px
 
-
 .sale
   height: 474px
   background: url(../../asset/register_bg.png) no-repeat
@@ -961,6 +964,219 @@ input[type="checkbox"]
       background: url(../../asset/m_sale_logo.png) no-repeat
       background-size: 298px 317px
       margin-top: 31px
+
+.winners
+  position: relative
+  @media screen and (max-width: 375px)
+    height: 560px
+  &.is-active
+    height: 2341px
+    @media screen and (max-width: 375px)
+      height: 1304px
+    .winners_content
+      height: 2019px
+      @media screen and (max-width: 375px)
+        height: 1251px
+  &_title
+    color: white
+    margin-top: 93px
+    @media screen and (max-width: 375px)
+      margin-top: 24px
+    &::before
+      background: url(../../asset/cloud_left.png) no-repeat
+      margin-right: 41px
+      background-size: 73px 26px
+      background-position: center bottom
+      @media screen and (max-width: 375px)
+        margin-right: 10px
+        background-size: 40px 14px
+    &::after
+      background: url(../../asset/cloud_right.png) no-repeat
+      margin-left: 40px
+      background-size: 73px 26px
+      background-position: center bottom
+      @media screen and (max-width: 375px)
+        margin-left: 10px
+        background-size: 40px 14px
+  &_content
+    +wh(1062px, auto)
+    @media screen and (max-width: 375px)
+      width: 348px
+    .not_open
+      display: none
+      +wh(100%, 454px)
+      margin-top: 144px
+      @media screen and (max-width: 375px)
+        +wh(347px, 287px)
+      .content_des
+        +wh(344px, 120px)
+        margin: 0 auto
+        color: white
+        line-height: 40px
+        font-size: 27px
+        letter-spacing: 1.6px
+        text-align: center
+        @media screen and (max-width: 375px)
+          +wh(178px, 60px)
+          font-size: 14px
+          line-height: 20px
+          letter-spacing: 0.8px
+      .content_bg
+        +wh(716px, 200px)
+        margin: 134px auto 0
+        @media screen and (max-width: 375px)
+          +wh(347px, 100px)
+          margin-top: 127px
+        img
+          +wh(100%, 100%)
+    .open
+      // display: none
+      +wh(100%, 2019px)
+      margin-top: 72px
+      @media screen and (max-width: 375px)
+        height: 1227px
+        margin-top: 24px
+      .winners_group
+        display: flex
+        flex-direction: column
+        margin-bottom: 15px
+        border-radius: 10px
+        &:last-child
+          margin-bottom: 0
+        &.group1
+          height: 516px
+          background: linear-gradient(253deg, #ffbb00, #c28e00)
+          @media screen and (max-width: 375px)
+            height: 196px
+          .gift1
+            height: 332px
+            border-bottom-left-radius: 0
+            border-bottom-right-radius: 0
+            @media screen and (max-width: 375px)
+              height: 108px
+        &.group2
+          height: 609px
+          background: linear-gradient(253deg, #a3a3a3, #4b4b4b)
+          @media screen and (max-width: 375px)
+            height: 334px
+          .gift2
+            height: 332px
+            border-bottom-left-radius: 0
+            border-bottom-right-radius: 0
+            background: url(../../asset/gift2_bg.png) 40px center, linear-gradient(253deg, #a3a3a3, #4b4b4b)
+            background-repeat: no-repeat
+            @media screen and (max-width: 375px)
+              height: 108px
+        &.group3
+          height: 882px
+          background: linear-gradient(253deg, #a49164, #4a3d25)
+          @media screen and (max-width: 375px)
+            height: 598px
+          .gift3
+            height: 332px
+            border-bottom-left-radius: 0
+            border-bottom-right-radius: 0
+            background: url(../../asset/gift3_bg.png) 40px center, linear-gradient(253deg, #a49164, #4a3d25)
+            background-repeat: no-repeat
+            @media screen and (max-width: 375px)
+              height: 108px
+      .winners_list
+        background: white
+        border-bottom-left-radius: 10px
+        border-bottom-right-radius: 10px
+        width: calc(100% - 12px)
+        margin: 0 auto
+        display: flex
+        align-items: center
+        flex-direction: column
+        .list_title
+          width: 884px
+          text-align: center
+          color: #4A4A4A
+          line-height: 36px
+          letter-spacing: 0.5px
+          padding-bottom: 11px
+          border-bottom: 2px solid
+          margin-top: 19px
+          @media screen and (max-width: 375px)
+            width: 330px
+            font-size: 12px
+            line-height: 18px
+            margin-top: 8px
+            padding-bottom: 4px
+        &.list1
+          height: 178px
+          @media screen and (max-width: 375px)
+            height: 82px
+        &.list2
+          height: 271px
+          @media screen and (max-width: 375px)
+            height: 220px
+        &.list3
+          height: 544px
+          @media screen and (max-width: 375px)
+            height: 484px
+        .list_content
+          width: 884px
+          margin: 0 auto
+          display: flex
+          flex-direction: row
+          flex-wrap: wrap
+          @media screen and (max-width: 375px)
+            width: 330px
+          &.list1
+            height: 72px
+            .winners_content
+              // height: 53px
+          &.list2
+            height: 144px
+            .winners_content
+              // height: 125px
+          &.list3
+            height: 432px
+            .winners_content
+              // height: 413px
+          .winners_content
+            // width: 770px
+            height: 53px
+            margin: 19px auto 0
+            display: flex
+            flex-basis: 20%
+            @media screen and (max-width: 375px)
+              flex-basis: 33.33%
+              margin-top: 7px
+              height: 32px
+            .winners_group
+              +wh(150px, 53px)
+              text-align: center
+              margin: 0 auto
+              letter-spacing: 0.34px
+              @media screen and (max-width: 375px)
+                +wh(68px, 32px)
+            .winners_name
+              font-size: 18px
+              line-height: 27px
+              @media screen and (max-width: 375px)
+                font-size: 10px
+                line-height: 15px
+            .winners_tel
+              font-size: 16px
+              line-height: 24px
+              @media screen and (max-width: 375px)
+                font-size: 10px
+                line-height: 15px
+
+  .totop
+    +wh(50px, 50px)
+    background: url(../../asset/totop.png) no-repeat
+    background-size: 50px 50px
+    position: absolute
+    bottom: 15px
+    right: 80px
+    @media screen and (max-width: 375px)
+      bottom: 10px
+      right: calc((100% - 50px) / 2)
+
 footer
   height: 98px
   background: #4A4A4A
