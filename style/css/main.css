@@ -49,6 +49,202 @@ input[type="checkbox"] {
   position: relative;
 }
 
+.bubble {
+  background: url(../../asset/bubble.png) no-repeat;
+  position: absolute;
+  z-index: 0;
+}
+.bubble.bubble141 {
+  width: 141px;
+  height: 142px;
+  background-size: 141px 142px;
+}
+.bubble.bubble40 {
+  width: 40px;
+  height: 41px;
+  background-size: 40px 41px;
+}
+.bubble.bubble52 {
+  width: 52px;
+  height: 53px;
+  background-size: 52px 53px;
+}
+.bubble.bubble215 {
+  width: 215px;
+  height: 216px;
+  background-size: 215px 216px;
+}
+.bubble.bubble161 {
+  width: 161px;
+  height: 162px;
+  background-size: 161px 162px;
+}
+.bubble.bubble82 {
+  width: 82px;
+  height: 83px;
+  background-size: 82px 83px;
+}
+.bubble.bubble21 {
+  width: 21px;
+  height: 23px;
+  background-size: 21px 23px;
+}
+.bubble.bubble308 {
+  width: 308px;
+  height: 309px;
+  background-size: 308px 309px;
+}
+.bubble.bubble91 {
+  width: 91px;
+  height: 91px;
+  background-size: 91px 91px;
+}
+.bubble.bubble113 {
+  width: 113px;
+  height: 114px;
+  background-size: 113px 114px;
+}
+.bubble.rotate165 {
+  transform: rotate(-165deg);
+}
+.bubble.rotate291 {
+  transform: rotate(-291deg);
+}
+.bubble.b01 {
+  top: 0;
+  left: 0;
+  background: url(../../asset/b01.png) no-repeat;
+  background-size: auto 142px;
+}
+.bubble.b02 {
+  top: 70px;
+  left: 422px;
+}
+.bubble.b03 {
+  top: 70px;
+  left: 1133px;
+}
+.bubble.b04 {
+  top: 112px;
+  right: 0;
+  background: url(../../asset/b04.png) no-repeat;
+  background-size: auto 216px;
+  background-position: right;
+}
+.bubble.b05 {
+  top: 354px;
+  left: -109px;
+}
+.bubble.b06 {
+  top: 376px;
+  left: 219px;
+}
+.bubble.b07 {
+  top: 377px;
+  left: 565px;
+}
+.bubble.b08 {
+  top: 335px;
+  left: 1020px;
+}
+.bubble.b09 {
+  top: 795px;
+  left: 26px;
+}
+.bubble.b10 {
+  top: 720px;
+  left: 179px;
+}
+.bubble.b11 {
+  top: 773px;
+  left: 934px;
+}
+.bubble.b12 {
+  top: 700px;
+  right: 0;
+}
+.bubble.b13 {
+  top: 200px;
+  left: 73px;
+}
+.bubble.b14 {
+  top: 700px;
+  right: 65px;
+}
+.bubble.b15 {
+  top: 795px;
+  left: 26px;
+}
+.bubble.b16 {
+  top: 816px;
+  right: 84px;
+}
+.bubble.b17 {
+  top: 987px;
+  left: 134px;
+}
+.bubble.b18 {
+  top: 1245px;
+  left: 78px;
+}
+.bubble.b19 {
+  top: 1301px;
+  right: 72px;
+}
+.bubble.b20 {
+  top: 1619px;
+  left: -66px;
+}
+.bubble.b21 {
+  top: 1687px;
+  left: 334px;
+}
+.bubble.b22 {
+  top: 1605px;
+  right: 179px;
+}
+.bubble.b23 {
+  top: 281px;
+  left: 281px;
+}
+.bubble.b24 {
+  top: 542px;
+  left: 380px;
+}
+.bubble.b25 {
+  top: 500px;
+  left: 854px;
+}
+.bubble.b26 {
+  top: 441px;
+  right: 219px;
+}
+.bubble.b27 {
+  background: url(../../asset/b27.png) no-repeat;
+  background-size: auto 162px;
+  background-position: right;
+  top: 336px;
+  right: 0;
+}
+.bubble.b28 {
+  background: url(../../asset/b01.png) no-repeat;
+  background-position: left;
+  background-size: auto 216px;
+  top: 572px;
+  left: 0;
+}
+.bubble.b29 {
+  top: 776px;
+  left: 255px;
+}
+.bubble.b30 {
+  background: url(../../asset/b27.png) no-repeat;
+  background-size: auto 162px;
+  background-position: right;
+  right: 0;
+  bottom: 0;
+}
+
 .section_title {
   width: 392px;
   height: 59px;
@@ -82,6 +278,7 @@ input[type="checkbox"] {
   width: 1062px;
   max-width: 1062px;
   border-radius: 10px;
+  z-index: 1;
 }
 @media screen and (max-width: 375px) {
   .grid {
@@ -254,6 +451,7 @@ input[type="checkbox"] {
 
 .hero {
   height: 900px;
+  position: relative;
 }
 @media screen and (max-width: 375px) {
   .hero {
@@ -504,6 +702,7 @@ input[type="checkbox"] {
 
 .about {
   height: 1732px;
+  position: relative;
 }
 @media screen and (max-width: 375px) {
   .about {
@@ -532,6 +731,7 @@ input[type="checkbox"] {
   flex-direction: column;
 }
 .about .grid.two_grid.method {
+  z-index: 1;
   height: 222px;
 }
 @media screen and (max-width: 375px) {
@@ -729,6 +929,9 @@ input[type="checkbox"] {
   background-repeat: no-repeat;
 }
 
+.notice {
+  position: relative;
+}
 @media screen and (max-width: 375px) {
   .notice {
     height: 450px;
@@ -1163,6 +1366,9 @@ input[type="checkbox"] {
   }
 }
 
+.product {
+  position: relative;
+}
 @media screen and (max-width: 375px) {
   .product {
     height: 560px;
@@ -1550,6 +1756,7 @@ input[type="checkbox"] {
 
 .winners {
   position: relative;
+  overflow: hidden;
 }
 @media screen and (max-width: 375px) {
   .winners {
@@ -1615,7 +1822,6 @@ input[type="checkbox"] {
   }
 }
 .winners_content .not_open {
-  display: none;
   width: 100%;
   height: 454px;
   margin-top: 144px;
@@ -1662,6 +1868,7 @@ input[type="checkbox"] {
   height: 100%;
 }
 .winners_content .open {
+  display: none;
   width: 100%;
   height: 2019px;
   margin-top: 72px;
