@@ -20,9 +20,82 @@ section
   flex-direction: column
 nav
   +wh(100%, 70px)
-  background: rgba(0,0,0,.2)
+  position: relative
+  display: flex
+  align-items: center
   @media screen and (max-width: 375px)
     height: 44px
+    background-color: rgba(239, 146, 174, 0.3)
+    display: inline-block
+  .menu, .show_time
+    display: none
+    @media screen and (max-width: 375px)
+      display: block
+      +wh(48px, 44px)
+      cursor: pointer
+  .menu
+    top: 0
+    left: 0
+    background: url(../../asset/menu.png) no-repeat
+    background-size: 22px 18px
+    background-position: center
+    @media screen and (max-width: 375px)
+      float: left
+  .show_time
+    top: 0
+    right: 0
+    background: url(../../asset/time.png) no-repeat
+    background-size: 24px 24px
+    background-position: center
+    @media screen and (max-width: 375px)
+      float: right
+  .logo
+    +wh(102px, 40px)
+    background: url(../../asset/logo.png) no-repeat
+    background-size: 100% 100%
+    margin-left: 80px
+    @media screen and (max-width: 375px)
+      +wh(62px, 44px)
+      margin-left: 109px
+      float: left
+      background-size: 62px 24px
+      background-position: center
+  ul
+    +wh(506px, 25px)
+    margin-left: 78px
+    display: flex
+    justify-content: space-between
+    @media screen and (max-width: 375px)
+      margin: 0
+      display: inherit
+      +wh(144px, 560px)
+      background: #4A4A4A
+      z-index: 2
+      position: relative
+    li
+      float: left
+      list-style: none
+      color: white
+      cursor: pointer
+      padding-bottom: 5px
+      &:hover
+        border-bottom: 2px solid
+      @media screen and (max-width: 375px)
+      &.close
+        display: none
+        @media screen and (max-width: 375px)
+          display: block
+          +wh(48px, 44px)
+          background: url(../../asset/close.png) no-repeat
+          background-position: center
+
+
+  .time_count
+    +wh(451px, 32px)
+    margin-left: 143px
+    @media screen and (max-width: 375px)
+      display: none
+
 
 input[type="checkbox"]
   +wh(20px, 20px)
@@ -35,35 +108,35 @@ input[type="checkbox"]
   position: absolute
   z-index: 0
   &.bubble141
-    +wh(141px, 142px)
-    background-size: 141px 142px
+    +wh(9vw, 9vw)
+    background-size: 9vw 9vw
   &.bubble40
-    +wh(40px, 41px)
-    background-size: 40px 41px
+    +wh(3vw, 3vw)
+    background-size: 3vw 3vw
   &.bubble52
-    +wh(52px, 53px)
-    background-size: 52px 53px
+    +wh(3.6vw, 3.6vw)
+    background-size: 3.6vw 3.6vw
   &.bubble215
-    +wh(215px, 216px)
-    background-size: 215px 216px
+    +wh(14.9vw, 14.9vw)
+    background-size: auto 14.9vw
   &.bubble161
-    +wh(161px, 162px)
-    background-size: 161px 162px
+    +wh(11.1vw, 11.1vw)
+    background-size: 11.1vw 11.1vw
   &.bubble82
-    +wh(82px, 83px)
-    background-size: 82px 83px
+    +wh(5.6vw, 5.6vw)
+    background-size: 5.6vw 5.6vw
   &.bubble21
-    +wh(21px, 23px)
-    background-size: 21px 23px
+    +wh(1.4vw, 1.4vw)
+    background-size: 1.4vw 1.4vw
   &.bubble308
-    +wh(308px, 309px)
-    background-size: 308px 309px
+    +wh(21.3vw, 21.3vw)
+    background-size: 21.3vw 21.3vw
   &.bubble91
-    +wh(91px, 91px)
-    background-size: 91px 91px
+    +wh(6.3vw, 6.3vw)
+    background-size: 6.3vw 6.3vw
   &.bubble113
-    +wh(113px, 114px)
-    background-size: 113px 114px
+    +wh(7.8vw, 7.8vw)
+    background-size: 7.8vw 7.8vw
   &.rotate165
     transform: rotate(-165deg)
   &.rotate291
@@ -72,106 +145,115 @@ input[type="checkbox"]
     top: 0
     left: 0
     background: url(../../asset/b01.png) no-repeat
-    background-size: auto 142px
+    background-size: auto 9vw
+    @media screen and (max-width: 375px)
+      display: none
   &.b02
     top: 70px
-    left: 422px
+    left: 29vw
   &.b03
     top: 70px
-    left: 1133px
+    right: 17.7vw
   &.b04
     top: 112px
     right: 0
     background: url(../../asset/b04.png) no-repeat
-    background-size: auto 216px
+    background-size: auto 14.9vw
     background-position: right
   &.b05
     top: 354px
-    left: -109px
+    left: -6.3vw
   &.b06
     top: 376px
-    left: 219px
+    left: 15vw
   &.b07
     top: 377px
-    left: 565px
+    left: 39.2vw
   &.b08
     top: 335px
-    left: 1020px
+    left: 170.8vw
   &.b09
     top: 795px
-    left: 26px
+    left: 1.8vw
   &.b10
     top: 720px
-    left: 179px
+    left: 12.4vw
   &.b11
     top: 773px
-    left: 934px
+    left: 64.8vw
   &.b12
     top: 700px
-    right: 0
+    left: 93.4vw
   &.b13
     top: 200px
-    left: 73px
+    left: 5vw
   &.b14
-    top: 700px
-    right: 65px
+    top: 64px
+    left: 95.4vw
   &.b15
     top: 795px
-    left: 26px
+    left: 1.8vw
   &.b16
     top: 816px
-    right: 84px
+    left: 79.2vw
   &.b17
     top: 987px
-    left: 134px
+    left: 9.3vw
   &.b18
     top: 1245px
-    left: 78px
+    left: 5.4vw
   &.b19
     top: 1301px
-    right: 72px
+    left: 88.6vw
   &.b20
     top: 1619px
-    left: -66px
+    left: -4.5vw
   &.b21
     top: 1687px
-    left: 334px
+    left: 23.1vw
   &.b22
     top: 1605px
-    right: 179px
+    left: 66.1vw
   &.b23
     top: 281px
-    left: 281px
+    left: 19.5vw
   &.b24
     top: 542px
-    left: 380px
+    left: 26.3vw
   &.b25
     top: 500px
-    left: 854px
+    left: 59.3vw
   &.b26
     top: 441px
-    right: 219px
+    left: 79vw
   &.b27
-    background: url(../../asset/b27.png) no-repeat
-    background-size: auto 162px
-    background-position: right
     top: 336px
-    right: 0
+    left: 93.8vw
   &.b28
-    background: url(../../asset/b01.png) no-repeat
-    background-position: left
-    background-size: auto 216px
     top: 572px
-    left: 0
+    left: -3.6vw
   &.b29
     top: 776px
-    left: 255px
+    left: 17.7vw
   &.b30
-    background: url(../../asset/b27.png) no-repeat
-    background-size: auto 162px
-    background-position: right
-    right: 0
-    bottom: 0
+    top: 743px
+    left: 93.9vw
+  &.b31
+    top: -46px
+    left: 23.1vw
+  &.b32
+    top: -129px
+    left: 66.1vw
+  &.b33
+    top: 64px
+    left: 95.4vw
+  &.b34
+    top: -181px
+    left: 12.4vw
+  &.b35
+    top: -126px
+    left: 64.8vw
+  &.b36
 .section_title
   +wh(392px, 59px)
   font-size: 40px
@@ -301,7 +383,7 @@ input[type="checkbox"]
 .hero
   height: 900px
   position: relative
-  // overflow-x: hidden
+  overflow: hidden
   @media screen and (max-width: 375px)
     height: 560px
   .hero_title
@@ -470,6 +552,7 @@ input[type="checkbox"]
 .about
   height: 1732px
   position: relative
+  overflow: hidden
   @media screen and (max-width: 375px)
     height: 714px
   .grid
@@ -617,6 +700,7 @@ input[type="checkbox"]
           background-repeat: no-repeat
 .notice
   position: relative
+  overflow: hidden
   @media screen and (max-width: 375px)
     height: 450px
   &_title
@@ -887,9 +971,9 @@ input[type="checkbox"]
         +wh(181px, 36px)
         margin-top: 40px
         font-size: 14px
-
 .product
   position: relative
+  overflow: hidden
   @media screen and (max-width: 375px)
     height: 560px
   &_title
@@ -1091,7 +1175,6 @@ input[type="checkbox"]
             background-size: 16px 16px
             background-position: center bottom
             margin-left: 10px
-
 .sale
   height: 474px
   background: url(../../asset/register_bg.png) no-repeat
@@ -1126,7 +1209,6 @@ input[type="checkbox"]
       background: url(../../asset/m_sale_logo.png) no-repeat
       background-size: 298px 317px
       margin-top: 31px
-
 .winners
   position: relative
   overflow: hidden
@@ -1341,7 +1423,6 @@ input[type="checkbox"]
     @media screen and (max-width: 375px)
       bottom: 10px
       right: calc((100% - 50px) / 2)
-
 footer
   height: 98px
   background: #4A4A4A

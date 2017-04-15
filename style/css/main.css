@@ -32,11 +32,117 @@ section {
 nav {
   width: 100%;
   height: 70px;
-  background: rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 @media screen and (max-width: 375px) {
   nav {
     height: 44px;
+    background-color: rgba(239, 146, 174, 0.3);
+    display: inline-block;
+  }
+}
+nav .menu, nav .show_time {
+  display: none;
+}
+@media screen and (max-width: 375px) {
+  nav .menu, nav .show_time {
+    display: block;
+    width: 48px;
+    height: 44px;
+    cursor: pointer;
+  }
+}
+nav .menu {
+  top: 0;
+  left: 0;
+  background: url(../../asset/menu.png) no-repeat;
+  background-size: 22px 18px;
+  background-position: center;
+}
+@media screen and (max-width: 375px) {
+  nav .menu {
+    float: left;
+  }
+}
+nav .show_time {
+  top: 0;
+  right: 0;
+  background: url(../../asset/time.png) no-repeat;
+  background-size: 24px 24px;
+  background-position: center;
+}
+@media screen and (max-width: 375px) {
+  nav .show_time {
+    float: right;
+  }
+}
+nav .logo {
+  width: 102px;
+  height: 40px;
+  background: url(../../asset/logo.png) no-repeat;
+  background-size: 100% 100%;
+  margin-left: 80px;
+}
+@media screen and (max-width: 375px) {
+  nav .logo {
+    width: 62px;
+    height: 44px;
+    margin-left: 109px;
+    float: left;
+    background-size: 62px 24px;
+    background-position: center;
+  }
+}
+nav ul {
+  width: 506px;
+  height: 25px;
+  margin-left: 78px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 375px) {
+  nav ul {
+    margin: 0;
+    display: inherit;
+    width: 144px;
+    height: 560px;
+    background: #4A4A4A;
+    z-index: 2;
+    position: relative;
+  }
+}
+nav ul li {
+  float: left;
+  list-style: none;
+  color: white;
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+nav ul li:hover {
+  border-bottom: 2px solid;
+}
+nav ul li.close {
+  display: none;
+}
+@media screen and (max-width: 375px) {
+  nav ul li.close {
+    display: block;
+    width: 48px;
+    height: 44px;
+    background: url(../../asset/close.png) no-repeat;
+    background-position: center;
+  }
+}
+nav .time_count {
+  width: 451px;
+  height: 32px;
+  margin-left: 143px;
+}
+@media screen and (max-width: 375px) {
+  nav .time_count {
+    display: none;
   }
 }
 
@@ -55,54 +161,54 @@ input[type="checkbox"] {
   z-index: 0;
 }
 .bubble.bubble141 {
-  width: 141px;
-  height: 142px;
-  background-size: 141px 142px;
+  width: 9vw;
+  height: 9vw;
+  background-size: 9vw 9vw;
 }
 .bubble.bubble40 {
-  width: 40px;
-  height: 41px;
-  background-size: 40px 41px;
+  width: 3vw;
+  height: 3vw;
+  background-size: 3vw 3vw;
 }
 .bubble.bubble52 {
-  width: 52px;
-  height: 53px;
-  background-size: 52px 53px;
+  width: 3.6vw;
+  height: 3.6vw;
+  background-size: 3.6vw 3.6vw;
 }
 .bubble.bubble215 {
-  width: 215px;
-  height: 216px;
-  background-size: 215px 216px;
+  width: 14.9vw;
+  height: 14.9vw;
+  background-size: auto 14.9vw;
 }
 .bubble.bubble161 {
-  width: 161px;
-  height: 162px;
-  background-size: 161px 162px;
+  width: 11.1vw;
+  height: 11.1vw;
+  background-size: 11.1vw 11.1vw;
 }
 .bubble.bubble82 {
-  width: 82px;
-  height: 83px;
-  background-size: 82px 83px;
+  width: 5.6vw;
+  height: 5.6vw;
+  background-size: 5.6vw 5.6vw;
 }
 .bubble.bubble21 {
-  width: 21px;
-  height: 23px;
-  background-size: 21px 23px;
+  width: 1.4vw;
+  height: 1.4vw;
+  background-size: 1.4vw 1.4vw;
 }
 .bubble.bubble308 {
-  width: 308px;
-  height: 309px;
-  background-size: 308px 309px;
+  width: 21.3vw;
+  height: 21.3vw;
+  background-size: 21.3vw 21.3vw;
 }
 .bubble.bubble91 {
-  width: 91px;
-  height: 91px;
-  background-size: 91px 91px;
+  width: 6.3vw;
+  height: 6.3vw;
+  background-size: 6.3vw 6.3vw;
 }
 .bubble.bubble113 {
-  width: 113px;
-  height: 114px;
-  background-size: 113px 114px;
+  width: 7.8vw;
+  height: 7.8vw;
+  background-size: 7.8vw 7.8vw;
 }
 .bubble.rotate165 {
   transform: rotate(-165deg);
@@ -114,135 +220,151 @@ input[type="checkbox"] {
   top: 0;
   left: 0;
   background: url(../../asset/b01.png) no-repeat;
-  background-size: auto 142px;
+  background-size: auto 9vw;
+}
+@media screen and (max-width: 375px) {
+  .bubble.b01 {
+    display: none;
+  }
 }
 .bubble.b02 {
   top: 70px;
-  left: 422px;
+  left: 29vw;
 }
 .bubble.b03 {
   top: 70px;
-  left: 1133px;
+  right: 17.7vw;
 }
 .bubble.b04 {
   top: 112px;
   right: 0;
   background: url(../../asset/b04.png) no-repeat;
-  background-size: auto 216px;
+  background-size: auto 14.9vw;
   background-position: right;
 }
 .bubble.b05 {
   top: 354px;
-  left: -109px;
+  left: -6.3vw;
 }
 .bubble.b06 {
   top: 376px;
-  left: 219px;
+  left: 15vw;
 }
 .bubble.b07 {
   top: 377px;
-  left: 565px;
+  left: 39.2vw;
 }
 .bubble.b08 {
   top: 335px;
-  left: 1020px;
+  left: 170.8vw;
 }
 .bubble.b09 {
   top: 795px;
-  left: 26px;
+  left: 1.8vw;
 }
 .bubble.b10 {
   top: 720px;
-  left: 179px;
+  left: 12.4vw;
 }
 .bubble.b11 {
   top: 773px;
-  left: 934px;
+  left: 64.8vw;
 }
 .bubble.b12 {
   top: 700px;
-  right: 0;
+  left: 93.4vw;
 }
 .bubble.b13 {
   top: 200px;
-  left: 73px;
+  left: 5vw;
 }
 .bubble.b14 {
-  top: 700px;
-  right: 65px;
+  top: 64px;
+  left: 95.4vw;
 }
 .bubble.b15 {
   top: 795px;
-  left: 26px;
+  left: 1.8vw;
 }
 .bubble.b16 {
   top: 816px;
-  right: 84px;
+  left: 79.2vw;
 }
 .bubble.b17 {
   top: 987px;
-  left: 134px;
+  left: 9.3vw;
 }
 .bubble.b18 {
   top: 1245px;
-  left: 78px;
+  left: 5.4vw;
 }
 .bubble.b19 {
   top: 1301px;
-  right: 72px;
+  left: 88.6vw;
 }
 .bubble.b20 {
   top: 1619px;
-  left: -66px;
+  left: -4.5vw;
 }
 .bubble.b21 {
   top: 1687px;
-  left: 334px;
+  left: 23.1vw;
 }
 .bubble.b22 {
   top: 1605px;
-  right: 179px;
+  left: 66.1vw;
 }
 .bubble.b23 {
   top: 281px;
-  left: 281px;
+  left: 19.5vw;
 }
 .bubble.b24 {
   top: 542px;
-  left: 380px;
+  left: 26.3vw;
 }
 .bubble.b25 {
   top: 500px;
-  left: 854px;
+  left: 59.3vw;
 }
 .bubble.b26 {
   top: 441px;
-  right: 219px;
+  left: 79vw;
 }
 .bubble.b27 {
-  background: url(../../asset/b27.png) no-repeat;
-  background-size: auto 162px;
-  background-position: right;
   top: 336px;
-  right: 0;
+  left: 93.8vw;
 }
 .bubble.b28 {
-  background: url(../../asset/b01.png) no-repeat;
-  background-position: left;
-  background-size: auto 216px;
   top: 572px;
-  left: 0;
+  left: -3.6vw;
 }
 .bubble.b29 {
   top: 776px;
-  left: 255px;
+  left: 17.7vw;
 }
 .bubble.b30 {
-  background: url(../../asset/b27.png) no-repeat;
-  background-size: auto 162px;
-  background-position: right;
-  right: 0;
-  bottom: 0;
+  top: 743px;
+  left: 93.9vw;
+}
+.bubble.b31 {
+  top: -46px;
+  left: 23.1vw;
+}
+.bubble.b32 {
+  top: -129px;
+  left: 66.1vw;
+}
+.bubble.b33 {
+  top: 64px;
+  left: 95.4vw;
+}
+.bubble.b34 {
+  top: -181px;
+  left: 12.4vw;
+}
+.bubble.b35 {
+  top: -126px;
+  left: 64.8vw;
 }
 
 .section_title {
@@ -452,6 +574,7 @@ input[type="checkbox"] {
 .hero {
   height: 900px;
   position: relative;
+  overflow: hidden;
 }
 @media screen and (max-width: 375px) {
   .hero {
@@ -703,6 +826,7 @@ input[type="checkbox"] {
 .about {
   height: 1732px;
   position: relative;
+  overflow: hidden;
 }
 @media screen and (max-width: 375px) {
   .about {
@@ -931,6 +1055,7 @@ input[type="checkbox"] {
 
 .notice {
   position: relative;
+  overflow: hidden;
 }
 @media screen and (max-width: 375px) {
   .notice {
@@ -1368,6 +1493,7 @@ input[type="checkbox"] {
 
 .product {
   position: relative;
+  overflow: hidden;
 }
 @media screen and (max-width: 375px) {
   .product {
