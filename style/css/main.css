@@ -29,6 +29,27 @@ section {
   flex-direction: column;
 }
 
+.social {
+  width: 103px;
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+}
+.social_icon {
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+.social_icon.fb {
+  background: url(../../asset/facebook-icon.png) no-repeat;
+  background-size: 44px 44px;
+}
+.social_icon.mail {
+  background: url(../../asset/mail-icon.png) no-repeat;
+  background-size: 44px 44px;
+  margin-left: 15px;
+}
+
 nav {
   width: 100%;
   height: 70px;
@@ -73,8 +94,14 @@ nav .show_time {
   background-size: 24px 24px;
   background-position: center;
 }
+nav .show_time.active {
+  background: url(../../asset/close_count.png) no-repeat;
+  background-size: 24px 24px;
+  background-position: center;
+}
 @media screen and (max-width: 375px) {
   nav .show_time {
+    position: absolute;
     float: right;
   }
 }
@@ -83,7 +110,7 @@ nav .logo {
   height: 40px;
   background: url(../../asset/logo.png) no-repeat;
   background-size: 100% 100%;
-  margin-left: 80px;
+  margin-left: 5.5vw;
 }
 @media screen and (max-width: 375px) {
   nav .logo {
@@ -98,14 +125,14 @@ nav .logo {
 nav ul {
   width: 506px;
   height: 25px;
-  margin-left: 78px;
+  margin-left: 5.4vw;
   display: flex;
   justify-content: space-between;
 }
 @media screen and (max-width: 375px) {
   nav ul {
     margin: 0;
-    display: inherit;
+    display: none;
     width: 144px;
     height: 560px;
     background: #4A4A4A;
@@ -123,27 +150,129 @@ nav ul li {
 nav ul li:hover {
   border-bottom: 2px solid;
 }
+@media screen and (max-width: 375px) {
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+  nav ul li:nth-of-type(2) {
+    margin-top: 29px;
+  }
+  nav ul li:hover {
+    border: 0;
+  }
+}
 nav ul li.close {
   display: none;
 }
 @media screen and (max-width: 375px) {
   nav ul li.close {
     display: block;
+    position: absolute;
     width: 48px;
     height: 44px;
     background: url(../../asset/close.png) no-repeat;
     background-position: center;
+    top: 0;
+    left: 0;
   }
 }
-nav .time_count {
-  width: 451px;
-  height: 32px;
-  margin-left: 143px;
+nav ul li.social {
+  display: none;
 }
 @media screen and (max-width: 375px) {
-  nav .time_count {
-    display: none;
+  nav ul li.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 108px;
+    padding: 0;
+    margin-top: 100px;
   }
+  nav ul li.social .social_icon {
+    width: 44px;
+    height: 44px;
+  }
+  nav ul li.social .mail {
+    margin: 20px 0 0 0;
+  }
+}
+
+.time_group {
+  width: 460px;
+  height: 32px;
+  margin-left: 63.1vw;
+  line-height: 32px;
+  color: white;
+  position: absolute;
+  top: 19px;
+  right: 5.5vw;
+  z-index: 2;
+}
+@media screen and (max-width: 375px) {
+  .time_group {
+    display: none;
+    background: #F092AE;
+    margin: 0 auto;
+    width: 375px;
+    height: 30px;
+    line-height: 30px;
+    top: 0;
+    left: 0;
+  }
+}
+.time_group .time_count {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 375px) {
+  .time_group .time_count {
+    width: 320px;
+    margin: 0 auto;
+  }
+}
+.time_group .time_count .unit {
+  float: left;
+  margin: 0 11px;
+}
+.time_group .time_count .unit:first-of-type {
+  margin-left: 0;
+}
+.time_group .time_count .unit:last-of-type {
+  margin-right: 0;
+}
+@media screen and (max-width: 375px) {
+  .time_group .time_count .unit {
+    font-size: 10px;
+    margin: 0 9px;
+  }
+}
+.time_group .time_count .count_item {
+  width: 32px;
+  height: 32px;
+  border: 1px solid;
+  border-radius: 6px;
+  float: left;
+  font-size: 20px;
+  text-align: center;
+  font-family: "arial";
+  font-weight: bold;
+}
+@media screen and (max-width: 375px) {
+  .time_group .time_count .count_item {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 5px 0;
+  }
+}
+.time_group .time_count .count_item.item_gap {
+  margin-right: 6px;
 }
 
 input[type="checkbox"] {
@@ -759,6 +888,7 @@ input[type="checkbox"] {
 }
 .hero .hero_product .sandalwood::after {
   content: url(../../asset/hero_icon_text.png);
+  background-size: 57px 47px;
   position: absolute;
   top: -17px;
   right: -28px;
@@ -798,6 +928,10 @@ input[type="checkbox"] {
   letter-spacing: 0.5px;
   color: white;
   line-height: 27px;
+}
+.hero .rigester:hover {
+  transition: background-image 1000ms linear;
+  background-image: linear-gradient(79deg, #f39eb2, #ffbeba);
 }
 @media screen and (max-width: 375px) {
   .hero .rigester {
@@ -1481,6 +1615,10 @@ input[type="checkbox"] {
   margin: 100px auto 0;
   display: flex;
   justify-content: center;
+}
+.register_content .send_register:hover {
+  transition: background-image 1000ms linear;
+  background-image: linear-gradient(79deg, #f39eb2, #ffbeba);
 }
 @media screen and (max-width: 375px) {
   .register_content .send_register {
@@ -2275,24 +2413,4 @@ footer .company .company_copyright {
     font-size: 12px;
     line-height: 18px;
   }
-}
-footer .social {
-  width: 103px;
-  height: 44px;
-  display: flex;
-  flex-direction: row;
-}
-footer .social_icon {
-  width: 44px;
-  height: 44px;
-  cursor: pointer;
-}
-footer .social_icon.fb {
-  background: url(../../asset/facebook-icon.png) no-repeat;
-  background-size: 44px 44px;
-}
-footer .social_icon.mail {
-  background: url(../../asset/mail-icon.png) no-repeat;
-  background-size: 44px 44px;
-  margin-left: 15px;
 }

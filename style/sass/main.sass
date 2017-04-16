@@ -7,8 +7,8 @@
   box-sizing: border-box
   padding: 0
   margin: 0
-// body
-//   position: relative
+html
+  // overflow: hidden
 
 // Global
 section
@@ -18,6 +18,22 @@ section
   justify-content: flex-start
   align-items: center
   flex-direction: column
+
+.social
+  +wh(103px, 44px)
+  display: flex
+  flex-direction: row
+  &_icon
+    +wh(44px, 44px)
+    cursor: pointer
+    &.fb
+      background: url(../../asset/facebook-icon.png) no-repeat
+      background-size: 44px 44px
+    &.mail
+      background: url(../../asset/mail-icon.png) no-repeat
+      background-size: 44px 44px
+      margin-left: 15px
+
 nav
   +wh(100%, 70px)
   position: relative
@@ -47,13 +63,18 @@ nav
     background: url(../../asset/time.png) no-repeat
     background-size: 24px 24px
     background-position: center
+    &.active
+      background: url(../../asset/close_count.png) no-repeat
+      background-size: 24px 24px
+      background-position: center
     @media screen and (max-width: 375px)
+      position: absolute
       float: right
   .logo
     +wh(102px, 40px)
     background: url(../../asset/logo.png) no-repeat
     background-size: 100% 100%
-    margin-left: 80px
+    margin-left: 5.5vw
     @media screen and (max-width: 375px)
       +wh(62px, 44px)
       margin-left: 109px
@@ -62,12 +83,12 @@ nav
       background-position: center
   ul
     +wh(506px, 25px)
-    margin-left: 78px
+    margin-left: 5.4vw
     display: flex
     justify-content: space-between
     @media screen and (max-width: 375px)
       margin: 0
-      display: inherit
+      display: none
       +wh(144px, 560px)
       background: #4A4A4A
       z-index: 2
@@ -81,21 +102,88 @@ nav
       &:hover
         border-bottom: 2px solid
       @media screen and (max-width: 375px)
+        width: 100%
+        text-align: center
+        margin: 0 auto
+        padding-bottom: 20px
+        &:nth-of-type(2)
+          margin-top: 29px
+        &:hover
+          border: 0
       &.close
         display: none
         @media screen and (max-width: 375px)
           display: block
+          position: absolute
           +wh(48px, 44px)
           background: url(../../asset/close.png) no-repeat
           background-position: center
+          top: 0
+          left: 0
+      &.social
+        display: none
+        @media screen and (max-width: 375px)
+          display: flex
+          flex-direction: column
+          align-items: center
+          +wh(100%, 108px)
+          padding: 0
+          margin-top: 100px
+          .social_icon
+            +wh(44px, 44px)
+          .mail
+            margin: 20px 0 0 0
 
-
+//
+.time_group
+  +wh(460px, 32px)
+  margin-left: 63.1vw
+  line-height: 32px
+  color: white
+  position: absolute
+  top: 19px
+  right: 5.5vw
+  z-index: 2
+  @media screen and (max-width: 375px)
+    display: none
+    background: #F092AE
+    margin: 0 auto
+    +wh(375px, 30px)
+    line-height: 30px
+    top: 0
+    left: 0
   .time_count
-    +wh(451px, 32px)
-    margin-left: 143px
+    +wh(100%, 100%)
     @media screen and (max-width: 375px)
-      display: none
-
+      width: 320px
+      margin: 0 auto
+    .unit
+      float: left
+      margin: 0 11px
+      &:first-of-type
+        margin-left: 0
+      &:last-of-type
+        margin-right: 0
+      @media screen and (max-width: 375px)
+        font-size: 10px
+        margin: 0 9px
+    .count_item
+      +wh(32px, 32px)
+      border: 1px solid
+      border-radius: 6px
+      float: left
+      font-size: 20px
+      text-align: center
+      font-family: 'arial'
+      font-weight: bold
+      @media screen and (max-width: 375px)
+        +wh(20px, 20px)
+        border-radius: 4px
+        font-size: 14px
+        line-height: 20px
+        margin: 5px 0
+      &.item_gap
+        margin-right: 6px
 
 input[type="checkbox"]
   +wh(20px, 20px)
@@ -103,6 +191,7 @@ input[type="checkbox"]
   background: #34495E
   box-sizing: content-box
   position: relative
+
 .bubble
   background: url(../../asset/bubble.png) no-repeat
   position: absolute
@@ -506,6 +595,7 @@ input[type="checkbox"]
         background-position: center bottom
       &::after
         content: url(../../asset/hero_icon_text.png)
+        background-size: 57px 47px
         position: absolute
         top: -17px
         right: -28px
@@ -536,6 +626,9 @@ input[type="checkbox"]
     letter-spacing: 0.5px
     color: white
     line-height: 27px
+    &:hover
+      transition: background-image 1000ms linear
+      background-image: linear-gradient(79deg, #f39eb2, #ffbeba)
     @media screen and (max-width: 375px)
       +wh(180px, 36px)
       margin-top: 28px
@@ -967,6 +1060,9 @@ input[type="checkbox"]
       margin: 100px auto 0
       display: flex
       justify-content: center
+      &:hover
+        transition: background-image 1000ms linear
+        background-image: linear-gradient(79deg, #f39eb2, #ffbeba)
       @media screen and (max-width: 375px)
         +wh(181px, 36px)
         margin-top: 40px
@@ -1463,17 +1559,3 @@ footer
       @media screen and (max-width: 375px)
         font-size: 12px
         line-height: 18px
-  .social
-    +wh(103px, 44px)
-    display: flex
-    flex-direction: row
-    &_icon
-      +wh(44px, 44px)
-      cursor: pointer
-      &.fb
-        background: url(../../asset/facebook-icon.png) no-repeat
-        background-size: 44px 44px
-      &.mail
-        background: url(../../asset/mail-icon.png) no-repeat
-        background-size: 44px 44px
-        margin-left: 15px
