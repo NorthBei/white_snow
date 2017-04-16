@@ -1,0 +1,41 @@
+// mixin
+@mixin wh($w, $h)
+  width: $w
+  height: $h
+
+// Global style
+
+button
+  background: none
+  text-decoration: none
+  border: none
+  cursor: pointer
+  &:focus
+    outline: none
+input
+  &:focus
+    outline: none
+
+input[type="checkbox"]
+  +wh(20px, 20px)
+  border-radius: 2px
+  background: #34495E
+  box-sizing: content-box
+  position: relative
+
+section
+  width: 100%
+  background: rgba(#F39EB2, 0.2)
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  flex-direction: column
+a
+  text-decoration: none
+  color: white
+
+.page_bg
+  background-image: radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba)
+
+.default_height
+  height: 900px

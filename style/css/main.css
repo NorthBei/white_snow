@@ -14,10 +14,13 @@ input:focus {
   outline: none;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  background: #34495E;
+  box-sizing: content-box;
+  position: relative;
 }
 
 section {
@@ -27,6 +30,25 @@ section {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.page_bg {
+  background-image: radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba);
+}
+
+.default_height {
+  height: 900px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 .social {
