@@ -44,7 +44,17 @@ $(function(){
     $('.send_register').css('margin-bottom', '10px');
     $('.receipt_input_group').append(receipt_input);
   })
+  //
 
+
+    var clipboard = new Clipboard('#copy_mail');
+    clipboard.on('success', function(e) {
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+
+    e.clearSelection();
+});
 })
 
 // Date count
@@ -55,6 +65,16 @@ window.onload = function(){
   console.log(getString(startDate));
   console.log(getString(endDate));
   setInterval(cal, 1000);
+
+  // winners is active 已開獎
+  var winners;
+  // 如果已經開獎 winners = true
+  winners = true;
+  if(winners){
+    $('#winners').addClass('is-active');
+    $('.not_open').css('display','none');
+    $('.open').css('display','block');
+  }
 }
 
 function getString(dt){
