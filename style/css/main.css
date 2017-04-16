@@ -1456,7 +1456,7 @@ input[type="checkbox"] {
   .register_content .receipt .receipt_input_group .receipt_input {
     width: 209px;
     height: 32px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     font-size: 12px;
   }
 }

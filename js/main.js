@@ -35,6 +35,16 @@ $(function(){
   })
   //
 
+  // add receipt input
+  $('.add_receipt').click(function(){
+    var receipt_input = $('<input type="text" class="receipt_input" placeholder="請輸入發票號碼">');
+    $('.receipt').css('height', 'auto');
+    $('.register').css('height', 'auto');
+    $('.register_content').css('height', 'auto');
+    $('.send_register').css('margin-bottom', '10px');
+    $('.receipt_input_group').append(receipt_input);
+  })
+
 })
 
 // Date count
