@@ -445,13 +445,17 @@ input[type="checkbox"]
 @keyframes bottom_down
   0%
     transform: skewY(0)
-  50%
+  33%
     transform: rotate(315deg) translateY(-30px) translateX(-30px)
+  66%
+    transform: rotate(270deg) translateY(-60px) translateX(-30px)
   100%
     transform: rotate(270deg) translateY(-60px) translateX(-30px)
 
 @keyframes bubble_show
   0%
+    opacity: 0
+  66%
     opacity: 0
   100%
     opacity: 1
@@ -878,7 +882,7 @@ input[type="checkbox"]
       .bottom
         position: absolute
         right: 0
-        animation: bottom_down 2.5s infinite
+        animation: bottom_down 3s infinite
         @media screen and (max-width: 375px)
           +wh(20px, 56px)
           animation: none
@@ -889,7 +893,7 @@ input[type="checkbox"]
         position: absolute
         bottom: 0
         opacity: 0
-        animation: bubble_show 2s 2s infinite
+        animation: bubble_show 3s infinite
         @media screen and (max-width: 375px)
           +wh(76px, 17px)
           animation: none
@@ -1032,6 +1036,8 @@ input[type="checkbox"]
           color: #9B9B9B
           font-size: 18px
           text-align: center
+          &.error
+            border: 2px solid #F5515F
           @media screen and (max-width: 375px)
             font-size: 12px
           &.name
@@ -1073,7 +1079,8 @@ input[type="checkbox"]
   position: relative
   overflow: hidden
   @media screen and (max-width: 375px)
-    height: 560px
+    min-height: 560px
+    height: auto
   &_title
     margin-top: 90px
     color: white
@@ -1099,7 +1106,9 @@ input[type="checkbox"]
     +wh(1070px, 732px)
     margin: 0 auto
     @media screen and (max-width: 375px)
-      +wh(360px, 478px)
+      // +wh(360px, 478px)
+      width: 360px
+      height: auto
       margin-top: 13px
     .product_list
       +wh(100%, 204px)
@@ -1117,6 +1126,11 @@ input[type="checkbox"]
         .item
           +wh(130px, 130px)
           cursor: pointer
+          &.active
+            border: 4px double white
+            border-radius: 50%
+            @media screen and (max-width: 375px)
+              border: 2px solid white
           @media screen and (max-width: 375px)
             +wh(70px, 70px)
           &.item1
@@ -1149,13 +1163,17 @@ input[type="checkbox"]
             background-position: center center
             @media screen and (max-width: 375px)
               background-size: 40px 49px
+          &.item1,&.item2,&.item3,&.item4,&.item5
+            &.active
+              background-size: 60%
     .product_content
       +wh(100%, 492px)
       display: flex
       flex-direction: row
       position: relative
       @media screen and (max-width: 375px)
-        height: 390px
+        min-height: 390px
+        height: auto
         margin-top: 11px
         flex-direction: column
       .product_section_title

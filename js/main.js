@@ -202,7 +202,7 @@ $(function(){
   var items_length = 4;
   var default_item = 1;
 
-  $('.item_group').click(function(){
+  $('.item').click(function(){
     $('#next_arrow').css('display', 'block');
     $('#pre_arrow').css('display', 'none');
     selected_item = $(this).attr('id');
@@ -210,7 +210,8 @@ $(function(){
     if (selected_item == "p4") {
       $('#next_arrow').css('display', 'none');
     }
-    $(this).addClass('active').siblings().removeClass('active');
+    $('.item_group .item').removeClass('active');
+    $(this).addClass('active');
     default_item = 1;
     if(selected_item != "p4"){
       $('#next_arrow').html('<img src="asset/next@2x.png">'+product[selected_item].items['item'+(default_item+1)].type_name);
