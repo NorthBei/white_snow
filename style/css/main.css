@@ -699,8 +699,11 @@ input[type="checkbox"] {
   0% {
     transform: skewY(0);
   }
-  50% {
+  33% {
     transform: rotate(315deg) translateY(-30px) translateX(-30px);
+  }
+  66%{
+    transform: rotate(270deg) translateY(-60px) translateX(-30px);
   }
   100% {
     transform: rotate(270deg) translateY(-60px) translateX(-30px);
@@ -709,6 +712,9 @@ input[type="checkbox"] {
 @keyframes bubble_show {
   0% {
     opacity: 0;
+  }
+  66%{
+    opacity: 0; 
   }
   100% {
     opacity: 1;
@@ -1340,7 +1346,7 @@ input[type="checkbox"] {
 .notice_animation .animation_group .bottom {
   position: absolute;
   right: 0;
-  animation: bottom_down 2.5s infinite;
+  animation: bottom_down 3s infinite;
 }
 @media screen and (max-width: 375px) {
   .notice_animation .animation_group .bottom {
@@ -1356,7 +1362,7 @@ input[type="checkbox"] {
   position: absolute;
   bottom: 0;
   opacity: 0;
-  animation: bubble_show 2s 2s infinite;
+  animation: bubble_show 3s infinite;
 }
 @media screen and (max-width: 375px) {
   .notice_animation .animation_group .bubble {
