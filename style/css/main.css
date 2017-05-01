@@ -1914,6 +1914,10 @@ input[type="checkbox"] {
   justify-content: center;
   margin-left: 61px;
 }
+.product_group .product_content .product_img img {
+  height: 100%;
+  width: auto;
+}
 @media screen and (max-width: 375px) {
   .product_group .product_content .product_img {
     width: 200px;

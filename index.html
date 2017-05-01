@@ -186,10 +186,10 @@
       <div class="section_title register_title">登入發票</div>
       <div class="register_content">
         <div class="receipt">
-          <div class="receipt_title">發票字母</div>
+          <div class="receipt_title">發票編號</div>
           <div class="receipt_input_group">
-            <input type="text" class="receipt_input" placeholder="請輸入發票號碼">
-            <input type="text" class="receipt_input" placeholder="請輸入發票號碼">
+            <input type="text" class="receipt_input" name="receipt" placeholder="請輸入發票編號">
+            <input type="text" class="receipt_input" name="receipt" placeholder="請輸入發票編號">
           </div>
         </div>
         <button type="button" class="add_receipt"></button>
@@ -201,15 +201,15 @@
         <div class="info">
           <div class="info_group name">
             <div class="receipt_title">真實姓名</div>
-            <input type="text" class="info_input name" placeholder="輸入姓名（必填）">
+            <input type="text" id="user_name" class="info_input name" placeholder="輸入姓名（必填）">
           </div>
           <div class="info_group phone">
             <div class="receipt_title">手機</div>
-            <input type="text" class="info_input phone" placeholder="輸入手機號碼（必填）">
+            <input type="text" id="user_tel" class="info_input phone" placeholder="輸入手機號碼（必填）">
           </div>
           <div class="info_group email">
             <div class="receipt_title">Email</div>
-            <input type="text" class="info_input email" placeholder="請輸入Email（必填）">
+            <input type="text" id="user_mail" class="info_input email" placeholder="請輸入Email（必填）">
           </div>
         </div>
         <div class="check">
@@ -223,28 +223,28 @@
       <div class="section_title product_title">白雪商品</div>
       <div class="product_group">
         <div class="product_list">
-          <div class="item_group active">
+          <div class="item_group active" id="p1">
             <div class="item item1"></div>
           </div>
-          <div class="item_group">
+          <div class="item_group" id="p2">
             <div class="item item2"></div>
           </div>
-          <div class="item_group">
+          <div class="item_group" id="p3">
             <div class="item item3"></div>
           </div>
-          <div class="item_group">
+          <div class="item_group" id="p4">
             <div class="item item4"></div>
           </div>
-          <div class="item_group">
+          <div class="item_group" id="p5">
             <div class="item item5"></div>
           </div>
         </div>
         <!-- item1 -->
-        <div id="product_item1" class="product_content">
-          <div class="product_section_title">milk 乳霜洗髮乳</div>
+        <div class="product_content">
+          <div class="product_section_title" id="p_title"></div>
           <div class="product_des">
             <div class="des_text">
-              <h2>milk 乳霜洗髮乳</h2>
+              <!-- <h2>milk 乳霜洗髮乳</h2>
               <div class="text_group">
                 <h3>全天候的滋養呵護</h3>
                 <p>• 告別乾枯、絕對滋潤</p>
@@ -254,10 +254,10 @@
                 <h3>乳霜洗髮乳 (無矽靈)</h3>
                 <p>• 無矽靈讓頭皮及頭髮更健康</p>
                 <p>• 柔順亮澤的養髮好產品</p>
-              </div>
+              </div> -->
             </div>
             <div class="des_spec">
-              <div class="spec_item">
+              <!-- <div class="spec_item">
                 <img src="asset/p1_spec1.png" alt="">
               </div>
               <div class="spec_item">
@@ -268,26 +268,26 @@
               </div>
               <div class="spec_item">
                 <img src="asset/p1_spec4.png" alt="">
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="product_img">
-            <img class="item1" src="asset/product01.png" alt="">
+            <!-- <img class="item1" src="asset/product01.png" alt=""> -->
           </div>
           <div class="arrow_group">
             <div class="arrow left"></div>
             <div class="arrow right"></div>
           </div>
           <div class="product_type">
-            <div class="type_item">洗髮乳-清潤型</div>
+            <!-- <div class="type_item">洗髮乳-清潤型</div>
             <div class="type_item">沐浴乳-清潤型</div>
             <div class="type_item chose">洗髮乳-滋潤型</div>
-            <div class="type_item">沐浴乳-滋潤型</div>
+            <div class="type_item">沐浴乳-滋潤型</div> -->
           </div>
         </div>
         <!-- item1 end -->
         <!-- item5 -->
-        <div id="product_item5" class="product_content" style="display:none">
+        <!-- <div id="product_item5" class="product_content" style="display:none">
           <div class="product_des">
             <div class="des_text">
               <h2>檀香沐浴乳/洗髮乳</h2>
@@ -317,7 +317,7 @@
             <div class="type_item chose">洗髮乳-山茶花油</div>
             <div class="type_item">沐浴乳-乳木果油</div>
           </div>
-        </div>
+        </div> -->
         <!-- item5 end -->
       </div>
       <!-- bubble -->

@@ -47,7 +47,7 @@ $(function(){
   //
 
 
-    var clipboard = new Clipboard('#copy_mail');
+  var clipboard = new Clipboard('#copy_mail');
     clipboard.on('success', function(e) {
     console.info('Action:', e.action);
     console.info('Text:', e.text);
@@ -55,6 +55,167 @@ $(function(){
 
     e.clearSelection();
 });
+
+  // Change product content
+  var product = [];
+  // milk 乳霜洗髮乳
+  var p1 = {
+    'name': 'milk 乳霜洗髮乳',
+    'items': {
+      'item1':{
+        'name': '<h2>milk 乳霜洗髮乳-清潤型</h2>',
+        'des': '<h2>milk 乳霜洗髮乳-清潤型</h2><text_group><h3>全天候的滋養呵護</h3><p>• 告別乾枯、絕對滋潤</p><p>• 讓肌膚及秀髮凍齡</p></text_group><text_group><h3>乳霜洗髮乳 (無矽靈)</h3><p>• 無矽靈讓頭皮及頭髮更健康</p><p>• 柔順亮澤的養髮好產品</p></text_group>',
+        'img': 'asset/p1-1.png',
+        'spec': ['spec1','spec2','spec5','spec4'],
+        'type': ['洗髮乳-清潤型', '沐浴乳-清潤型', '洗髮乳-滋潤型', '沐浴乳-滋潤型']
+      },
+      'item2':{
+        'name': '<h2>milk 乳霜沐浴乳-清潤型</h2>',
+        'des': '<h2>milk 乳霜沐浴乳-清潤型</h2><text_group><h3>全天候的滋養呵護</h3><p>• 告別乾枯、絕對滋潤</p><p>• 讓肌膚及秀髮凍齡</p></text_group><text_group><h3>乳霜沐浴乳</h3><p>• 乳清蛋白+乳霜加倍滋潤</p><p>• 洗後光滑不緊繃</p></text_group>',
+        'img': 'asset/p1-2.png',
+        'spec': ['spec1','spec6'],
+        'type': ['洗髮乳-清潤型', '沐浴乳-清潤型', '洗髮乳-滋潤型', '沐浴乳-滋潤型']
+      },
+      'item3':{
+        'name': '<h2>milk 乳霜洗髮乳-滋潤型</h2>',
+        'des': '<h2>milk 乳霜洗髮乳-滋潤型</h2><text_group><h3>全天候的滋養呵護</h3><p>• 告別乾枯、絕對滋潤</p><p>• 讓肌膚及秀髮凍齡</p></text_group><text_group><h3>乳霜洗髮乳 (無矽靈)</h3><p>• 無矽靈讓頭皮及頭髮更健康</p><p>• 柔順亮澤的養髮好產品</p></text_group>',
+        'img': 'asset/p1-3.png',
+        'spec': ['spec1','spec2','spec5','spec4'],
+        'type': ['洗髮乳-清潤型', '沐浴乳-清潤型', '洗髮乳-滋潤型', '沐浴乳-滋潤型']
+      },
+      'item4':{
+        'name': '<h2>milk 乳霜沐浴乳-滋潤型</h2>',
+        'des': '<h2>milk 乳霜沐浴乳-滋潤型</h2><text_group><h3>全天候的滋養呵護</h3><p>• 告別乾枯、絕對滋潤</p><p>• 讓肌膚及秀髮凍齡</p></text_group><text_group><h3>乳霜洗髮乳 (無矽靈)</h3><p>• 乳清蛋白+乳霜加倍滋潤</p><p>• 洗後光滑不緊繃</p></text_group>',
+        'img': 'asset/p1-4.png',
+        'spec': ['spec1','spec6'],
+        'type': ['洗髮乳-清潤型', '沐浴乳-清潤型', '洗髮乳-滋潤型', '沐浴乳-滋潤型']
+      }
+    }
+  };
+  // 果酸沐浴乳
+  var p2 = {
+    'name': '果酸沐浴乳',
+    'items': {
+      'item1': {
+        'name': '<h2>果酸沐浴乳</h2>',
+        'des': '<h2>果酸沐浴乳</h2><text_group><h3>真正寵愛的保濕因子</h3><p>• 超優質洗感、好沖不滑溜</p><p>• 保濕成分真正寵愛您</p></text_group><text_group><h3>果酸沐浴乳</h3><p>• 保濕柔膚因子、真正溫柔洗淨</p><p>• 維他命E及金盞花等萃取、細膩呵護肌膚</p></text_group>',
+        'img': 'asset/p2-1.png',
+        'spec': ['spec1','spec6','spec7'],
+        'type': ['果酸沐浴乳', '果酸洗髮乳 (無矽靈)']
+      },
+      'item2': {
+        'name': '<h2>果酸沐浴乳</h2>',
+        'des': '<h2>果酸沐浴乳</h2><text_group><h3>真正寵愛的保濕因子</h3><p>• 超優質洗感、好沖不滑溜</p><p>• 保濕成分真正寵愛您</p></text_group><text_group><h3>果酸沐浴乳</h3><p>• 維他命E讓頭皮健康年輕</p><p>• 天然果酸讓頭髮柔順、減少分岔斷裂</p></text_group>',
+        'img': 'asset/p2-2.png',
+        'spec': ['spec2','spec6','spec3','spec7'],
+        'type': ['果酸沐浴乳', '果酸洗髮乳 (無矽靈)']
+      },
+    }
+  }
+  // 保濕化妝水
+  var p3 = {
+    'name': '保濕化妝水',
+    'items': {
+      'item1': {
+        'name': '<h2>保濕化妝水</h2>',
+        'des': '<h2>保濕化妝水</h2><text_group><h3>超水嫩的保養推薦</h3><p>• 從肌底開始保濕再保濕</p><p>• 保養級玻尿酸補充並鎖住水分</p></text_group><text_group><h3>保濕步驟1~保濕化妝水</h3><p>• 當化妝水或濕敷都超好用</p><p>• 青春又亮白~特選綠茶及蘆薈萃取</p></text_group>',
+        'img': 'asset/p3-1.png',
+        'spec': ['spec1','spec8'],
+        'type': ['保濕步驟1~保濕化妝水', '保濕步驟2~保濕柔膚乳']
+      },
+      'item2': {
+        'name': '<h2>保濕柔膚乳</h2>',
+        'des': '<h2>保濕柔膚乳</h2><text_group><h3>超水嫩的保養推薦</h3><p>• 從肌底開始保濕再保濕</p><p>• 保養級玻尿酸補充並鎖住水分</p></text_group><text_group><h3>保濕步驟2~保濕柔膚乳</h3><p>• 保養級橄欖油、乳木果油好滋潤</p><p>• 豐富膠原蛋白讓肌膚超Q彈</p></text_group>',
+        'img': 'asset/p3-2.png',
+        'spec': ['spec1','spec9','spec6'],
+        'type': ['保濕步驟1~保濕化妝水', '保濕步驟2~保濕柔膚乳']
+      },
+    }
+  }
+  // 禪之喜悅沐浴乳
+  var p4 = {
+    'name': '禪之喜悅沐浴乳',
+    'items': {
+      'item1': {
+        'name': '<h2>禪之喜悅沐浴乳</h2>',
+        'des': '<h2>禪之喜悅沐浴乳</h2><text_group><h3>靜心舒壓的沐浴時光</h3><p>• 舒緩放鬆的植物萃取</p><p>• 親膚保濕成分讓肌膚水嫩健康</p></text_group>',
+        'img': 'asset/p4-1.png',
+        'spec': ['spec1','spec9','spec6'],
+        'type': ['禪之喜悅沐浴乳']
+      }
+    }
+  }
+  // 檀香洗髮乳
+  var p5 = {
+    'name': '檀香洗髮乳',
+    'items': {
+      'item1': {
+        'name': '<h2>檀香洗髮乳</h2>',
+        'des': '<h2>檀香洗髮乳</h2><text_group><h3>健康修護的植物油及植萃</h3><p>• 暢銷經典產品、專為東方人設計</p><p>• 修護成分讓肌膚及頭皮健康</p></text_group><text_group><h3>乳霜洗髮乳 (無矽靈)</h3><p>• 荷荷芭油及當藥等植萃，讓秀髮免於吹風整燙傷害</p><p>• 酪梨油讓頭皮更健康</p></text_group>',
+        'img': 'asset/p5-1.png',
+        'spec': ['spec1','spec9','spec4'],
+        'type': ['洗髮乳-檀香', '沐浴乳-檀香', '洗髮乳-山茶花油', '沐浴乳-乳木果油']
+      },
+      'item2': {
+        'name': '<h2>檀香沐浴乳</h2>',
+        'des': '<h2>檀香沐浴乳</h2><text_group><h3>健康修護的植物油及植萃</h3><p>• 暢銷經典產品、專為東方人設計</p><p>• 修護成分讓肌膚及頭皮健康</p></text_group><text_group><h3>檀香沐浴乳</h3><p>• 菩提樹、洋甘菊、小黃瓜等植萃，讓肌膚活力Q彈</p><p>• 親膚性配方，減緩肌膚乾裂</p></text_group>',
+        'img': 'asset/p5-2.png',
+        'spec': ['spec1','spec6'],
+        'type': ['洗髮乳-檀香', '沐浴乳-檀香', '洗髮乳-山茶花油', '沐浴乳-乳木果油']
+      },
+      'item3': {
+        'name': '<h2>檀香洗髮乳</h2>',
+        'des': '<h2>檀香洗髮乳</h2><text_group><h3>健康修護的植物油及植萃</h3><p>• 暢銷經典產品、專為東方人設計</p><p>• 修護成分讓肌膚及頭皮健康</p></text_group><text_group><h3>乳霜洗髮乳 (無矽靈)</h3><p>• 荷荷芭油及當藥等植萃，讓秀髮免於吹風整燙傷害</p><p>• 酪梨油讓頭皮更健康</p></text_group>',
+        'img': 'asset/p5-3.png',
+        'spec': ['spec1','spec9','spec4'],
+        'type': ['洗髮乳-檀香', '沐浴乳-檀香', '洗髮乳-山茶花油', '沐浴乳-乳木果油']
+      },
+      'item4': {
+        'name': '<h2>檀香沐浴乳</h2>',
+        'des': '<h2>檀香沐浴乳</h2><text_group><h3>健康修護的植物油及植萃</h3><p>• 暢銷經典產品、專為東方人設計</p><p>• 修護成分讓肌膚及頭皮健康</p></text_group><text_group><h3>乳霜洗髮乳 (無矽靈)</h3><p>• 菩提樹、洋甘菊、小黃瓜等植萃，讓肌膚活力Q彈</p><p>• 親膚性配方，減緩肌膚乾裂</p></text_group>',
+        'img': 'asset/p5-4.png',
+        'spec': ['spec1','spec6'],
+        'type': ['洗髮乳-檀香', '沐浴乳-檀香', '洗髮乳-山茶花油', '沐浴乳-乳木果油']
+      }
+    }
+  }
+  product['p1'] = p1;
+  product['p2'] = p2;
+  product['p3'] = p3;
+  product['p4'] = p4;
+  product['p5'] = p5;
+
+  var selected_item;
+  var items_length;
+  var default_item;
+
+  $('.item_group').click(function(){
+    changeProduct();
+  })
+
+  function changeProduct(){
+    $('.des_spec').html('');
+    $('.product_type').html('');
+    selected_item = $(this).attr('id');
+    default_item = 1;
+    $(this).addClass('active').siblings().removeClass('active');
+    $('.product_content').addClass('item'+default_item);
+    items_length = Object.keys(product[selected_item].items).length;
+    console.log(selected_item);
+    console.log(product[selected_item].items['item'+default_item]);
+    console.log(items_length);
+    $('#p_title').html(product[selected_item].items['item'+default_item].name);
+    $('.des_text').html(product[selected_item].items['item'+default_item].des);
+    $('.product_img').html('<img src='+product[selected_item].items['item'+default_item].img+'>');
+    $.each(product[selected_item].items['item'+default_item].spec, function(i,v){
+      $('.des_spec').append('<div class="spec_item"><img src=asset/p1_'+v+'.png></div>');
+    })
+    $.each(product[selected_item].items['item'+default_item].type, function(i,v){
+      $('.product_type').append('<div class="type_item">'+v+'</div>');
+    })
+    $('.type_item').eq((default_item-1)).addClass('chose').siblings().removeClass('chose');
+  }
+  // Change product content END
 })
 
 // Date count
@@ -62,8 +223,8 @@ var startDate = new Date(2017,5,1,00,00);
 var endDate = new Date(2017,6,31,23,59);
 var spantime = (endDate - startDate)/1000;
 window.onload = function(){
-  console.log(getString(startDate));
-  console.log(getString(endDate));
+  // console.log(getString(startDate));
+  // console.log(getString(endDate));
   setInterval(cal, 1000);
 
   // winners is active 已開獎
@@ -99,3 +260,20 @@ function cal(){
   $('#s_2').html(s.toString()[1]);
 }
 // Date count end
+
+$('.send_register').click(function(){
+  var receipt_input;
+  var receipt_array = [], receipt_obj = {};
+  var name = $('#user_name').val();
+  var phone = $('#user_tel').val();
+  var email = $('#user_mail').val();
+
+  receipt_input = $('.receipt_input').each(function(){
+    receipt_obj[$(this).attr('name')] = $(this).val();
+    // console.log(receipt_obj);
+    receipt_array.push(receipt_obj);
+  });
+
+  console.log(receipt_obj);
+  console.log(receipt_array);
+})
