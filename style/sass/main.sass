@@ -380,9 +380,11 @@ input[type="checkbox"]
       .left
         font-size: 50px
         +wh(139px, 108px)
+        flex: 50%
         @media screen and (max-width: 375px)
           font-size: 20px
           +wh(46px, 45px)
+          flex: 30%
         & p
           font-size: 24px
           @media screen and (max-width: 375px)
@@ -394,8 +396,10 @@ input[type="checkbox"]
           +wh(1px, 37px)
       .right
         font-size: 32px
+        flex: 50%
         @media screen and (max-width: 375px)
           font-size: 12px
+          flex: 70%
         &.washer
           font-size: 27px
           @media screen and (max-width: 375px)
@@ -457,11 +461,13 @@ input[type="checkbox"]
 .default_height
   height: 900px
 .hero
-  height: 900px
+  min-height: 900px
+  height: 100vh
   position: relative
   overflow: hidden
   @media screen and (max-width: 375px)
-    height: 560px
+    min-height: 560px
+    height: 100vh
   .hero_title
     +wh(556px, 112px)
     font-size: 4.75em
@@ -696,6 +702,7 @@ input[type="checkbox"]
         justify-content: flex-start
         padding: 0 29px 0 34px
         flex-direction: row
+        font-size: 22px
         @media screen and (max-width: 375px)
           font-size: 12px
           padding: 14px 13px 0 11px
@@ -722,10 +729,11 @@ input[type="checkbox"]
               margin: 22px 0 0 2px
           .date_item
             height: 74px
+            width: 100%
             // line-height: 37px
             display: flex
             flex-direction: row
-            font-size: 24px
+            // font-size: 24px
             display: flex
             flex-direction: column
             @media screen and (max-width: 375px)
@@ -736,7 +744,7 @@ input[type="checkbox"]
                 display: block
 
             & p
-              font-size: 28px
+              // font-size: 28px
               @media screen and (max-width: 375px)
                 font-size: 12px
           .gap
@@ -745,15 +753,22 @@ input[type="checkbox"]
             display: flex
             flex-direction: row
             margin-top: 18px
+            width: 100%
             @media screen and (max-width: 375px)
               flex-direction: column
               margin-top: 8px
             .date_item_group_item
-              width: 214px
+              // width: 214px
+              flex-basis: 50%
               height: 74px
-              font-size: 24px
+              font-size: 22px
               display: flex
               flex-direction: column
+              &:nth-of-type(2)
+                flex-grow: 2
+                padding-left: 60px
+                @media screen and (max-width: 375px)
+                  padding-left: 0
               @media screen and (max-width: 375px)
                 font-size: 12px
     &.gift
@@ -1223,12 +1238,27 @@ input[type="checkbox"]
         .item5
           +wh(283px, 453px)
       .arrow_group
+        display: none
+        @media screen and (max-width: 375px)
+          display: block
+        #pre_arrow
+          display: none
         .arrow
           +wh(36px, 74px)
           position: absolute
+          font-size: 10px
+          color: white
+          &.left
+            left: 10px
+            top: 35%
           &.right
-            right: 0
-            top: 50%
+            right: 10px
+            top: 35%
+          &.left, &.right
+            img
+              width: 13px
+              display: block
+              margin: 0 auto 8px
       .product_type
         // +wh(192px, 126px)
         +wh(163px, 126px)

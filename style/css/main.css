@@ -588,12 +588,14 @@ input[type="checkbox"] {
   font-size: 50px;
   width: 139px;
   height: 108px;
+  flex: 50%;
 }
 @media screen and (max-width: 375px) {
   .grid.gift .gift_name .left {
     font-size: 20px;
     width: 46px;
     height: 45px;
+    flex: 30%;
   }
 }
 .grid.gift .gift_name .left p {
@@ -617,10 +619,12 @@ input[type="checkbox"] {
 }
 .grid.gift .gift_name .right {
   font-size: 32px;
+  flex: 50%;
 }
 @media screen and (max-width: 375px) {
   .grid.gift .gift_name .right {
     font-size: 12px;
+    flex: 70%;
   }
 }
 .grid.gift .gift_name .right.washer {
@@ -723,13 +727,15 @@ input[type="checkbox"] {
 }
 
 .hero {
-  height: 900px;
+  min-height: 900px;
+  height: 100vh;
   position: relative;
   overflow: hidden;
 }
 @media screen and (max-width: 375px) {
   .hero {
-    height: 560px;
+    min-height: 560px;
+    height: 100vh;
   }
 }
 .hero .hero_title {
@@ -1083,6 +1089,7 @@ input[type="checkbox"] {
   justify-content: flex-start;
   padding: 0 29px 0 34px;
   flex-direction: row;
+  font-size: 22px;
 }
 @media screen and (max-width: 375px) {
   .about .grid.two_grid .method_des {
@@ -1126,9 +1133,9 @@ input[type="checkbox"] {
 }
 .about .grid.two_grid .method_des .date_group .date_item {
   height: 74px;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  font-size: 24px;
   display: flex;
   flex-direction: column;
 }
@@ -1142,9 +1149,6 @@ input[type="checkbox"] {
     display: block;
   }
 }
-.about .grid.two_grid .method_des .date_group .date_item p {
-  font-size: 28px;
-}
 @media screen and (max-width: 375px) {
   .about .grid.two_grid .method_des .date_group .date_item p {
     font-size: 12px;
@@ -1157,6 +1161,7 @@ input[type="checkbox"] {
   display: flex;
   flex-direction: row;
   margin-top: 18px;
+  width: 100%;
 }
 @media screen and (max-width: 375px) {
   .about .grid.two_grid .method_des .date_group .date_item_group {
@@ -1165,11 +1170,20 @@ input[type="checkbox"] {
   }
 }
 .about .grid.two_grid .method_des .date_group .date_item_group .date_item_group_item {
-  width: 214px;
+  flex-basis: 50%;
   height: 74px;
-  font-size: 24px;
+  font-size: 22px;
   display: flex;
   flex-direction: column;
+}
+.about .grid.two_grid .method_des .date_group .date_item_group .date_item_group_item:nth-of-type(2) {
+  flex-grow: 2;
+  padding-left: 60px;
+}
+@media screen and (max-width: 375px) {
+  .about .grid.two_grid .method_des .date_group .date_item_group .date_item_group_item:nth-of-type(2) {
+    padding-left: 0;
+  }
 }
 @media screen and (max-width: 375px) {
   .about .grid.two_grid .method_des .date_group .date_item_group .date_item_group_item {
@@ -1939,14 +1953,36 @@ input[type="checkbox"] {
   width: 283px;
   height: 453px;
 }
+.product_group .product_content .arrow_group {
+  display: none;
+}
+@media screen and (max-width: 375px) {
+  .product_group .product_content .arrow_group {
+    display: block;
+  }
+}
+.product_group .product_content .arrow_group #pre_arrow {
+  display: none;
+}
 .product_group .product_content .arrow_group .arrow {
   width: 36px;
   height: 74px;
   position: absolute;
+  font-size: 10px;
+  color: white;
+}
+.product_group .product_content .arrow_group .arrow.left {
+  left: 10px;
+  top: 35%;
 }
 .product_group .product_content .arrow_group .arrow.right {
-  right: 0;
-  top: 50%;
+  right: 10px;
+  top: 35%;
+}
+.product_group .product_content .arrow_group .arrow.left img, .product_group .product_content .arrow_group .arrow.right img {
+  width: 13px;
+  display: block;
+  margin: 0 auto 8px;
 }
 .product_group .product_content .product_type {
   width: 163px;
