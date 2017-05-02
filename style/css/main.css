@@ -78,6 +78,10 @@ nav {
   position: relative;
   display: flex;
   align-items: center;
+  top: 0;
+/*  position: fixed;
+  
+  z-index: 50;*/
 }
 @media screen and (max-width: 375px) {
   nav {
@@ -737,6 +741,7 @@ input[type="checkbox"] {
   height: 100vh;
   position: relative;
   overflow: hidden;
+  /*padding-top: 70px;*/
 }
 @media screen and (max-width: 375px) {
   .hero {
@@ -1466,6 +1471,7 @@ input[type="checkbox"] {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 @media screen and (max-width: 375px) {
   .register_content .receipt {
@@ -1514,14 +1520,28 @@ input[type="checkbox"] {
   right: 0;
   top: 80px;
 }
+
+.add_receipt.after_click{
+  top: initial;
+  bottom: 32px;
+}
+
 @media screen and (max-width: 375px) {
   .register_content .add_receipt {
     width: 32px;
     height: 33px;
     background-size: 32px 33px;
-    top: 40px;
+    /*top: 40px;*/
+    top: initial;
+    bottom: 7px;
+  }
+
+  .add_receipt.after_click{
+    bottom: 10px;
   }
 }
+
+
 .register_content .check {
   width: 721px;
   height: 21px;
@@ -1757,6 +1777,9 @@ input[type="checkbox"] {
   width: 130px;
   height: 130px;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border-color: white;
+  border-radius: 50%;
 }
 .product_group .product_list .item_group .item.active {
   border: 4px double white;
@@ -1824,7 +1847,8 @@ input[type="checkbox"] {
   }
 }
 .product_group .product_list .item_group .item.item1.active, .product_group .product_list .item_group .item.item2.active, .product_group .product_list .item_group .item.item3.active, .product_group .product_list .item_group .item.item4.active, .product_group .product_list .item_group .item.item5.active {
-  background-size: 60%;
+  /*background-size: 60%;*/
+  transform: scale(1.2);
 }
 .product_group .product_content {
   width: 100%;
@@ -1858,6 +1882,8 @@ input[type="checkbox"] {
   width: 410px;
   height: 379px;
   margin-top: 74px;
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (max-width: 375px) {
   .product_group .product_content .product_des {
@@ -1873,6 +1899,7 @@ input[type="checkbox"] {
   color: white;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 @media screen and (max-width: 375px) {
   .product_group .product_content .product_des .des_text {
@@ -1919,7 +1946,7 @@ input[type="checkbox"] {
   height: 75px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  /*justify-content: space-around;*/
   margin-top: 39px;
 }
 @media screen and (max-width: 375px) {
@@ -1927,16 +1954,23 @@ input[type="checkbox"] {
     width: 190px;
     height: 40px;
     margin: 16px auto 0;
+    justify-content: center;
+  }
+
+  .spec_item:last-child{
+    margin: 0;
   }
 }
 .product_group .product_content .product_des .des_spec .spec_item {
   width: 74px;
   height: 74px;
+  margin-right: 16px;
 }
 @media screen and (max-width: 375px) {
   .product_group .product_content .product_des .des_spec .spec_item {
     width: 40px;
     height: 40px;
+    margin-right: 7px;
   }
 }
 .product_group .product_content .product_des .des_spec .spec_item img {
@@ -2017,6 +2051,7 @@ input[type="checkbox"] {
   align-self: flex-end;
   text-align: right;
   margin-bottom: 40px;
+  justify-content: flex-end;
 }
 @media screen and (max-width: 375px) {
   .product_group .product_content .product_type {
@@ -2029,6 +2064,7 @@ input[type="checkbox"] {
   color: white;
   line-height: 27px;
   font-size: 12px;
+  margin-top: 15px;
 }
 .product_group .product_content .product_type .type_item.chose {
   font-size: 18px;
@@ -2047,6 +2083,8 @@ input[type="checkbox"] {
   background-size: 16px 16px;
   background-position: center bottom;
   margin-left: 10px;
+  position: relative;
+  top: 3px;
 }
 
 .sale {

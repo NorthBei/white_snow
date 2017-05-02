@@ -37,7 +37,8 @@ $(function(){
 
   // add receipt input
   $('.add_receipt').click(function(){
-    var receipt_input = $('<input type="text" class="receipt_input" name="receipt" placeholder="請輸入發票號碼" onfocus=this.placeholder="" onblur=this.placeholder="請輸入發票編號">');
+    $(this).addClass("after_click");
+    var receipt_input = $('<input type="text" class="receipt_input" placeholder="請輸入發票號碼">');
     $('.receipt').css('height', 'auto');
     $('.register').css('height', 'auto');
     $('.register_content').css('height', 'auto');
@@ -45,6 +46,26 @@ $(function(){
     $('.receipt_input_group').append(receipt_input);
   })
   //
+
+  $('.register_content input[type=text]').focus(function(){
+    var ele = $(this);
+    var placeholder = ele.attr("placeholder");
+    ele.attr("placeholder","");
+    ele.data("placeholder",placeholder);
+  });
+
+  $('.register_content input[type=text]').blur(function(){
+      var ele = $(this);
+      var placeholder = ele.data("placeholder");
+      ele.attr("placeholder",placeholder);
+  });
+
+  $('.next_page').click(function(){
+    var height = $('#hero').height();
+    $('html, body').animate({
+        scrollTop: height
+    }, 500);
+  });
 
 
   var clipboard = new Clipboard('#copy_mail');
