@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "https://fonts.googleapis.com/css?family=Pinyon+Script";
 @import "https://fonts.googleapis.com/css?family=Noto+Sans";
 button {
@@ -51,6 +52,10 @@ a {
   margin: 0;
 }
 
+body {
+  font-family: "微軟正黑體";
+}
+
 .social {
   width: 103px;
   height: 44px;
@@ -78,12 +83,18 @@ nav {
   position: relative;
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  background: #F7AAB5;
+  transition: transform 0.3s ease-in-out;
 }
 @media screen and (max-width: 375px) {
   nav {
     height: 44px;
     background-color: rgba(239, 146, 174, 0.3);
     display: inline-block;
+    background: #f9aeb6;
   }
 }
 nav .menu, nav .show_time {
@@ -229,10 +240,10 @@ nav ul li.social {
   margin-left: 63.1vw;
   line-height: 32px;
   color: white;
-  position: absolute;
+  position: fixed;
   top: 19px;
   right: 5.5vw;
-  z-index: 2;
+  z-index: 51;
 }
 @media screen and (max-width: 375px) {
   .time_group {
@@ -737,11 +748,13 @@ input[type="checkbox"] {
   height: 100vh;
   position: relative;
   overflow: hidden;
+  padding-top: 70px;
 }
 @media screen and (max-width: 375px) {
   .hero {
     min-height: 560px;
     height: 100vh;
+    padding-top: 44px;
   }
 }
 .hero .hero_title {
@@ -769,9 +782,8 @@ input[type="checkbox"] {
 }
 .hero .hero_title::after {
   content: "Love Mummy";
-  width: 193px;
   height: 42px;
-  font-family: "PinyonScript";
+  font-family: "Pinyon Script";
   font-size: 34px;
   letter-spacing: 1.5px;
   opacity: 0.75;
@@ -779,7 +791,7 @@ input[type="checkbox"] {
   position: absolute;
   text-shadow: none;
   left: 180px;
-  top: -33px;
+  top: -38px;
 }
 @media screen and (max-width: 375px) {
   .hero .hero_title::after {
@@ -870,16 +882,35 @@ input[type="checkbox"] {
   background: url(../../asset/milk-icon-btn.png) no-repeat;
   background-size: 86px 135px;
   background-position: left center;
+  position: relative;
 }
 @media screen and (max-width: 375px) {
   .hero .hero_product .milk {
     background-size: 42px 66px;
   }
 }
+.hero .hero_product .milk::after {
+  content: url(../../asset/text1.png);
+  background-size: 57px 47px;
+  position: absolute;
+  top: -17px;
+  right: -28px;
+  opacity: 0;
+}
+@media screen and (max-width: 375px) {
+  .hero .hero_product .milk::after {
+    display: none;
+  }
+}
+.hero .hero_product .milk:hover::after {
+  opacity: 1;
+  animation: bounce 2s ease;
+}
 .hero .hero_product .acid {
   background: url(../../asset/acid-icon-btn.png) no-repeat;
   background-size: 110px 109px;
   background-position: center center;
+  position: relative;
 }
 @media screen and (max-width: 375px) {
   .hero .hero_product .acid {
@@ -887,26 +918,79 @@ input[type="checkbox"] {
     background-position: center bottom;
   }
 }
+.hero .hero_product .acid::after {
+  content: url(../../asset/text2.png);
+  background-size: 57px 47px;
+  position: absolute;
+  top: -17px;
+  right: -28px;
+  opacity: 0;
+}
+@media screen and (max-width: 375px) {
+  .hero .hero_product .acid::after {
+    display: none;
+  }
+}
+.hero .hero_product .acid:hover::after {
+  opacity: 1;
+  animation: bounce 2s ease;
+}
 .hero .hero_product .moisturizer {
   background: url(../../asset/moisturizer-icon-btn.png) no-repeat;
   background-size: 56px 122px;
   background-position: center center;
+  position: relative;
 }
 @media screen and (max-width: 375px) {
   .hero .hero_product .moisturizer {
     background-size: 35px 72px;
   }
 }
+.hero .hero_product .moisturizer::after {
+  content: url(../../asset/text3.png);
+  background-size: 57px 47px;
+  position: absolute;
+  top: -17px;
+  right: -28px;
+  opacity: 0;
+}
+@media screen and (max-width: 375px) {
+  .hero .hero_product .moisturizer::after {
+    display: none;
+  }
+}
+.hero .hero_product .moisturizer:hover::after {
+  opacity: 1;
+  animation: bounce 2s ease;
+}
 .hero .hero_product .zen {
   background: url(../../asset/zen-icon-btn.png) no-repeat;
   background-size: 82px 126px;
   background-position: center center;
+  position: relative;
 }
 @media screen and (max-width: 375px) {
   .hero .hero_product .zen {
     background-size: 40px 62px;
     background-position: center bottom;
   }
+}
+.hero .hero_product .zen::after {
+  content: url(../../asset/text4.png);
+  background-size: 57px 47px;
+  position: absolute;
+  top: -17px;
+  right: -28px;
+  opacity: 0;
+}
+@media screen and (max-width: 375px) {
+  .hero .hero_product .zen::after {
+    display: none;
+  }
+}
+.hero .hero_product .zen:hover::after {
+  opacity: 1;
+  animation: bounce 2s ease;
 }
 .hero .hero_product .sandalwood {
   background: url(../../asset/sandalwood-icon-btn.png) no-repeat;
@@ -962,6 +1046,9 @@ input[type="checkbox"] {
   letter-spacing: 0.5px;
   color: white;
   line-height: 27px;
+  display: block;
+  text-align: center;
+  padding-top: 14px;
 }
 .hero .rigester:hover {
   transition: background-image 1000ms linear;
@@ -1478,6 +1565,16 @@ input[type="checkbox"] {
   flex-direction: column;
   margin-left: 25px;
   margin-left: 8px;
+  position: relative;
+}
+.register_content .receipt .receipt_input_group::after {
+  content: "資料未輸入";
+  color: #F5515F;
+  font-size: 14px;
+  position: absolute;
+  bottom: 5px;
+  left: 45%;
+  opacity: 0;
 }
 @media screen and (max-width: 375px) {
   .register_content .receipt .receipt_input_group {
@@ -1519,7 +1616,17 @@ input[type="checkbox"] {
     width: 32px;
     height: 33px;
     background-size: 32px 33px;
-    top: 40px;
+    top: initial;
+    bottom: 250px;
+  }
+}
+.register_content .add_receipt.after_click {
+  top: initial;
+  bottom: 495px;
+}
+@media screen and (max-width: 375px) {
+  .register_content .add_receipt.after_click {
+    bottom: 400px;
   }
 }
 .register_content .check {
@@ -1528,6 +1635,7 @@ input[type="checkbox"] {
   font-size: 14px;
   color: #4A4A4A;
   margin-left: 117px;
+  position: relative;
 }
 @media screen and (max-width: 375px) {
   .register_content .check {
@@ -1573,6 +1681,15 @@ input[type="checkbox"] {
 .register_content .info .info_group.name {
   width: 361px;
   height: 48px;
+  position: relative;
+}
+.register_content .info .info_group.name.showerrow::after {
+  content: "請輸入姓名";
+  color: #F5515F;
+  font-size: 14px;
+  position: absolute;
+  bottom: -25px;
+  left: 55%;
 }
 @media screen and (max-width: 375px) {
   .register_content .info .info_group.name {
@@ -1585,6 +1702,16 @@ input[type="checkbox"] {
   width: 441px;
   height: 48px;
   margin-left: 25px;
+  position: relative;
+}
+.register_content .info .info_group.phone.showerrow::after {
+  content: "請輸入手機";
+  color: #F5515F;
+  font-size: 14px;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  opacity: 0;
 }
 @media screen and (max-width: 375px) {
   .register_content .info .info_group.phone {
@@ -1596,6 +1723,16 @@ input[type="checkbox"] {
 .register_content .info .info_group.email {
   width: 846px;
   height: 48px;
+  position: relative;
+}
+.register_content .info .info_group.email.showerrow::after {
+  content: "請輸入email";
+  color: #F5515F;
+  font-size: 14px;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  opacity: 0;
 }
 @media screen and (max-width: 375px) {
   .register_content .info .info_group.email {
@@ -1622,6 +1759,7 @@ input[type="checkbox"] {
 .register_content .info .info_group .info_input.name {
   margin-left: 25px;
   width: 253px;
+  position: relative;
 }
 @media screen and (max-width: 375px) {
   .register_content .info .info_group .info_input.name {
@@ -1757,6 +1895,9 @@ input[type="checkbox"] {
   width: 130px;
   height: 130px;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border-color: white;
+  border-radius: 50%;
 }
 .product_group .product_list .item_group .item.active {
   border: 4px double white;
@@ -1824,7 +1965,7 @@ input[type="checkbox"] {
   }
 }
 .product_group .product_list .item_group .item.item1.active, .product_group .product_list .item_group .item.item2.active, .product_group .product_list .item_group .item.item3.active, .product_group .product_list .item_group .item.item4.active, .product_group .product_list .item_group .item.item5.active {
-  background-size: 60%;
+  transform: scale(1.2);
 }
 .product_group .product_content {
   width: 100%;
@@ -1858,6 +1999,8 @@ input[type="checkbox"] {
   width: 410px;
   height: 379px;
   margin-top: 74px;
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (max-width: 375px) {
   .product_group .product_content .product_des {
@@ -1873,6 +2016,7 @@ input[type="checkbox"] {
   color: white;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 @media screen and (max-width: 375px) {
   .product_group .product_content .product_des .des_text {
@@ -1919,7 +2063,6 @@ input[type="checkbox"] {
   height: 75px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   margin-top: 39px;
 }
 @media screen and (max-width: 375px) {
@@ -1927,16 +2070,22 @@ input[type="checkbox"] {
     width: 190px;
     height: 40px;
     margin: 16px auto 0;
+    justify-content: center;
   }
 }
 .product_group .product_content .product_des .des_spec .spec_item {
   width: 74px;
   height: 74px;
+  margin-right: 16px;
 }
 @media screen and (max-width: 375px) {
   .product_group .product_content .product_des .des_spec .spec_item {
     width: 40px;
     height: 40px;
+    margin-right: 7px;
+  }
+  .product_group .product_content .product_des .des_spec .spec_item:last-child {
+    margin: 0;
   }
 }
 .product_group .product_content .product_des .des_spec .spec_item img {
@@ -2029,6 +2178,8 @@ input[type="checkbox"] {
   color: white;
   line-height: 27px;
   font-size: 12px;
+  margin-top: 15px;
+  cursor: pointer;
 }
 .product_group .product_content .product_type .type_item.chose {
   font-size: 18px;
@@ -2047,6 +2198,8 @@ input[type="checkbox"] {
   background-size: 16px 16px;
   background-position: center bottom;
   margin-left: 10px;
+  position: relative;
+  top: 3px;
 }
 
 .sale {
@@ -2424,10 +2577,11 @@ input[type="checkbox"] {
   height: 50px;
   background: url(../../asset/totop.png) no-repeat;
   background-size: 50px 50px;
-  position: absolute;
+  position: fixed;
   bottom: 15px;
-  right: 80px;
+  right: 77px;
   cursor: pointer;
+  z-index: 99999;
 }
 @media screen and (max-width: 375px) {
   .winners .totop {

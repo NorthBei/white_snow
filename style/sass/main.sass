@@ -6,7 +6,8 @@
   box-sizing: border-box
   padding: 0
   margin: 0
-
+body
+  font-family: "微軟正黑體"
 // Global
 .social
   +wh(103px, 44px)
@@ -28,10 +29,16 @@ nav
   position: relative
   display: flex
   align-items: center
+  position: fixed
+  top: 0
+  z-index: 50
+  background: #F7AAB5
+  transition: transform 0.3s ease-in-out
   @media screen and (max-width: 375px)
     height: 44px
     background-color: rgba(239, 146, 174, 0.3)
     display: inline-block
+    background: #f9aeb6
   .menu, .show_time
     display: none
     @media screen and (max-width: 375px)
@@ -127,10 +134,11 @@ nav
   margin-left: 63.1vw
   line-height: 32px
   color: white
-  position: absolute
+  // position: absolute
+  position: fixed
   top: 19px
   right: 5.5vw
-  z-index: 2
+  z-index: 51
   @media screen and (max-width: 375px)
     display: none
     background: #F092AE
@@ -469,9 +477,11 @@ input[type="checkbox"]
   height: 100vh
   position: relative
   overflow: hidden
+  padding-top: 70px
   @media screen and (max-width: 375px)
     min-height: 560px
     height: 100vh
+    padding-top: 44px
   .hero_title
     +wh(556px, 112px)
     font-size: 4.75em
@@ -492,8 +502,9 @@ input[type="checkbox"]
       margin-top: 63px
     &::after
       content: 'Love Mummy'
-      +wh(193px, 42px)
-      font-family: 'PinyonScript'
+      // +wh(193px, 42px)
+      height: 42px
+      font-family: "Pinyon Script"
       font-size: 34px
       letter-spacing: 1.5px
       opacity: .75
@@ -501,7 +512,7 @@ input[type="checkbox"]
       position: absolute
       text-shadow: none
       left: 180px
-      top: -33px
+      top: -38px
       @media screen and (max-width: 375px)
         +wh(136px, 30px)
         font-size: 24px
@@ -560,28 +571,80 @@ input[type="checkbox"]
       background: url(../../asset/milk-icon-btn.png) no-repeat
       background-size: 86px 135px
       background-position: left center
+      position: relative
       @media screen and (max-width: 375px)
         background-size: 42px 66px
+      &::after
+        content: url(../../asset/text1.png)
+        background-size: 57px 47px
+        position: absolute
+        top: -17px
+        right: -28px
+        opacity: 0
+        @media screen and (max-width: 375px)
+          display: none
+      &:hover::after
+        opacity: 1
+        animation: bounce 2s ease
     .acid
       background: url(../../asset/acid-icon-btn.png) no-repeat
       background-size: 110px 109px
       background-position: center center
+      position: relative
       @media screen and (max-width: 375px)
         background-size: 54px
         background-position: center bottom
+      &::after
+        content: url(../../asset/text2.png)
+        background-size: 57px 47px
+        position: absolute
+        top: -17px
+        right: -28px
+        opacity: 0
+        @media screen and (max-width: 375px)
+          display: none
+      &:hover::after
+        opacity: 1
+        animation: bounce 2s ease
     .moisturizer
       background: url(../../asset/moisturizer-icon-btn.png) no-repeat
       background-size: 56px 122px
       background-position: center center
+      position: relative
       @media screen and (max-width: 375px)
         background-size: 35px 72px
+      &::after
+        content: url(../../asset/text3.png)
+        background-size: 57px 47px
+        position: absolute
+        top: -17px
+        right: -28px
+        opacity: 0
+        @media screen and (max-width: 375px)
+          display: none
+      &:hover::after
+        opacity: 1
+        animation: bounce 2s ease
     .zen
       background: url(../../asset/zen-icon-btn.png) no-repeat
       background-size: 82px 126px
       background-position: center center
+      position: relative
       @media screen and (max-width: 375px)
         background-size: 40px 62px
         background-position: center bottom
+      &::after
+        content: url(../../asset/text4.png)
+        background-size: 57px 47px
+        position: absolute
+        top: -17px
+        right: -28px
+        opacity: 0
+        @media screen and (max-width: 375px)
+          display: none
+      &:hover::after
+        opacity: 1
+        animation: bounce 2s ease
     .sandalwood
       background: url(../../asset/sandalwood-icon-btn.png) no-repeat
       background-size: 89px 110px
@@ -623,6 +686,9 @@ input[type="checkbox"]
     letter-spacing: 0.5px
     color: white
     line-height: 27px
+    display: block
+    text-align: center
+    padding-top: 14px
     &:hover
       transition: background-image 1000ms linear
       background-image: linear-gradient(79deg, #f39eb2, #ffbeba)
@@ -957,6 +1023,15 @@ input[type="checkbox"]
         flex-direction: column
         margin-left: 25px
         margin-left: 8px
+        position: relative
+        &::after
+          content: "資料未輸入"
+          color: #F5515F
+          font-size: 14px
+          position: absolute
+          bottom: 5px
+          left: 45%
+          opacity: 0
         @media screen and (max-width: 375px)
           justify-content: space-around
         .receipt_input
@@ -983,12 +1058,23 @@ input[type="checkbox"]
       @media screen and (max-width: 375px)
         +wh(32px, 33px)
         background-size: 32px 33px
-        top: 40px
+        // top: 40px
+        top: initial
+        // bottom: 7px
+        bottom: 250px
+      &.after_click
+        top: initial
+        // bottom: 32px
+        bottom: 495px
+        @media screen and (max-width: 375px)
+          // bottom: 10px
+          bottom: 400px
     .check
       +wh(721px, 21px)
       font-size: 14px
       color: #4A4A4A
       margin-left: 117px
+      position: relative
       @media screen and (max-width: 375px)
         +wh(289px, 46px)
         font-size: 10px
@@ -1016,17 +1102,44 @@ input[type="checkbox"]
         flex-direction: row
         &.name
           +wh(361px, 48px)
+          position: relative
+          &.showerrow::after
+            content: "請輸入姓名"
+            color: #F5515F
+            font-size: 14px
+            position: absolute
+            bottom: -25px
+            left: 55%
+            // opacity: 0
           @media screen and (max-width: 375px)
             +wh(100%, 32px)
             margin-bottom: 10px
         &.phone
           +wh(441px, 48px)
           margin-left: 25px
+          position: relative
+          &.showerrow::after
+            content: "請輸入手機"
+            color: #F5515F
+            font-size: 14px
+            position: absolute
+            bottom: -25px
+            left: 50%
+            opacity: 0
           @media screen and (max-width: 375px)
             +wh(100%, 32px)
             margin: 0 0 10px 0
         &.email
           +wh(846px, 48px)
+          position: relative
+          &.showerrow::after
+            content: "請輸入email"
+            color: #F5515F
+            font-size: 14px
+            position: absolute
+            bottom: -25px
+            left: 50%
+            opacity: 0
           @media screen and (max-width: 375px)
             +wh(100%, 32px)
             margin-bottom: 10px
@@ -1043,6 +1156,7 @@ input[type="checkbox"]
           &.name
             margin-left: 25px
             width: 253px
+            position: relative
             @media screen and (max-width: 375px)
               width: 251px
               margin-left: 8px
@@ -1126,6 +1240,9 @@ input[type="checkbox"]
         .item
           +wh(130px, 130px)
           cursor: pointer
+          transition: all 0.5s ease-in-out
+          border-color: white
+          border-radius: 50%
           &.active
             border: 4px double white
             border-radius: 50%
@@ -1165,7 +1282,8 @@ input[type="checkbox"]
               background-size: 40px 49px
           &.item1,&.item2,&.item3,&.item4,&.item5
             &.active
-              background-size: 60%
+              // background-size: 60%
+              transform: scale(1.2)
     .product_content
       +wh(100%, 492px)
       display: flex
@@ -1188,6 +1306,8 @@ input[type="checkbox"]
       .product_des
         +wh(410px, 379px)
         margin-top: 74px
+        display: flex
+        flex-direction: column
         @media screen and (max-width: 375px)
           +wh(332px, 110px)
           margin: 32px auto 0
@@ -1197,6 +1317,7 @@ input[type="checkbox"]
           color: white
           display: flex
           flex-direction: column
+          flex: 1
           @media screen and (max-width: 375px)
             width: 100%
             flex-direction: row
@@ -1226,15 +1347,20 @@ input[type="checkbox"]
           +wh(360px, 75px)
           display: flex
           flex-direction: row
-          justify-content: space-around
+          // justify-content: space-around
           margin-top: 39px
           @media screen and (max-width: 375px)
             +wh(190px, 40px)
             margin: 16px auto 0
+            justify-content: center
           .spec_item
             +wh(74px, 74px)
+            margin-right: 16px
             @media screen and (max-width: 375px)
               +wh(40px, 40px)
+              margin-right: 7px
+              &:last-child
+                margin: 0
             img
               +wh(100%, 100%)
       .product_img
@@ -1294,6 +1420,8 @@ input[type="checkbox"]
           color: white
           line-height: 27px
           font-size: 12px
+          margin-top: 15px
+          cursor: pointer
           &.chose
             font-size: 18px
           &.chose::after
@@ -1309,6 +1437,8 @@ input[type="checkbox"]
             background-size: 16px 16px
             background-position: center bottom
             margin-left: 10px
+            position: relative
+            top: 3px
 .sale
   height: 474px
   background: url(../../asset/register_bg.png) no-repeat
@@ -1550,10 +1680,11 @@ input[type="checkbox"]
     +wh(50px, 50px)
     background: url(../../asset/totop.png) no-repeat
     background-size: 50px 50px
-    position: absolute
+    position: fixed
     bottom: 15px
-    right: 80px
+    right: 77px
     cursor: pointer
+    z-index: 99999
     @media screen and (max-width: 375px)
       bottom: 10px
       right: calc((100% - 50px) / 2)

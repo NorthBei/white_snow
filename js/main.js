@@ -1,3 +1,12 @@
+$(window).scroll(function(){
+  //Scorll to top button
+  if( $(this).scrollTop() > 830 ){
+    $("#totop").fadeIn("fast");
+  }else {
+    $("#totop").stop().fadeOut("fast");
+  }
+});
+
 $(function(){
   // scroll to top
   $("#totop").click(function(){
@@ -38,14 +47,42 @@ $(function(){
   // add receipt input
   $('.add_receipt').click(function(){
     var receipt_input = $('<input type="text" class="receipt_input" name="receipt" placeholder="請輸入發票號碼" onfocus=this.placeholder="" onblur=this.placeholder="請輸入發票編號">');
+    $(this).addClass("after_click");
+    // var receipt_input = $('<input type="text" class="receipt_input" name="receipt" placeholder="請輸入發票號碼">');
     $('.receipt').css('height', 'auto');
     $('.register').css('height', 'auto');
     $('.register_content').css('height', 'auto');
-    $('.send_register').css('margin-bottom', '10px');
+    $('.send_register').css('margin-bottom', '30px');
     $('.receipt_input_group').append(receipt_input);
+    // input_register();
   })
   //
+  // input_register();
 
+  $('.next_page').click(function(){
+    var height = $('#hero').height();
+    $('html, body').animate({
+        scrollTop: height
+    }, 500);
+  });
+
+  if($(window).width() < 380){
+
+    var lastScrollTop = 0;
+    $(window).scroll(function(event){
+      var st = $(this).scrollTop();
+      if (st > lastScrollTop){
+         // downscroll code
+         $('nav').css("transform","translateY(-100%)");
+         console.log("downscroll code");
+      } else {
+        // upscroll code
+        $('nav').css("transform","translateY(0%)");
+        console.log("upscroll code");
+      }
+      lastScrollTop = st;
+    });
+  }
 
   var clipboard = new Clipboard('#copy_mail');
     clipboard.on('success', function(e) {
@@ -55,6 +92,23 @@ $(function(){
 
     e.clearSelection();
 });
+
+function input_register(){
+  $('.register_content input[type=text]').focus(function(){
+    var ele = $(this);
+    var placeholder = ele.attr("placeholder");
+    ele.data("placeholder",placeholder);
+    ele.attr("placeholder","");
+    console.log(placeholder);
+  });
+
+  $('.register_content input[type=text]').blur(function(){
+      var ele = $(this);
+      var placeholder = ele.data("placeholder");
+      ele.attr("placeholder",placeholder);
+      console.log(placeholder);
+  });
+}
 
   // Change product content
   var product = [];
@@ -198,10 +252,10 @@ $(function(){
   product['p4'] = p4;
   product['p5'] = p5;
 
-  var selected_item;
+  var selected_item = "p1";
   var items_length = 4;
   var default_item = 1;
-
+  var hero_selected_item;
   $('.item').click(function(){
     $('#next_arrow').css('display', 'block');
     $('#pre_arrow').css('display', 'none');
@@ -347,9 +401,17 @@ $('.send_register').click(function(){
       receipt_array.push(receipt_obj);
     });
 
-  }else {
-    alert('必填');
   }
+  // else if(name == ""){
+  //   $('#user_name').addClass('error');
+  //   $('.register_content .info .info_group.name').toggleClass('showerrow');
+  // }else if (phone=="") {
+  //   $('#user_tel').addClass('error');
+  //   $('.register_content .info .info_group.phone').toggleClass('showerrow');
+  // }else if (email=="") {
+  //   $('#user_tel').addClass('error');
+  //   $('.register_content .info .info_group.email').toggleClass('showerrow');
+  // }
 
   console.log(receipt_array);
 

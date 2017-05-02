@@ -29,7 +29,7 @@
     <section class="page_bg hero" id="hero">
       <nav>
         <div class="menu" id="open_menu"></div>
-        <div class="logo"></div>
+        <a href="#" class="scroll"><div class="logo"></div></a>
         <ul>
           <li class="close" id="close_menu"></li>
           <li><a href="#about" class="scroll">活動辦法</a></li>
@@ -52,14 +52,14 @@
         <div class="during_item to"></div>
       </div>
       <div class="hero_product">
-        <div class="hero_product_item milk"></div>
-        <div class="hero_product_item acid"></div>
-        <div class="hero_product_item moisturizer"></div>
-        <div class="hero_product_item zen"></div>
-        <div class="hero_product_item sandalwood"></div>
+        <a href="#product" class="scroll hero_product_item milk"></a>
+        <a href="#product" class="scroll hero_product_item acid"></a>
+        <a href="#product" class="scroll hero_product_item moisturizer"></a>
+        <a href="#product" class="scroll hero_product_item zen"></a>
+        <a href="#product" class="scroll hero_product_item sandalwood"></a>
       </div>
       <p class="hero_des">在活動期間內購買白雪企業任一品項，至活動網站登錄發票號碼，就有機會抽中寵愛好禮！</p>
-      <button class="rigester">登入發票號碼</button>
+      <a href="#register" class="rigester">登入發票號碼</a>
       <button class="next_page"></button>
       <div class="bubble bubble141 b01"></div>
       <div class="bubble bubble40 b02"></div>
@@ -191,8 +191,8 @@
             <input type="text" class="receipt_input" name="receipt" placeholder="請輸入發票編號" onfocus="this.placeholder=''" onblur="this.placeholder = '請輸入發票編號'">
             <input type="text" class="receipt_input" name="receipt" placeholder="請輸入發票編號" onfocus="this.placeholder=''" onblur="this.placeholder = '請輸入發票編號'">
           </div>
+          <button type="button" class="add_receipt"></button>
         </div>
-        <button type="button" class="add_receipt"></button>
         <div class="check">
           <input type="checkbox">
           我已核對發票範例，確認輸入有效發票，並保留發票正本（需顯示購買白雪產品品名之明細），以利兌獎。
@@ -201,15 +201,15 @@
         <div class="info">
           <div class="info_group name">
             <div class="receipt_title">真實姓名</div>
-            <input type="text" id="user_name" class="info_input name" placeholder="輸入姓名（必填）">
+            <input type="text" id="user_name" class="info_input name" placeholder="輸入姓名（必填）" onfocus="this.placeholder=''" onblur="this.placeholder = '輸入姓名（必填）'">
           </div>
           <div class="info_group phone">
             <div class="receipt_title">手機</div>
-            <input type="text" id="user_tel" class="info_input phone" placeholder="輸入手機號碼（必填）">
+            <input type="text" id="user_tel" class="info_input phone" placeholder="輸入手機號碼（必填）" onfocus="this.placeholder=''" onblur="this.placeholder = '輸入手機號碼（必填）'">
           </div>
           <div class="info_group email">
             <div class="receipt_title">Email</div>
-            <input type="text" id="user_mail" class="info_input email" placeholder="請輸入Email（必填）">
+            <input type="text" id="user_mail" class="info_input email" placeholder="請輸入Email（必填）" onfocus="this.placeholder=''" onblur="this.placeholder = '請輸入Email（必填）'">
           </div>
         </div>
         <div class="check">
