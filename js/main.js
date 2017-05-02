@@ -67,7 +67,7 @@ $(function(){
     }, 500);
   });
 
-  if(window.width() > 380){
+  if($(window).width() < 380){
 
     var lastScrollTop = 0;
     $(window).scroll(function(event){
