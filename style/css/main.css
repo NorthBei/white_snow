@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Pinyon+Script";
+@import url("https://fonts.googleapis.com/css?family=Pinyon+Script"); 
 @import "https://fonts.googleapis.com/css?family=Noto+Sans";
 button {
   background: none;
@@ -30,6 +30,10 @@ section {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+}
+
+body{
+  font-family: "微軟正黑體";
 }
 
 a {
@@ -78,16 +82,20 @@ nav {
   position: relative;
   display: flex;
   align-items: center;
-  top: 0;
-/*  position: fixed;
+
   
-  z-index: 50;*/
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  background: #F7AAB5;
+  transition: transform 0.3s ease-in-out;
 }
 @media screen and (max-width: 375px) {
   nav {
     height: 44px;
     background-color: rgba(239, 146, 174, 0.3);
     display: inline-block;
+    background: #f9aeb6;
   }
 }
 nav .menu, nav .show_time {
@@ -237,6 +245,9 @@ nav ul li.social {
   top: 19px;
   right: 5.5vw;
   z-index: 2;
+
+  position: fixed;  
+  z-index: 51;
 }
 @media screen and (max-width: 375px) {
   .time_group {
@@ -741,12 +752,13 @@ input[type="checkbox"] {
   height: 100vh;
   position: relative;
   overflow: hidden;
-  /*padding-top: 70px;*/
+  padding-top: 70px;
 }
 @media screen and (max-width: 375px) {
   .hero {
     min-height: 560px;
     height: 100vh;
+    padding-top: 44px;
   }
 }
 .hero .hero_title {
@@ -763,6 +775,7 @@ input[type="checkbox"] {
   position: relative;
   margin-top: 95px;
 }
+
 @media screen and (max-width: 375px) {
   .hero .hero_title {
     width: 338px;
@@ -774,9 +787,9 @@ input[type="checkbox"] {
 }
 .hero .hero_title::after {
   content: "Love Mummy";
-  width: 193px;
+  /*width: 193px;*/
   height: 42px;
-  font-family: "PinyonScript";
+  font-family: "Pinyon Script";
   font-size: 34px;
   letter-spacing: 1.5px;
   opacity: 0.75;

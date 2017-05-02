@@ -67,6 +67,24 @@ $(function(){
     }, 500);
   });
 
+  if(window.width() > 380){
+
+    var lastScrollTop = 0;
+    $(window).scroll(function(event){
+      var st = $(this).scrollTop();
+      if (st > lastScrollTop){
+         // downscroll code
+         $('nav').css("transform","translateY(-100%)");
+         console.log("downscroll code");
+      } else {
+        // upscroll code
+        $('nav').css("transform","translateY(0%)");
+        console.log("upscroll code");
+      }
+      lastScrollTop = st;
+    });
+  }
+
 
   var clipboard = new Clipboard('#copy_mail');
     clipboard.on('success', function(e) {
