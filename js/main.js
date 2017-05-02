@@ -44,21 +44,10 @@ $(function(){
     $('.register_content').css('height', 'auto');
     $('.send_register').css('margin-bottom', '10px');
     $('.receipt_input_group').append(receipt_input);
+    input_register();
   })
   //
-
-  $('.register_content input[type=text]').focus(function(){
-    var ele = $(this);
-    var placeholder = ele.attr("placeholder");
-    ele.attr("placeholder","");
-    ele.data("placeholder",placeholder);
-  });
-
-  $('.register_content input[type=text]').blur(function(){
-      var ele = $(this);
-      var placeholder = ele.data("placeholder");
-      ele.attr("placeholder",placeholder);
-  });
+  input_register();
 
   $('.next_page').click(function(){
     var height = $('#hero').height();
@@ -94,6 +83,22 @@ $(function(){
 
     e.clearSelection();
 });
+
+function input_register(){
+  $('.register_content input[type=text]').focus(function(){
+    var ele = $(this);
+    var placeholder = ele.attr("placeholder");
+    ele.attr("placeholder","");
+    ele.data("placeholder",placeholder);
+  });
+
+  $('.register_content input[type=text]').blur(function(){
+      var ele = $(this);
+      var placeholder = ele.data("placeholder");
+      ele.attr("placeholder",placeholder);
+  });
+
+}
 
   // Change product content
   var product = [];
