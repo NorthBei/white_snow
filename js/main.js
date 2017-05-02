@@ -1,6 +1,7 @@
 $(window).scroll(function(){
   //Scorll to top button
-  if( $(this).scrollTop() > 830 ){
+  var show_topbtn = $('#hero').outerHeight() - $(window).height();
+  if( $(this).scrollTop() > show_topbtn ){
     $("#totop").fadeIn("fast");
   }else {
     $("#totop").stop().fadeOut("fast");

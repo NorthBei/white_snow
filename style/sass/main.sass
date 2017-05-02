@@ -1022,7 +1022,7 @@ input[type="checkbox"]
       display: flex
       flex-direction: row
       @media screen and (max-width: 375px)
-        +wh(100%, 73px)
+        +wh(100%, auto)
       .receipt_input_group
         display: flex
         flex-direction: column
@@ -1690,6 +1690,7 @@ input[type="checkbox"]
     right: 77px
     cursor: pointer
     z-index: 99999
+    display: none
     @media screen and (max-width: 375px)
       bottom: 10px
       right: calc((100% - 50px) / 2)
