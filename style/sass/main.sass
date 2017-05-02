@@ -38,6 +38,7 @@ nav
     height: 44px
     background-color: rgba(239, 146, 174, 0.3)
     display: inline-block
+    position: fixed
     background: #f9aeb6
   .menu, .show_time
     display: none
@@ -481,7 +482,10 @@ input[type="checkbox"]
   @media screen and (max-width: 375px)
     min-height: 560px
     height: 100vh
-    padding-top: 44px
+    // padding-top: 44px
+    padding-top: 0
+    display: flex
+    justify-content: center
   .hero_title
     +wh(556px, 112px)
     font-size: 4.75em
@@ -696,6 +700,7 @@ input[type="checkbox"]
       +wh(180px, 36px)
       margin-top: 28px
       font-size: 14px
+      padding-top: 5px
   .next_page
     +wh(50px, 50px)
     background: url(../../asset/next_page.png) no-repeat
