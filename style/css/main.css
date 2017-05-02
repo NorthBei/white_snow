@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 @charset "UTF-8";
 @import "https://fonts.googleapis.com/css?family=Pinyon+Script";
+=======
+@import url("https://fonts.googleapis.com/css?family=Pinyon+Script"); 
+>>>>>>> 6c4c73664e7e9841ac9b255706c47e5d15150459
 @import "https://fonts.googleapis.com/css?family=Noto+Sans";
 button {
   background: none;
@@ -31,6 +35,10 @@ section {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+}
+
+body{
+  font-family: "微軟正黑體";
 }
 
 a {
@@ -83,6 +91,11 @@ nav {
   position: relative;
   display: flex;
   align-items: center;
+<<<<<<< HEAD
+=======
+
+  
+>>>>>>> 6c4c73664e7e9841ac9b255706c47e5d15150459
   position: fixed;
   top: 0;
   z-index: 50;
@@ -243,6 +256,12 @@ nav ul li.social {
   position: fixed;
   top: 19px;
   right: 5.5vw;
+<<<<<<< HEAD
+=======
+  z-index: 2;
+
+  position: fixed;  
+>>>>>>> 6c4c73664e7e9841ac9b255706c47e5d15150459
   z-index: 51;
 }
 @media screen and (max-width: 375px) {
@@ -771,6 +790,7 @@ input[type="checkbox"] {
   position: relative;
   margin-top: 95px;
 }
+
 @media screen and (max-width: 375px) {
   .hero .hero_title {
     width: 338px;
@@ -782,6 +802,10 @@ input[type="checkbox"] {
 }
 .hero .hero_title::after {
   content: "Love Mummy";
+<<<<<<< HEAD
+=======
+  /*width: 193px;*/
+>>>>>>> 6c4c73664e7e9841ac9b255706c47e5d15150459
   height: 42px;
   font-family: "Pinyon Script";
   font-size: 34px;
@@ -1553,6 +1577,7 @@ input[type="checkbox"] {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 @media screen and (max-width: 375px) {
   .register_content .receipt {
@@ -1611,11 +1636,18 @@ input[type="checkbox"] {
   right: 0;
   top: 80px;
 }
+
+.add_receipt.after_click{
+  top: initial;
+  bottom: 32px;
+}
+
 @media screen and (max-width: 375px) {
   .register_content .add_receipt {
     width: 32px;
     height: 33px;
     background-size: 32px 33px;
+<<<<<<< HEAD
     top: initial;
     bottom: 250px;
   }
@@ -1627,8 +1659,19 @@ input[type="checkbox"] {
 @media screen and (max-width: 375px) {
   .register_content .add_receipt.after_click {
     bottom: 400px;
+=======
+    /*top: 40px;*/
+    top: initial;
+    bottom: 7px;
+  }
+
+  .add_receipt.after_click{
+    bottom: 10px;
+>>>>>>> 6c4c73664e7e9841ac9b255706c47e5d15150459
   }
 }
+
+
 .register_content .check {
   width: 721px;
   height: 21px;
@@ -1965,6 +2008,10 @@ input[type="checkbox"] {
   }
 }
 .product_group .product_list .item_group .item.item1.active, .product_group .product_list .item_group .item.item2.active, .product_group .product_list .item_group .item.item3.active, .product_group .product_list .item_group .item.item4.active, .product_group .product_list .item_group .item.item5.active {
+<<<<<<< HEAD
+=======
+  /*background-size: 60%;*/
+>>>>>>> 6c4c73664e7e9841ac9b255706c47e5d15150459
   transform: scale(1.2);
 }
 .product_group .product_content {
@@ -2063,6 +2110,10 @@ input[type="checkbox"] {
   height: 75px;
   display: flex;
   flex-direction: row;
+<<<<<<< HEAD
+=======
+  /*justify-content: space-around;*/
+>>>>>>> 6c4c73664e7e9841ac9b255706c47e5d15150459
   margin-top: 39px;
 }
 @media screen and (max-width: 375px) {
@@ -2071,6 +2122,13 @@ input[type="checkbox"] {
     height: 40px;
     margin: 16px auto 0;
     justify-content: center;
+<<<<<<< HEAD
+=======
+  }
+
+  .spec_item:last-child{
+    margin: 0;
+>>>>>>> 6c4c73664e7e9841ac9b255706c47e5d15150459
   }
 }
 .product_group .product_content .product_des .des_spec .spec_item {
@@ -2083,9 +2141,12 @@ input[type="checkbox"] {
     width: 40px;
     height: 40px;
     margin-right: 7px;
+<<<<<<< HEAD
   }
   .product_group .product_content .product_des .des_spec .spec_item:last-child {
     margin: 0;
+=======
+>>>>>>> 6c4c73664e7e9841ac9b255706c47e5d15150459
   }
 }
 .product_group .product_content .product_des .des_spec .spec_item img {
@@ -2166,6 +2227,7 @@ input[type="checkbox"] {
   align-self: flex-end;
   text-align: right;
   margin-bottom: 40px;
+  justify-content: flex-end;
 }
 @media screen and (max-width: 375px) {
   .product_group .product_content .product_type {
@@ -2179,7 +2241,10 @@ input[type="checkbox"] {
   line-height: 27px;
   font-size: 12px;
   margin-top: 15px;
+<<<<<<< HEAD
   cursor: pointer;
+=======
+>>>>>>> 6c4c73664e7e9841ac9b255706c47e5d15150459
 }
 .product_group .product_content .product_type .type_item.chose {
   font-size: 18px;

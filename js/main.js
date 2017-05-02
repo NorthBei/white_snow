@@ -46,18 +46,55 @@ $(function(){
 
   // add receipt input
   $('.add_receipt').click(function(){
+<<<<<<< HEAD
     var receipt_input = $('<input type="text" class="receipt_input" name="receipt" placeholder="請輸入發票號碼" onfocus=this.placeholder="" onblur=this.placeholder="請輸入發票編號">');
     $(this).addClass("after_click");
     // var receipt_input = $('<input type="text" class="receipt_input" name="receipt" placeholder="請輸入發票號碼">');
+=======
+    $(this).addClass("after_click");
+    var receipt_input = $('<input type="text" class="receipt_input" placeholder="請輸入發票號碼">');
+>>>>>>> 6c4c73664e7e9841ac9b255706c47e5d15150459
     $('.receipt').css('height', 'auto');
     $('.register').css('height', 'auto');
     $('.register_content').css('height', 'auto');
     $('.send_register').css('margin-bottom', '30px');
     $('.receipt_input_group').append(receipt_input);
+<<<<<<< HEAD
     // input_register();
   })
   //
   // input_register();
+=======
+    input_register();
+  })
+  //
+  input_register();
+
+  $('.next_page').click(function(){
+    var height = $('#hero').height();
+    $('html, body').animate({
+        scrollTop: height
+    }, 500);
+  });
+
+  if($(window).width() < 380){
+
+    var lastScrollTop = 0;
+    $(window).scroll(function(event){
+      var st = $(this).scrollTop();
+      if (st > lastScrollTop){
+         // downscroll code
+         $('nav').css("transform","translateY(-100%)");
+         console.log("downscroll code");
+      } else {
+        // upscroll code
+        $('nav').css("transform","translateY(0%)");
+        console.log("upscroll code");
+      }
+      lastScrollTop = st;
+    });
+  }
+>>>>>>> 6c4c73664e7e9841ac9b255706c47e5d15150459
 
   $('.next_page').click(function(){
     var height = $('#hero').height();
@@ -97,17 +134,27 @@ function input_register(){
   $('.register_content input[type=text]').focus(function(){
     var ele = $(this);
     var placeholder = ele.attr("placeholder");
+<<<<<<< HEAD
     ele.data("placeholder",placeholder);
     ele.attr("placeholder","");
     console.log(placeholder);
+=======
+    ele.attr("placeholder","");
+    ele.data("placeholder",placeholder);
+>>>>>>> 6c4c73664e7e9841ac9b255706c47e5d15150459
   });
 
   $('.register_content input[type=text]').blur(function(){
       var ele = $(this);
       var placeholder = ele.data("placeholder");
       ele.attr("placeholder",placeholder);
+<<<<<<< HEAD
       console.log(placeholder);
   });
+=======
+  });
+
+>>>>>>> 6c4c73664e7e9841ac9b255706c47e5d15150459
 }
 
   // Change product content
