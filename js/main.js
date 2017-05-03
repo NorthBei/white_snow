@@ -14,6 +14,13 @@ $(function(){
     $("body,html").animate({scrollTop:0},1000);
   });
   //
+  $('#nav a[class=scroll]').click(function(event){
+    event.preventDefault()
+    var id = $(this).attr("data-link");
+    var scroll_length = $(id).offset().top;
+    console.log(id,scroll_length);
+    $("body,html").animate({scrollTop:scroll_length},1000);
+  });
 
   // menu btn toggle
   $('nav #open_menu').click(function(){
@@ -57,6 +64,7 @@ $(function(){
     $('.receipt_input_group').append(receipt_input);
     // input_register();
   })
+   
   //
   // input_register();
 

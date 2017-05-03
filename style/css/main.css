@@ -1962,6 +1962,7 @@ input[type="checkbox"] {
   background: url(../../asset/product_item5.png) no-repeat;
   background-size: 77px 95px;
   background-position: center center;
+  margin-bottom: 4px;
 }
 @media screen and (max-width: 375px) {
   .product_group .product_list .item_group .item.item5 {
