@@ -1834,10 +1834,11 @@ input[type="checkbox"] {
   color: white;
   font-size: 18px;
   margin: 100px auto 0;
-  display: flex;
-  justify-content: center;
+  /*display: flex;
+  justify-content: center;*/
   font-family: "微軟正黑體";
   margin: 70px auto 0;
+  display: block;
 }
 .register_content .send_register:hover {
   transition: background-image 1000ms linear;
