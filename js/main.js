@@ -72,9 +72,13 @@ $(function(){
   });
 
   $('.remove_receipt').click(function(){
-    $(this).addClass("after_click");
+    
     // var receipt_input = $('<input type="text" class="receipt_input" name="receipt" placeholder="請輸入發票號碼">');
-    $('.receipt_input').last().remove();
+    var input = $('.receipt_input')
+    if(input.length > 1){
+      $(this).addClass("after_click");
+      input.last().remove();
+    }
     // $('.receipt').css('height', 'auto');
     // $('.register').css('height', 'auto');
     // $('.register_content').css('height', 'auto');
