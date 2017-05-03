@@ -443,6 +443,8 @@ $('.send_register').click(function(){
       console.log(receipt_obj);
       receipt_array.push(receipt_obj);
     });
+  }
+
   // }else if (name == "" & phone=="" && email=="" && receipt=="") {
   //   $('#user_mail').addClass('error');
   //   $('#user_name').addClass('error');

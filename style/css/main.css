@@ -1684,8 +1684,7 @@ input[type="checkbox"] {
 }
 @media screen and (max-width: 375px) {
   .register_content .add_receipt.after_click {
-    bottom: 400px;
-    bottom: 437px;
+    bottom: 470px;
   }
 }
 .register_content .remove_receipt {
@@ -1707,7 +1706,7 @@ input[type="checkbox"] {
 }
 @media screen and (max-width: 375px) {
   .register_content .remove_receipt.after_click {
-    bottom: 400px;
+    bottom: 470px;
   }
 }
 .register_content .check {
