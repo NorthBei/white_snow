@@ -1519,6 +1519,7 @@ input[type="checkbox"] {
 @media screen and (max-width: 375px) {
   .register {
     height: 560px;
+    height: 623px;
   }
 }
 .register_title {
@@ -1619,6 +1620,10 @@ input[type="checkbox"] {
   position: absolute;
   bottom: 3px;
   left: 45%;
+  
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -17px;
 }
 .register_content .receipt .receipt_input_group .receipt_input {
   width: 631px;
@@ -1681,6 +1686,7 @@ input[type="checkbox"] {
 @media screen and (max-width: 375px) {
   .register_content .add_receipt.after_click {
     bottom: 400px;
+    bottom: 473px;
   }
 }
 .register_content .remove_receipt {
@@ -1703,6 +1709,8 @@ input[type="checkbox"] {
 @media screen and (max-width: 375px) {
   .register_content .remove_receipt.after_click {
     bottom: 400px;
+    bottom: 473px;
+
   }
 }
 .register_content .check {
@@ -1747,12 +1755,13 @@ input[type="checkbox"] {
 @media screen and (max-width: 375px) {
   .register_content .info {
     width: 331px;
-    height: 116px;
+    height: 185px;
   }
 }
 .register_content .info .info_group {
   display: flex;
   flex-direction: row;
+  margin-bottom: 29px;
 }
 .register_content .info .info_group.name {
   width: 361px;
@@ -1766,6 +1775,10 @@ input[type="checkbox"] {
   position: absolute;
   bottom: -25px;
   left: 55%;
+
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 36px;
 }
 @media screen and (max-width: 375px) {
   .register_content .info .info_group.name {
