@@ -18,10 +18,15 @@ $(function(){
     event.preventDefault()
     var id = $(this).attr("data-link");
     var scroll_length = $(id).offset().top;
-    console.log(id,scroll_length);
+    //console.log(id,scroll_length);
     $("body,html").animate({scrollTop:scroll_length},1000);
   });
 
+  $('.hero .rigester').click(function(){
+    event.preventDefault()
+    var scroll_length = $('#register').offset().top;
+    $("body,html").animate({scrollTop:scroll_length},1000);
+  });
   // menu btn toggle
   $('nav #open_menu').click(function(){
     $('nav ul').css('display', 'inherit');

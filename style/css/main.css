@@ -352,6 +352,7 @@ input[type="checkbox"] {
   width: 5.6vw;
   height: 5.6vw;
   background-size: 5.6vw 5.6vw;
+  animation:scale 3s infinite ease-in-out;
 }
 .bubble.bubble21 {
   width: 1.4vw;
@@ -404,6 +405,7 @@ input[type="checkbox"] {
   background: url(../../asset/b04.png) no-repeat;
   background-size: auto 14.9vw;
   background-position: right;
+  animation:Floating 3s infinite ease-in-out;
 }
 .bubble.b05 {
   top: 354px;
@@ -768,7 +770,7 @@ input[type="checkbox"] {
   color: white;
   margin: 0 auto;
   text-shadow: 0px 0 8px white;
-  font-family: "NotoSansCJKtc-Medium";
+  font-family: "微軟正黑體";
   font-weight: 500;
   text-align: center;
   position: relative;
@@ -1025,7 +1027,7 @@ input[type="checkbox"] {
   animation: bounce 2s ease;
 }
 .hero .hero_des {
-  font-family: "NotoSansCJKtc";
+  font-family: "微軟正黑體";
   margin-top: 24px;
   text-align: center;
   font-size: 20px;
@@ -1052,6 +1054,7 @@ input[type="checkbox"] {
   display: block;
   text-align: center;
   padding-top: 14px;
+  font-family: "微軟正黑體";
 }
 .hero .rigester:hover {
   transition: background-image 1000ms linear;
@@ -1116,6 +1119,7 @@ input[type="checkbox"] {
 .about .grid.two_grid.method {
   z-index: 1;
   height: 222px;
+  font-family: "微軟正黑體";
 }
 @media screen and (max-width: 375px) {
   .about .grid.two_grid.method {
@@ -1135,6 +1139,7 @@ input[type="checkbox"] {
 }
 .about .grid.two_grid.date {
   height: 294px;
+  font-family: "微軟正黑體";
 }
 @media screen and (max-width: 375px) {
   .about .grid.two_grid.date {
@@ -1173,7 +1178,7 @@ input[type="checkbox"] {
   float: right;
 }
 .about .grid.two_grid .method_des {
-  font-family: "NotoSansCJKtc";
+  font-family: "微軟正黑體";
   background: white;
   width: calc(100% - 6px);
   margin: 0 auto;
@@ -1492,6 +1497,7 @@ input[type="checkbox"] {
 .register_title {
   color: black;
   margin-top: 79px;
+  font-family: "微軟正黑體";
 }
 @media screen and (max-width: 375px) {
   .register_title {
@@ -1527,6 +1533,7 @@ input[type="checkbox"] {
   height: 565px;
   margin-top: 62px;
   position: relative;
+  font-family: "微軟正黑體";
 }
 @media screen and (max-width: 375px) {
   .register_content {
@@ -1802,6 +1809,8 @@ input[type="checkbox"] {
   margin: 100px auto 0;
   display: flex;
   justify-content: center;
+  font-family: "微軟正黑體";
+  margin: 85px auto 0;
 }
 .register_content .send_register:hover {
   transition: background-image 1000ms linear;
@@ -2658,4 +2667,16 @@ footer .company .company_copyright {
     font-size: 12px;
     line-height: 18px;
   }
+}
+
+@keyframes Floating{
+    from {transform:translate(0, 0px);}
+    65% {transform:translate(0, 15px);}
+    to {transform: translate(0, -0px);}    
+}
+
+@keyframes scale{
+  from {-webkit-transform: scale(0.9);}
+  65% {-webkit-transform: scale(1.0);}
+  to {-webkit-transform: scale(0.9);}    
 }
