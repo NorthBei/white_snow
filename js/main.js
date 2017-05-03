@@ -14,6 +14,13 @@ $(function(){
     $("body,html").animate({scrollTop:0},1000);
   });
   //
+  $('#nav a[class=scroll]').click(function(event){
+    event.preventDefault()
+    var id = $(this).attr("data-link");
+    var scroll_length = $(id).offset().top;
+    //console.log(id,scroll_length);
+    $("body,html").animate({scrollTop:scroll_length},1000);
+  });
 
   $('#nav a[class=scroll]').click(function(event){
     event.preventDefault()
@@ -64,6 +71,7 @@ $(function(){
     var receipt_input = $('<input type="text" class="receipt_input" name="receipt" placeholder="請輸入發票號碼" onfocus=this.placeholder="" onblur=this.placeholder="請輸入發票編號">');
     $(this).addClass("after_click");
     $('.remove_receipt').addClass("after_click");
+    $('.remove_receipt').addClass("after_click");
     // var receipt_input = $('<input type="text" class="receipt_input" name="receipt" placeholder="請輸入發票號碼">');
     $('.receipt').css('height', 'auto');
     $('.register').css('height', 'auto');
@@ -74,7 +82,8 @@ $(function(){
   })
 
   $('.remove_receipt').click(function(){
-    // $(this).addClass("after_click");
+
+    // var receipt_input = $('<input type="text" class="receipt_input" name="receipt" placeholder="請輸入發票號碼">');
     var input = $('.receipt_input')
     if(input.length > 1){
       $(this).addClass("after_click");
@@ -444,82 +453,93 @@ $('.send_register').click(function(){
     $('.register_content .info .info_group.phone').addClass('showerrow');
     $('.register_content .info .info_group.email').addClass('showerrow');
     $('.register_content .receipt_input_group').addClass('showerrow');
-  }
-  else if (name == "" & phone=="" && email=="") {
-    $('#user_name').addClass('error');
-    $('#user_tel').addClass('error');
-    $('#user_mail').addClass('error');
-    $('.register_content .info .info_group.name').addClass('showerrow');
-    $('.register_content .info .info_group.phone').addClass('showerrow');
-    $('.register_content .info .info_group.email').addClass('showerrow');
-  }else if (name == "" & phone=="" && receipt=="") {
-    $('#user_name').addClass('error');
-    $('#user_tel').addClass('error');
-    $('.receipt_input').addClass('error');
-    $('.register_content .info .info_group.name').addClass('showerrow');
-    $('.register_content .info .info_group.phone').addClass('showerrow');
-    $('.register_content .receipt_input_group').addClass('showerrow');
-  }else if (email == "" & phone=="" && receipt=="") {
-    $('#user_mail').addClass('error');
-    $('#user_tel').addClass('error');
-    $('.receipt_input').addClass('error');
-    $('.register_content .info .info_group.phone').addClass('showerrow');
-    $('.register_content .info .info_group.email').addClass('showerrow');
-    $('.register_content .receipt_input_group').addClass('showerrow');
-  }else if (email == "" & name=="" && receipt=="") {
-    $('#user_mail').addClass('error');
-    $('#user_name').addClass('error');
-    $('.receipt_input').addClass('error');
-    $('.register_content .info .info_group.name').addClass('showerrow');
-    $('.register_content .info .info_group.email').addClass('showerrow');
-    $('.register_content .info .info_group.email').addClass('showerrow');
-  }else if (name == "" & phone=="") {
-    $('#user_name').addClass('error');
-    $('#user_tel').addClass('error');
-    $('.register_content .info .info_group.name').addClass('showerrow');
-    $('.register_content .info .info_group.phone').addClass('showerrow');
-  }else if (name == "" & email=="") {
-    $('#user_name').addClass('error');
-    $('#user_mail').addClass('error');
-    $('.register_content .info .info_group.name').addClass('showerrow')
-    $('.register_content .info .info_group.email').addClass('showerrow');
-  }else if (phone=="" && email=="") {
-    $('#user_tel').addClass('error');
-    $('#user_mail').addClass('error');
-    $('.register_content .info .info_group.phone').addClass('showerrow');
-    $('.register_content .info .info_group.email').addClass('showerrow');
-  }else if (name == "" && receipt=="") {
-    $('#user_name').addClass('error');
-    $('.receipt_input').addClass('error');
-    $('.register_content .info .info_group.name').addClass('showerrow');
-    $('.register_content .receipt_input_group').addClass('showerrow');
-  }else if (phone=="" && receipt=="") {
-    $('#user_tel').addClass('error');
-    $('.receipt_input').addClass('error');
-    $('.register_content .info .info_group.phone').addClass('showerrow');
-    $('.register_content .receipt_input_group').addClass('showerrow');
-  }else if (email=="" && receipt=="") {
-    $('#user_mail').addClass('error');
-    $('.receipt_input').addClass('error');
-    $('.register_content .info .info_group.email').addClass('showerrow');
-    $('.register_content .receipt_input_group').addClass('showerrow');
-  }
-  else if (name == "") {
+  };
+  if (name == "") {
     $('#user_name').addClass('error');
     $('.register_content .info .info_group.name').addClass('showerrow');
     if($(window).width() <= 375)
       return
-  }else if (phone=="") {
+  };
+  if (phone=="") {
     $('#user_tel').addClass('error');
     $('.register_content .info .info_group.phone').addClass('showerrow');
-  }else if (email=="") {
+    if($(window).width() <= 375)
+      return
+  };
+  if (email=="") {
     $('#user_mail').addClass('error');
     $('.register_content .info .info_group.email').addClass('showerrow');
-  }else if (receipt_input=="") {
+    if($(window).width() <= 375)
+      return
+  };
+  if (receipt_input=="") {
     console.log("11");
     $('.receipt_input').addClass('error');
     $('.register_content .receipt_input_group').addClass('showerrow');
-  }
+    if($(window).width() <= 375)
+      return
+  };
+
+  // else if (name == "" & phone=="" && email=="") {
+  //   $('#user_name').addClass('error');
+  //   $('#user_tel').addClass('error');
+  //   $('#user_mail').addClass('error');
+  //   $('.register_content .info .info_group.name').addClass('showerrow');
+  //   $('.register_content .info .info_group.phone').addClass('showerrow');
+  //   $('.register_content .info .info_group.email').addClass('showerrow');
+  // }else if (name == "" & phone=="" && receipt=="") {
+  //   $('#user_name').addClass('error');
+  //   $('#user_tel').addClass('error');
+  //   $('.receipt_input').addClass('error');
+  //   $('.register_content .info .info_group.name').addClass('showerrow');
+  //   $('.register_content .info .info_group.phone').addClass('showerrow');
+  //   $('.register_content .receipt_input_group').addClass('showerrow');
+  // }else if (email == "" & phone=="" && receipt=="") {
+  //   $('#user_mail').addClass('error');
+  //   $('#user_tel').addClass('error');
+  //   $('.receipt_input').addClass('error');
+  //   $('.register_content .info .info_group.phone').addClass('showerrow');
+  //   $('.register_content .info .info_group.email').addClass('showerrow');
+  //   $('.register_content .receipt_input_group').addClass('showerrow');
+  // }else if (email == "" & name=="" && receipt=="") {
+  //   $('#user_mail').addClass('error');
+  //   $('#user_name').addClass('error');
+  //   $('.receipt_input').addClass('error');
+  //   $('.register_content .info .info_group.name').addClass('showerrow');
+  //   $('.register_content .info .info_group.email').addClass('showerrow');
+  //   $('.register_content .info .info_group.email').addClass('showerrow');
+  // }else if (name == "" & phone=="") {
+  //   $('#user_name').addClass('error');
+  //   $('#user_tel').addClass('error');
+  //   $('.register_content .info .info_group.name').addClass('showerrow');
+  //   $('.register_content .info .info_group.phone').addClass('showerrow');
+  // }else if (name == "" & email=="") {
+  //   $('#user_name').addClass('error');
+  //   $('#user_mail').addClass('error');
+  //   $('.register_content .info .info_group.name').addClass('showerrow')
+  //   $('.register_content .info .info_group.email').addClass('showerrow');
+  // }else if (phone=="" && email=="") {
+  //   $('#user_tel').addClass('error');
+  //   $('#user_mail').addClass('error');
+  //   $('.register_content .info .info_group.phone').addClass('showerrow');
+  //   $('.register_content .info .info_group.email').addClass('showerrow');
+  // }else if (name == "" && receipt=="") {
+  //   $('#user_name').addClass('error');
+  //   $('.receipt_input').addClass('error');
+  //   $('.register_content .info .info_group.name').addClass('showerrow');
+  //   $('.register_content .receipt_input_group').addClass('showerrow');
+  // }else if (phone=="" && receipt=="") {
+  //   $('#user_tel').addClass('error');
+  //   $('.receipt_input').addClass('error');
+  //   $('.register_content .info .info_group.phone').addClass('showerrow');
+  //   $('.register_content .receipt_input_group').addClass('showerrow');
+  // }else if (email=="" && receipt=="") {
+  //   $('#user_mail').addClass('error');
+  //   $('.receipt_input').addClass('error');
+  //   $('.register_content .info .info_group.email').addClass('showerrow');
+  //   $('.register_content .receipt_input_group').addClass('showerrow');
+  // }
+  //
 
   console.log(receipt_array);
 
