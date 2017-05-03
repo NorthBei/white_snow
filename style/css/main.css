@@ -1620,7 +1620,6 @@ input[type="checkbox"] {
   position: absolute;
   bottom: 3px;
   left: 45%;
-  
   left: 50%;
   transform: translateX(-50%);
   bottom: -17px;
@@ -1686,7 +1685,7 @@ input[type="checkbox"] {
 @media screen and (max-width: 375px) {
   .register_content .add_receipt.after_click {
     bottom: 400px;
-    bottom: 473px;
+    bottom: 437px;
   }
 }
 .register_content .remove_receipt {
@@ -1709,8 +1708,6 @@ input[type="checkbox"] {
 @media screen and (max-width: 375px) {
   .register_content .remove_receipt.after_click {
     bottom: 400px;
-    bottom: 473px;
-
   }
 }
 .register_content .check {
@@ -1775,7 +1772,6 @@ input[type="checkbox"] {
   position: absolute;
   bottom: -25px;
   left: 55%;
-
   left: 50%;
   transform: translateX(-50%);
   margin-left: 36px;

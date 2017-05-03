@@ -1000,6 +1000,7 @@ input[type="checkbox"]
   background-size: cover
   @media screen and (max-width: 375px)
     height: 560px
+    height: 623px
   &_title
     color: black
     margin-top: 79px
@@ -1065,9 +1066,11 @@ input[type="checkbox"]
           color: #F5515F
           font-size: 14px
           position: absolute
-          // top: 55px
           bottom: 3px
           left: 45%
+          left: 50%
+          transform: translateX(-50%)
+          bottom: -17px
         .receipt_input
           +wh(631px, 48px)
           border-radius: 100px
@@ -1109,6 +1112,7 @@ input[type="checkbox"]
         bottom: 463px
         @media screen and (max-width: 375px)
           bottom: 400px
+          bottom: 437px
     .remove_receipt
       background: url(../../asset/remove_receipt.png) no-repeat
       background-size: 48px 48px
@@ -1153,10 +1157,11 @@ input[type="checkbox"]
       flex-direction: row
       flex-wrap: wrap
       @media screen and (max-width: 375px)
-        +wh(331px, 116px)
+        +wh(331px, 185px)
       .info_group
         display: flex
         flex-direction: row
+        margin-bottom: 29px
         &.name
           +wh(361px, 48px)
           position: relative
@@ -1167,7 +1172,9 @@ input[type="checkbox"]
             position: absolute
             bottom: -25px
             left: 55%
-            // opacity: 0
+            left: 50%
+            transform: translateX(-50%)
+            margin-left: 36px
           @media screen and (max-width: 375px)
             +wh(100%, 32px)
             margin-bottom: 10px
