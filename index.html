@@ -27,17 +27,17 @@
       </div>
     </div>
     <section class="page_bg hero" id="hero">
-      <nav>
+      <nav id="nav">
         <div class="menu" id="open_menu"></div>
-        <a href="#" class="scroll"><div class="logo"></div></a>
+         <a href="" class="scroll" data-link="#hero"><div class="logo"></div></a>
         <ul>
           <li class="close" id="close_menu"></li>
-          <li><a href="#about" class="scroll">活動辦法</a></li>
-          <li><a href="#notice" class="scroll">注意事項</a></li>
-          <li><a href="#register" class="scroll">登入活動</a></li>
-          <li><a href="#product" class="scroll">白雪商品</a></li>
-          <li><a href="#sale" class="scroll">銷售通路</a></li>
-          <li><a href="#winners" class="scroll">得獎名單</a></li>
+          <li><a href="" data-link="#about" class="scroll">活動辦法</a></li>
+          <li><a href="" data-link="#notice" class="scroll">注意事項</a></li>
+          <li><a href="" data-link="#register" class="scroll">登入活動</a></li>
+          <li><a href="" data-link="#product" class="scroll">白雪商品</a></li>
+          <li><a href="" data-link="#sale" class="scroll">銷售通路</a></li>
+          <li><a href="" data-link="#winners" class="scroll">得獎名單</a></li>
           <li class="social">
             <a class="social_icon fb" href="#" target="_blank"></a>
             <button class="social_icon mail" id="copy_mail" data-clipboard-text="my@mail.com"></button>
@@ -188,10 +188,11 @@
         <div class="receipt">
           <div class="receipt_title">發票編號</div>
           <div class="receipt_input_group">
-            <input type="text" class="receipt_input" name="receipt" placeholder="請輸入發票編號" onfocus="this.placeholder=''" onblur="this.placeholder = '請輸入發票編號'">
+            <!-- <input type="text" class="receipt_input" name="receipt" placeholder="請輸入發票編號" onfocus="this.placeholder=''" onblur="this.placeholder = '請輸入發票編號'"> -->
             <input type="text" class="receipt_input" name="receipt" placeholder="請輸入發票編號" onfocus="this.placeholder=''" onblur="this.placeholder = '請輸入發票編號'">
           </div>
-          <button type="button" class="add_receipt"></button>
+          <button type="button" class="receipt_button add_receipt"></button>
+          <button type="button" class="receipt_button remove_receipt"></button>
         </div>
         <div class="check">
           <input type="checkbox">

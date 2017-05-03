@@ -34,6 +34,7 @@ nav
   z-index: 50
   background: #F7AAB5
   transition: transform 0.3s ease-in-out
+  max-width: 100vw
   @media screen and (max-width: 375px)
     height: 44px
     background-color: rgba(239, 146, 174, 0.3)
@@ -181,6 +182,8 @@ nav
       &.item_gap
         margin-right: 6px
 
+input[type="text"]
+  font-family: "微軟正黑體"
 input[type="checkbox"]
   +wh(20px, 20px)
   border-radius: 2px
@@ -210,6 +213,7 @@ input[type="checkbox"]
   &.bubble82
     +wh(5.6vw, 5.6vw)
     background-size: 5.6vw 5.6vw
+    animation: scale 3s infinite ease-in-out
   &.bubble21
     +wh(1.4vw, 1.4vw)
     background-size: 1.4vw 1.4vw
@@ -245,6 +249,7 @@ input[type="checkbox"]
     background: url(../../asset/b04.png) no-repeat
     background-size: auto 14.9vw
     background-position: right
+    animation: Floating 3s infinite ease-in-out
   &.b05
     top: 354px
     left: -6.3vw
@@ -469,6 +474,22 @@ input[type="checkbox"]
   100%
     opacity: 1
 
+@keyframes Floating
+  from
+    transform: translate(0, 0px)
+  65%
+    transform: translate(0, 15px)
+  to
+    transform: translate(0, -0px)
+
+@keyframes scale
+  from
+    -webkit-transform: scale(0.9)
+  65%
+    -webkit-transform: scale(1.0)
+  to
+    -webkit-transform: scale(0.9)
+
 .page_bg
   background-image: radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba)
 .default_height
@@ -493,7 +514,7 @@ input[type="checkbox"]
     color: white
     margin: 0 auto
     text-shadow: 0px 0 8px white
-    font-family: 'NotoSansCJKtc-Medium'
+    font-family: "微軟正黑體"
     font-weight: 500
     text-align: center
     position: relative
@@ -671,7 +692,7 @@ input[type="checkbox"]
         animation: bounce 2s ease
 
   .hero_des
-    font-family: 'NotoSansCJKtc'
+    font-family: "微軟正黑體"
     margin-top: 24px
     text-align: center
     font-size: 20px
@@ -693,6 +714,7 @@ input[type="checkbox"]
     display: block
     text-align: center
     padding-top: 14px
+    font-family: "微軟正黑體"
     &:hover
       transition: background-image 1000ms linear
       background-image: linear-gradient(79deg, #f39eb2, #ffbeba)
@@ -733,6 +755,7 @@ input[type="checkbox"]
       &.method
         z-index: 1
         height: 222px
+        font-family: "微軟正黑體"
         @media screen and (max-width: 375px)
           height: 125px
         .method_title
@@ -743,6 +766,7 @@ input[type="checkbox"]
             height: calc(69% - 3px)
       &.date
         height: 294px
+        font-family: "微軟正黑體"
         @media screen and (max-width: 375px)
           height: 190px
         .method_title
@@ -764,7 +788,7 @@ input[type="checkbox"]
         span
           float: right
       .method_des
-        font-family: 'NotoSansCJKtc'
+        font-family: "微軟正黑體"
         background: white
         width: calc(100% - 6px)
         margin: 0 auto
@@ -1001,9 +1025,11 @@ input[type="checkbox"]
     +wh(847px, 565px)
     margin-top: 62px
     position: relative
+    font-family: "微軟正黑體"
     @media screen and (max-width: 375px)
       +wh(331px, 316px)
       margin-top: 52px
+      margin-top: 18px
     .receipt_title
       height: 48px
       line-height: 48px
@@ -1017,28 +1043,31 @@ input[type="checkbox"]
         line-height: 24px
         text-align: center
     .receipt
-      +wh(829px, 175px)
+      // +wh(829px, 175px)
+      +wh(829px, auto)
       margin: 0 auto
       display: flex
       flex-direction: row
       @media screen and (max-width: 375px)
         +wh(100%, auto)
+        flex-direction: column
+        align-items: center
       .receipt_input_group
         display: flex
         flex-direction: column
         margin-left: 25px
         margin-left: 8px
         position: relative
-        &::after
+        @media screen and (max-width: 375px)
+          justify-content: space-around
+        &.showerrow::after
           content: "資料未輸入"
           color: #F5515F
           font-size: 14px
           position: absolute
-          bottom: 5px
+          // top: 55px
+          bottom: 3px
           left: 45%
-          opacity: 0
-        @media screen and (max-width: 375px)
-          justify-content: space-around
         .receipt_input
           +wh(631px, 48px)
           border-radius: 100px
@@ -1053,27 +1082,50 @@ input[type="checkbox"]
             font-size: 12px
           &:first-child
             margin-top: 0
-    .add_receipt
+          &.error
+            border: 2px solid #F5515F
+    .receipt_button
       +wh(48px, 48px)
-      background: url(../../asset/add_receipt.png) no-repeat
-      background-size: 48px 48px
       position: absolute
-      right: 0
       top: 80px
       @media screen and (max-width: 375px)
-        +wh(32px, 33px)
-        background-size: 32px 33px
-        // top: 40px
+        +wh(22px, 22px)
+        background-size: 22px 22px
         top: initial
-        // bottom: 7px
-        bottom: 250px
+        bottom: 213px
+        right: 25px
+        bottom: 255px
+    .add_receipt
+      background: url(../../asset/add_receipt.png) no-repeat
+      background-size: 48px 48px
+      right: 0
+      top: 0
+      @media screen and (max-width: 375px)
+        background-size: 22px 22px
+        right: 25px
+        top: 30px
       &.after_click
         top: initial
-        // bottom: 32px
-        bottom: 495px
+        bottom: 463px
         @media screen and (max-width: 375px)
-          // bottom: 10px
           bottom: 400px
+    .remove_receipt
+      background: url(../../asset/remove_receipt.png) no-repeat
+      background-size: 48px 48px
+      right: -68px
+      top: 0
+      @media screen and (max-width: 375px)
+        // right: -3px
+        right: 0
+        top: 30px
+        background-size: 22px 22px
+      &.after_click
+        top: initial
+        bottom: 463px
+        @media screen and (max-width: 375px)
+          bottom: 400px
+          // bottom: 405px
+
     .check
       +wh(721px, 21px)
       font-size: 14px
@@ -1130,7 +1182,7 @@ input[type="checkbox"]
             position: absolute
             bottom: -25px
             left: 50%
-            opacity: 0
+            // opacity: 0
           @media screen and (max-width: 375px)
             +wh(100%, 32px)
             margin: 0 0 10px 0
@@ -1144,7 +1196,7 @@ input[type="checkbox"]
             position: absolute
             bottom: -25px
             left: 50%
-            opacity: 0
+            // opacity: 0
           @media screen and (max-width: 375px)
             +wh(100%, 32px)
             margin-bottom: 10px
@@ -1185,8 +1237,11 @@ input[type="checkbox"]
       color: white
       font-size: 18px
       margin: 100px auto 0
-      display: flex
-      justify-content: center
+      // display: flex
+      // justify-content: center
+      font-family: "微軟正黑體"
+      margin: 70px auto 0
+      display: block
       &:hover
         transition: background-image 1000ms linear
         background-image: linear-gradient(79deg, #f39eb2, #ffbeba)
@@ -1283,6 +1338,7 @@ input[type="checkbox"]
             background: url(../../asset/product_item5.png) no-repeat
             background-size: 77px 95px
             background-position: center center
+            margin-bottom: 4px
             @media screen and (max-width: 375px)
               background-size: 40px 49px
           &.item1,&.item2,&.item3,&.item4,&.item5

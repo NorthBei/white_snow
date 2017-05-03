@@ -88,6 +88,7 @@ nav {
   z-index: 50;
   background: #F7AAB5;
   transition: transform 0.3s ease-in-out;
+  max-width: 100vw;
 }
 @media screen and (max-width: 375px) {
   nav {
@@ -309,6 +310,10 @@ nav ul li.social {
   margin-right: 6px;
 }
 
+input[type="text"] {
+  font-family: "微軟正黑體";
+}
+
 input[type="checkbox"] {
   width: 20px;
   height: 20px;
@@ -352,6 +357,7 @@ input[type="checkbox"] {
   width: 5.6vw;
   height: 5.6vw;
   background-size: 5.6vw 5.6vw;
+  animation: scale 3s infinite ease-in-out;
 }
 .bubble.bubble21 {
   width: 1.4vw;
@@ -404,6 +410,7 @@ input[type="checkbox"] {
   background: url(../../asset/b04.png) no-repeat;
   background-size: auto 14.9vw;
   background-position: right;
+  animation: Floating 3s infinite ease-in-out;
 }
 .bubble.b05 {
   top: 354px;
@@ -736,6 +743,28 @@ input[type="checkbox"] {
     opacity: 1;
   }
 }
+@keyframes Floating {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 15px);
+  }
+  to {
+    transform: translate(0, 0px);
+  }
+}
+@keyframes scale {
+  from {
+    -webkit-transform: scale(0.9);
+  }
+  65% {
+    -webkit-transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0.9);
+  }
+}
 .page_bg {
   background-image: radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba);
 }
@@ -768,7 +797,7 @@ input[type="checkbox"] {
   color: white;
   margin: 0 auto;
   text-shadow: 0px 0 8px white;
-  font-family: "NotoSansCJKtc-Medium";
+  font-family: "微軟正黑體";
   font-weight: 500;
   text-align: center;
   position: relative;
@@ -1025,7 +1054,7 @@ input[type="checkbox"] {
   animation: bounce 2s ease;
 }
 .hero .hero_des {
-  font-family: "NotoSansCJKtc";
+  font-family: "微軟正黑體";
   margin-top: 24px;
   text-align: center;
   font-size: 20px;
@@ -1052,6 +1081,7 @@ input[type="checkbox"] {
   display: block;
   text-align: center;
   padding-top: 14px;
+  font-family: "微軟正黑體";
 }
 .hero .rigester:hover {
   transition: background-image 1000ms linear;
@@ -1116,6 +1146,7 @@ input[type="checkbox"] {
 .about .grid.two_grid.method {
   z-index: 1;
   height: 222px;
+  font-family: "微軟正黑體";
 }
 @media screen and (max-width: 375px) {
   .about .grid.two_grid.method {
@@ -1135,6 +1166,7 @@ input[type="checkbox"] {
 }
 .about .grid.two_grid.date {
   height: 294px;
+  font-family: "微軟正黑體";
 }
 @media screen and (max-width: 375px) {
   .about .grid.two_grid.date {
@@ -1173,7 +1205,7 @@ input[type="checkbox"] {
   float: right;
 }
 .about .grid.two_grid .method_des {
-  font-family: "NotoSansCJKtc";
+  font-family: "微軟正黑體";
   background: white;
   width: calc(100% - 6px);
   margin: 0 auto;
@@ -1527,12 +1559,14 @@ input[type="checkbox"] {
   height: 565px;
   margin-top: 62px;
   position: relative;
+  font-family: "微軟正黑體";
 }
 @media screen and (max-width: 375px) {
   .register_content {
     width: 331px;
     height: 316px;
     margin-top: 52px;
+    margin-top: 18px;
   }
 }
 .register_content .receipt_title {
@@ -1553,7 +1587,7 @@ input[type="checkbox"] {
 }
 .register_content .receipt {
   width: 829px;
-  height: 175px;
+  height: auto;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -1562,6 +1596,8 @@ input[type="checkbox"] {
   .register_content .receipt {
     width: 100%;
     height: auto;
+    flex-direction: column;
+    align-items: center;
   }
 }
 .register_content .receipt .receipt_input_group {
@@ -1571,19 +1607,18 @@ input[type="checkbox"] {
   margin-left: 8px;
   position: relative;
 }
-.register_content .receipt .receipt_input_group::after {
-  content: "資料未輸入";
-  color: #F5515F;
-  font-size: 14px;
-  position: absolute;
-  bottom: 5px;
-  left: 45%;
-  opacity: 0;
-}
 @media screen and (max-width: 375px) {
   .register_content .receipt .receipt_input_group {
     justify-content: space-around;
   }
+}
+.register_content .receipt .receipt_input_group.showerrow::after {
+  content: "資料未輸入";
+  color: #F5515F;
+  font-size: 14px;
+  position: absolute;
+  bottom: 3px;
+  left: 45%;
 }
 .register_content .receipt .receipt_input_group .receipt_input {
   width: 631px;
@@ -1606,30 +1641,67 @@ input[type="checkbox"] {
 .register_content .receipt .receipt_input_group .receipt_input:first-child {
   margin-top: 0;
 }
-.register_content .add_receipt {
+.register_content .receipt .receipt_input_group .receipt_input.error {
+  border: 2px solid #F5515F;
+}
+.register_content .receipt_button {
   width: 48px;
   height: 48px;
-  background: url(../../asset/add_receipt.png) no-repeat;
-  background-size: 48px 48px;
   position: absolute;
-  right: 0;
   top: 80px;
 }
 @media screen and (max-width: 375px) {
-  .register_content .add_receipt {
-    width: 32px;
-    height: 33px;
-    background-size: 32px 33px;
+  .register_content .receipt_button {
+    width: 22px;
+    height: 22px;
+    background-size: 22px 22px;
     top: initial;
-    bottom: 250px;
+    bottom: 213px;
+    right: 25px;
+    bottom: 255px;
+  }
+}
+.register_content .add_receipt {
+  background: url(../../asset/add_receipt.png) no-repeat;
+  background-size: 48px 48px;
+  right: 0;
+  top: 0;
+}
+@media screen and (max-width: 375px) {
+  .register_content .add_receipt {
+    background-size: 22px 22px;
+    right: 25px;
+    top: 30px;
   }
 }
 .register_content .add_receipt.after_click {
   top: initial;
-  bottom: 495px;
+  bottom: 463px;
 }
 @media screen and (max-width: 375px) {
   .register_content .add_receipt.after_click {
+    bottom: 400px;
+  }
+}
+.register_content .remove_receipt {
+  background: url(../../asset/remove_receipt.png) no-repeat;
+  background-size: 48px 48px;
+  right: -68px;
+  top: 0;
+}
+@media screen and (max-width: 375px) {
+  .register_content .remove_receipt {
+    right: 0;
+    top: 30px;
+    background-size: 22px 22px;
+  }
+}
+.register_content .remove_receipt.after_click {
+  top: initial;
+  bottom: 463px;
+}
+@media screen and (max-width: 375px) {
+  .register_content .remove_receipt.after_click {
     bottom: 400px;
   }
 }
@@ -1715,7 +1787,6 @@ input[type="checkbox"] {
   position: absolute;
   bottom: -25px;
   left: 50%;
-  opacity: 0;
 }
 @media screen and (max-width: 375px) {
   .register_content .info .info_group.phone {
@@ -1736,7 +1807,6 @@ input[type="checkbox"] {
   position: absolute;
   bottom: -25px;
   left: 50%;
-  opacity: 0;
 }
 @media screen and (max-width: 375px) {
   .register_content .info .info_group.email {
@@ -1800,8 +1870,9 @@ input[type="checkbox"] {
   color: white;
   font-size: 18px;
   margin: 100px auto 0;
-  display: flex;
-  justify-content: center;
+  font-family: "微軟正黑體";
+  margin: 70px auto 0;
+  display: block;
 }
 .register_content .send_register:hover {
   transition: background-image 1000ms linear;
@@ -1962,6 +2033,7 @@ input[type="checkbox"] {
   background: url(../../asset/product_item5.png) no-repeat;
   background-size: 77px 95px;
   background-position: center center;
+  margin-bottom: 4px;
 }
 @media screen and (max-width: 375px) {
   .product_group .product_list .item_group .item.item5 {
