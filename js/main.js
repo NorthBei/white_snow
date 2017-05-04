@@ -7,17 +7,17 @@ $(window).scroll(function(){
     $("#totop").stop().fadeOut("fast");
   }
 
-  // var footer_position = $('footer').offset().top;
-  // console.log($("#totop").offset().top,footer_position);
-  
-  // if($("#totop").offset().top > footer_position){
-  //   $("#totop").addClass("totop_scroll_bottom");
-  //   //("bottom","178px");
-  //   console.log("x");
-  // }
-  // else{
-  //   $("#totop").removeClass("totop_scroll_bottom");
-  // }
+  var footer_position = $('footer').offset().top - 70;
+  console.log($("#totop").offset().top,footer_position);
+  var scrollTop = $(this).scrollTop() + $(window).height();
+  if(scrollTop > footer_position){
+    $("#totop").addClass("totop_scroll_bottom");
+    //("bottom","178px");
+    console.log("x");
+  }
+  else{
+    $("#totop").removeClass("totop_scroll_bottom");
+  }
 });
 
 $(function(){

@@ -2680,9 +2680,9 @@ input[type="checkbox"] {
   display: none;
 }
 
-/*.winners  .totop_scroll_bottom{
-  bottom: 178px;
-}*/
+.winners  .totop_scroll_bottom{
+  position: absolute;
+}
 
 @media screen and (max-width: 375px) {
   .winners .totop {
