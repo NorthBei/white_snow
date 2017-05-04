@@ -31,6 +31,7 @@ nav
   align-items: center
   position: fixed
   top: 0
+  left: 0
   z-index: 50
   background: #F7AAB5
   transition: transform 0.3s ease-in-out
@@ -190,11 +191,12 @@ input[type="checkbox"]
   background: #34495E
   box-sizing: content-box
   position: relative
-
+  margin-top: 4px
 .bubble
   background: url(../../asset/bubble.png) no-repeat
   position: absolute
   z-index: 0
+  position: fixed
   &.bubble141
     +wh(9vw, 9vw)
     background-size: 9vw 9vw
@@ -265,15 +267,23 @@ input[type="checkbox"]
   &.b09
     top: 795px
     left: 1.8vw
+    bottom: 62px
+    top: initial
   &.b10
     top: 720px
     left: 12.4vw
+    top: initial
+    bottom: -126px
   &.b11
     top: 773px
     left: 64.8vw
+    top: initial
+    bottom: -2px
   &.b12
     top: 700px
     left: 93.4vw
+    top: initial
+    bottom: 155px
   &.b13
     top: 200px
     left: 5vw
@@ -491,7 +501,14 @@ input[type="checkbox"]
     -webkit-transform: scale(0.9)
 
 .page_bg
-  background-image: radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba)
+  // background-image: radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba)
+  &::before
+    position: absolute
+    content: ""
+    width: 100%
+    height: 100%
+    background-image: radial-gradient(circle at 50% 50%, #f39eb2, #ffbeba)
+    z-index: -2
 .default_height
   height: 900px
 .hero
@@ -1079,6 +1096,7 @@ input[type="checkbox"]
           color: #9B9B9B
           font-size: 18px
           text-align: center
+          width: 595px
           @media screen and (max-width: 375px)
             +wh(209px, 32px)
             margin-bottom: 10px
@@ -1103,6 +1121,7 @@ input[type="checkbox"]
       background-size: 48px 48px
       right: 0
       top: 0
+      right: 83px
       @media screen and (max-width: 375px)
         background-size: 22px 22px
         right: 25px
@@ -1119,6 +1138,7 @@ input[type="checkbox"]
       background-size: 48px 48px
       right: -68px
       top: 0
+      right: 17px
       @media screen and (max-width: 375px)
         // right: -3px
         right: 0
@@ -1138,6 +1158,8 @@ input[type="checkbox"]
       color: #4A4A4A
       margin-left: 117px
       position: relative
+      display: flex
+      align-items: center
       @media screen and (max-width: 375px)
         +wh(289px, 46px)
         font-size: 10px
@@ -1177,6 +1199,10 @@ input[type="checkbox"]
             left: 50%
             transform: translateX(-50%)
             margin-left: 36px
+            @media screen and (max-width: 375px)
+              left: 50
+              transform: translateX(-50%)
+              margin-left: 36px
           @media screen and (max-width: 375px)
             +wh(100%, 32px)
             margin-bottom: 10px
@@ -1223,12 +1249,15 @@ input[type="checkbox"]
             margin-left: 25px
             width: 253px
             position: relative
+            margin-left: 9px
             @media screen and (max-width: 375px)
               width: 251px
               margin-left: 8px
           &.phone
             margin-left: 40px
             width: 359px
+            margin-left: 11px
+            width: 289px
             @media screen and (max-width: 375px)
               width: 251px
               margin-left: 8px
@@ -1745,7 +1774,8 @@ input[type="checkbox"]
               @media screen and (max-width: 375px)
                 font-size: 10px
                 line-height: 15px
-
+  .totop_scroll_bottom
+    position: absolute
   .totop
     +wh(50px, 50px)
     background: url(../../asset/totop.png) no-repeat
@@ -1767,6 +1797,7 @@ footer
   align-items: center
   justify-content: space-between
   padding: 0 80px 0 40px
+  position: relative
   @media screen and (max-width: 375px)
     height: 300px
     flex-direction: column

@@ -297,6 +297,17 @@ function input_register(){
   var items_length = 4;
   var default_item = 1;
   var hero_selected_item;
+
+  $('.hero_product_item').click(function(){
+    $('.item_group .item').removeClass('active');
+    hero_selected_item = $(this).attr('data-id');
+    var hero_selected_index = $(this).index();
+    console.log(hero_selected_item);
+    console.log(hero_selected_index);
+    changeProduct(hero_selected_item, default_item);
+    $('.item_group .item').eq(hero_selected_index).addClass('active');
+  })
+
   $('.item').click(function(){
     $('#next_arrow').css('display', 'block');
     $('#pre_arrow').css('display', 'none');
