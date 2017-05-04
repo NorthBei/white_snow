@@ -330,6 +330,7 @@ input[type="checkbox"] {
   background: #34495E;
   box-sizing: content-box;
   position: relative;
+  margin-top: 4px;
 }
 
 .bubble {
@@ -1742,6 +1743,9 @@ input[type="checkbox"] {
   color: #4A4A4A;
   margin-left: 117px;
   position: relative;
+  
+  display: flex;
+  align-items: center;
 }
 @media screen and (max-width: 375px) {
   .register_content .check {
@@ -1872,6 +1876,7 @@ input[type="checkbox"] {
   margin-left: 25px;
   width: 253px;
   position: relative;
+  margin-left: 9px;
 }
 @media screen and (max-width: 375px) {
   .register_content .info .info_group .info_input.name {
@@ -1882,6 +1887,8 @@ input[type="checkbox"] {
 .register_content .info .info_group .info_input.phone {
   margin-left: 40px;
   width: 359px;
+  margin-left: 11px;
+  width: 389px;
 }
 @media screen and (max-width: 375px) {
   .register_content .info .info_group .info_input.phone {
