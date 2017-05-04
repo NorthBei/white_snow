@@ -8,12 +8,10 @@ $(window).scroll(function(){
   }
 
   var footer_position = $('footer').offset().top - 70;
-  console.log($("#totop").offset().top,footer_position);
+  //console.log($("#totop").offset().top,footer_position);
   var scrollTop = $(this).scrollTop() + $(window).height();
   if(scrollTop > footer_position){
     $("#totop").addClass("totop_scroll_bottom");
-    //("bottom","178px");
-    console.log("x");
   }
   else{
     $("#totop").removeClass("totop_scroll_bottom");
