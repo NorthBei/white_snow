@@ -85,6 +85,7 @@ nav {
   align-items: center;
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 50;
   background: #F7AAB5;
   transition: transform 0.3s ease-in-out;
@@ -1620,9 +1621,6 @@ input[type="checkbox"] {
   position: absolute;
   bottom: 3px;
   left: 45%;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -17px;
 }
 .register_content .receipt .receipt_input_group .receipt_input {
   width: 631px;
@@ -1633,6 +1631,7 @@ input[type="checkbox"] {
   color: #9B9B9B;
   font-size: 18px;
   text-align: center;
+  width: 595px;
 }
 @media screen and (max-width: 375px) {
   .register_content .receipt .receipt_input_group .receipt_input {
@@ -1640,6 +1639,12 @@ input[type="checkbox"] {
     height: 32px;
     margin-bottom: 10px;
     font-size: 12px;
+  }
+
+  .register_content .receipt .receipt_input_group.showerrow::after{
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -17px;
   }
 }
 .register_content .receipt .receipt_input_group .receipt_input:first-child {
@@ -1670,6 +1675,7 @@ input[type="checkbox"] {
   background-size: 48px 48px;
   right: 0;
   top: 0;
+  right: 83px;
 }
 @media screen and (max-width: 375px) {
   .register_content .add_receipt {
@@ -1692,6 +1698,7 @@ input[type="checkbox"] {
   background-size: 48px 48px;
   right: -68px;
   top: 0;
+  right: 17px;
 }
 @media screen and (max-width: 375px) {
   .register_content .remove_receipt {
@@ -1771,15 +1778,19 @@ input[type="checkbox"] {
   position: absolute;
   bottom: -25px;
   left: 55%;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-left: 36px;
+  
 }
 @media screen and (max-width: 375px) {
   .register_content .info .info_group.name {
     width: 100%;
     height: 32px;
     margin-bottom: 10px;
+  }
+
+  .register_content .info .info_group.name.showerrow::after{
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 36px;
   }
 }
 .register_content .info .info_group.phone {
@@ -2668,6 +2679,11 @@ input[type="checkbox"] {
   z-index: 99999;
   display: none;
 }
+
+/*.winners  .totop_scroll_bottom{
+  bottom: 178px;
+}*/
+
 @media screen and (max-width: 375px) {
   .winners .totop {
     bottom: 10px;
