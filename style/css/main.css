@@ -399,8 +399,8 @@ input[type="checkbox"] {
 }
 .bubble.b01 {
   top: 0;
-  left: 0;
-  background: url(../../asset/b01.png) no-repeat;
+  left: -60px;
+  /*background: url(../../asset/b01.png) no-repeat;*/
   background-size: auto 9vw;
 }
 @media screen and (max-width: 375px) {
@@ -411,18 +411,21 @@ input[type="checkbox"] {
 .bubble.b02 {
   top: 70px;
   left: 29vw;
+  animation-delay: 1s;
 }
 .bubble.b03 {
   top: 70px;
   right: 17.7vw;
+  animation-delay: 0.7s;
 }
 .bubble.b04 {
   top: 112px;
-  right: 0;
-  background: url(../../asset/b04.png) no-repeat;
+  /*right: 0;
+  background: url(../../asset/b04.png) no-repeat;*/
+  right: -50px;
   background-size: auto 14.9vw;
   background-position: right;
-  animation: Floating 3s infinite ease-in-out;
+  animation-delay: 0s;
 }
 .bubble.b05 {
   top: 354px;
@@ -465,6 +468,7 @@ input[type="checkbox"] {
 
   top: initial;
   bottom: 155px;
+  animation-delay: 0.5s;
 }
 .bubble.b13 {
   top: 200px;
@@ -765,12 +769,77 @@ input[type="checkbox"] {
     opacity: 1;
   }
 }
+
+.bubble_animation1{
+  animation: bubble_animation1 3s ease-in-out 2s infinite alternate;
+}
+
+.bubble_animation2{
+  animation: bubble_animation2 2.5s ease-in-out 2s infinite alternate;
+}
+
+.bubble_animation3{
+  animation: bubble_animation3 2s ease-in-out 0s infinite alternate;  
+}
+
+.bubble_animation4{
+  animation: bubble_animation4 4s ease-in-out 0s infinite alternate;
+}
+
+@keyframes bubble_animation1{
+  from {
+    transform: translate(0, 0px) scale(1);
+  }
+  50% {
+    transform: translate(0, 10px) scale(0.9);
+  }
+  to {
+    transform: translate(0, 0px) scale(1);
+  }
+}
+
+@keyframes bubble_animation2{
+  from {
+    transform: translate(0, 0px) scale(1) rotate(-165deg);
+  }
+  50%{
+    transform: translate(0, 10px) scale(0.8) rotate(-165deg);
+  }
+  to {
+    transform: translate(0, 20px) scale(0.7) rotate(-165deg);
+  }
+}
+
+@keyframes bubble_animation3{
+  from {
+    transform: translate(0, 0px) scale(1) rotate(-291deg);
+  }
+  50%{
+    transform: translate(0, 10px) scale(0.8) rotate(-291deg);
+  }
+  to {
+    transform: translate(0, 5px) scale(0.9) rotate(-291deg);
+  }
+}
+
+@keyframes bubble_animation4{
+  from {
+    transform: translate(0, 0px) scale(1);
+  }
+  50%{
+    transform: translate(0, 19px) scale(0.8);
+  }
+  to {
+    transform: translate(0, 15px) scale(0.9);
+  }
+}
+
 @keyframes Floating {
   from {
     transform: translate(0, 0px);
   }
   65% {
-    transform: translate(0, 15px);
+    transform: translate(0, 40px);
   }
   to {
     transform: translate(0, 0px);
@@ -778,13 +847,13 @@ input[type="checkbox"] {
 }
 @keyframes scale {
   from {
-    -webkit-transform: scale(0.9);
+    -webkit-transform: scale(0.8);
   }
-  65% {
+  35% {
     -webkit-transform: scale(1);
   }
   to {
-    -webkit-transform: scale(0.9);
+    -webkit-transform: scale(0.8);
   }
 }
 /*.page_bg {
