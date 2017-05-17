@@ -2243,6 +2243,7 @@ input[type="checkbox"] {
 }
 .product_group .product_content .product_des {
   /*width: 410px;*/
+  min-width: 410px
   height: 379px;
   margin-top: 74px;
   display: flex;

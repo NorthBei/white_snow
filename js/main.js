@@ -172,11 +172,11 @@ function input_register(){
     'name': 'milk 乳霜洗髮乳',
     'items': {
       'item1':{
-        'name': 'milk 乳霜洗髮乳-清潤型',
-        'type_name': '洗髮乳清潤型',
-        'des': '<h2>milk <span class="pink_color_shadow">乳霜洗髮乳-清潤型</span></h2><text_group><h3>全天候的滋養呵護</h3><p>• 告別乾枯、絕對滋潤</p><p>• 讓秀髮凍齡</p><p>• 無矽靈</p></text_group><!--<text_group><h3>乳霜洗髮乳 (無矽靈)</h3><p>• 無矽靈讓頭皮及頭髮更健康</p><p>• 柔順亮澤的養髮好產品</p></text_group>-->',
-        'img': 'asset/p1-1.png',
-        'spec': ['spec1','spec3','spec5','spec4'],
+        'name': 'milk 乳霜沐浴乳-滋潤型',
+        'type_name': '沐浴乳滋潤型',
+        'des': '<h2>milk <span class="pink_color_shadow">乳霜沐浴乳-滋潤型<span class="pink_color_shadow"></h2><text_group><h3>全天候的滋養呵護</h3><p>• 告別乾枯、絕對滋潤</p><p>• 讓肌膚凍齡</p></text_group><text_group><!--<h3>乳霜洗髮乳 (無矽靈)</h3>--><p>• 乳清蛋白+乳霜加倍滋潤</p><p>• 洗後光滑不緊繃</p></text_group>',
+        'img': 'asset/p1-4.png',
+        'spec': ['spec1','spec10','spec12','spec6'],
         //'type': ['洗髮乳-清潤型', '沐浴乳-清潤型', '洗髮乳-滋潤型', '沐浴乳-滋潤型']
         'type': ['沐浴乳-滋潤型','沐浴乳-清潤型','洗髮乳-滋潤型','洗髮乳-清潤型']
       },
@@ -186,8 +186,8 @@ function input_register(){
         'des': '<h2>milk <span class="pink_color_shadow">乳霜沐浴乳-清潤型</span></span></h2><text_group><h3>全天候的滋養呵護</h3><p>• 告別乾枯、絕對滋潤</p><p>• 讓肌膚凍齡</p></text_group><!--<text_group><h3>乳霜沐浴乳</h3><p>• 乳清蛋白+乳霜加倍滋潤</p><p>• 洗後光滑不緊繃</p></text_group>-->',
         'img': 'asset/p1-2.png',
         'spec': ['spec1','spec10','spec6'],
-        'type': ['洗髮乳-清潤型', '沐浴乳-清潤型', '洗髮乳-滋潤型', '沐浴乳-滋潤型']
-        //'type': ['沐浴乳-滋潤型','沐浴乳-清潤型','洗髮乳-滋潤型','洗髮乳-清潤型']
+        //'type': ['洗髮乳-清潤型', '沐浴乳-清潤型', '洗髮乳-滋潤型', '沐浴乳-滋潤型']
+        'type': ['沐浴乳-滋潤型','沐浴乳-清潤型','洗髮乳-滋潤型','洗髮乳-清潤型']
       },
       'item3':{
         'name': 'milk 乳霜洗髮乳-滋潤型',
@@ -195,17 +195,17 @@ function input_register(){
         'des': '<h2>milk <span class="pink_color_shadow">乳霜洗髮乳-滋潤型<span></h2><text_group><h3>全天候的滋養呵護</h3><p>• 告別乾枯、絕對滋潤</p><p>• 讓秀髮凍齡</p><p>• 無矽靈</p></text_group><!--<text_group><h3>乳霜洗髮乳 (無矽靈)</h3><p>• 無矽靈讓頭皮及頭髮更健康</p><p>• 柔順亮澤的養髮好產品</p></text_group>-->',
         'img': 'asset/p1-3.png',
         'spec': ['spec1','spec3','spec5','spec4','spec2'],
-        'type': ['洗髮乳-清潤型', '沐浴乳-清潤型', '洗髮乳-滋潤型', '沐浴乳-滋潤型']
-        //'type': ['沐浴乳-滋潤型','沐浴乳-清潤型','洗髮乳-滋潤型','洗髮乳-清潤型']
+        //'type': ['洗髮乳-清潤型', '沐浴乳-清潤型', '洗髮乳-滋潤型', '沐浴乳-滋潤型']
+        'type': ['沐浴乳-滋潤型','沐浴乳-清潤型','洗髮乳-滋潤型','洗髮乳-清潤型']
       },
       'item4':{
-        'name': 'milk 乳霜沐浴乳-滋潤型',
-        'type_name': '沐浴乳滋潤型',
-        'des': '<h2>milk <span class="pink_color_shadow">乳霜沐浴乳-滋潤型<span class="pink_color_shadow"></h2><text_group><h3>全天候的滋養呵護</h3><p>• 告別乾枯、絕對滋潤</p><p>• 讓肌膚凍齡</p></text_group><text_group><!--<h3>乳霜洗髮乳 (無矽靈)</h3>--><p>• 乳清蛋白+乳霜加倍滋潤</p><p>• 洗後光滑不緊繃</p></text_group>',
-        'img': 'asset/p1-4.png',
-        'spec': ['spec1','spec10','spec12','spec6'],
-        'type': ['洗髮乳-清潤型', '沐浴乳-清潤型', '洗髮乳-滋潤型', '沐浴乳-滋潤型']
-        //'type': ['沐浴乳-滋潤型','沐浴乳-清潤型','洗髮乳-滋潤型','洗髮乳-清潤型']
+        'name': 'milk 乳霜洗髮乳-清潤型',
+        'type_name': '洗髮乳清潤型',
+        'des': '<h2>milk <span class="pink_color_shadow">乳霜洗髮乳-清潤型</span></h2><text_group><h3>全天候的滋養呵護</h3><p>• 告別乾枯、絕對滋潤</p><p>• 讓秀髮凍齡</p><p>• 無矽靈</p></text_group><!--<text_group><h3>乳霜洗髮乳 (無矽靈)</h3><p>• 無矽靈讓頭皮及頭髮更健康</p><p>• 柔順亮澤的養髮好產品</p></text_group>-->',
+        'img': 'asset/p1-1.png',
+        'spec': ['spec1','spec3','spec5','spec4'],
+        //'type': ['洗髮乳-清潤型', '沐浴乳-清潤型', '洗髮乳-滋潤型', '沐浴乳-滋潤型']
+        'type': ['沐浴乳-滋潤型','沐浴乳-清潤型','洗髮乳-滋潤型','洗髮乳-清潤型']
       }
     }
   };
