@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>White Snow</title>
+    <link rel="stylesheet" href="style/css/hover.css">
     <link rel="stylesheet" href="style/css/main.css">
+    <link rel="stylesheet" href="style/css/magic.min.css">
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -53,12 +55,12 @@
          <a href="" class="scroll" data-link="#hero"><div class="logo"></div></a>
         <ul>
           <li class="close" id="close_menu"></li>
-          <li><a href="" data-link="#about" class="scroll">活動辦法</a></li>
-          <li><a href="" data-link="#notice" class="scroll">注意事項</a></li>
-          <li><a href="" data-link="#register" class="scroll">登入活動</a></li>
-          <li><a href="" data-link="#product" class="scroll">白雪商品</a></li>
-          <li><a href="" data-link="#sale" class="scroll">銷售通路</a></li>
-          <li><a href="" data-link="#winners" class="scroll">得獎名單</a></li>
+          <li class="hvr-back-pulse"><a href="" data-link="#about" class="scroll">活動辦法</a></li>
+          <li class="hvr-back-pulse"><a href="" data-link="#notice" class="scroll">注意事項</a></li>
+          <li class="hvr-back-pulse"><a href="" data-link="#register" class="scroll">登入活動</a></li>
+          <li class="hvr-back-pulse"><a href="" data-link="#product" class="scroll">白雪商品</a></li>
+          <li class="hvr-back-pulse"><a href="" data-link="#sale" class="scroll">銷售通路</a></li>
+          <li class="hvr-back-pulse"><a href="" data-link="#winners" class="scroll">得獎名單</a></li>
           <li class="social">
             <a class="social_icon fb" href="#" target="_blank"></a>
             <button class="social_icon mail" id="copy_mail" data-clipboard-text="my@mail.com"></button>
@@ -99,10 +101,11 @@
       <div class="grid two_grid method">
         <div class="method_title">活動辦法</div>
         <div class="method_des">
-          在活動期間內，凡購買白雪企業任一品項(此期間的發票皆可登錄參加抽獎)，至活動網站登錄發票號碼，就有機會抽中寵愛好禮！買愈多抽愈多～
+          <p>在活動期間內，凡購買白雪企業<span class="any_product">任一品項</span>(此期間的發票皆可登錄參加抽獎，至活動網站登錄發票號碼，就有機會抽中寵愛好禮！買愈多抽愈多～</p>
         </div>
       </div>
-      <div class="grid gift gift1">
+      <div class="grid gift gift1 hvr-sweep-to-right">
+        <img src="./asset/gift1_bg.png" class="gift_banner">
         <div class="gift_name">
           <div class="left">頭獎<p>3名</p></div>
           <div class="border"></div>
@@ -110,7 +113,8 @@
         </div>
         <img src="asset/gift1.png" alt="" class="gift_img money">
       </div>
-      <div class="grid gift gift2">
+      <div class="grid gift gift2 hvr-sweep-to-right">
+        <img src="./asset/gift2_bg.png" class="gift_banner">
         <div class="gift_name">
           <div class="left">貳獎<p>10名</p></div>
           <div class="border"></div>
@@ -118,7 +122,8 @@
         </div>
         <img src="asset/gift2.png" alt="" class="gift_img washer">
       </div>
-      <div class="grid gift gift3">
+      <div class="grid gift gift3 hvr-sweep-to-right">
+        <img src="./asset/gift3_bg.png" class="gift_banner">
         <div class="gift_name">
           <div class="left">參獎<p>30名</p></div>
           <div class="border"></div>
@@ -266,24 +271,25 @@
           <div class="product_section_title" id="p_title">milk 乳霜洗髮乳-清潤型</div>
           <div class="product_des">
             <div class="des_text">
-              <h2>milk 乳霜洗髮乳-清潤型</h2>
+              <h2 >milk <span class="pink_color_shadow">乳霜洗髮乳-清潤型</span></h2>
               <div class="text_group">
                 <h3>全天候的滋養呵護</h3>
                 <p>• 告別乾枯、絕對滋潤</p>
-                <p>• 讓肌膚及秀髮凍齡</p>
+                <p>• 讓秀髮凍齡</p>
+                <p>• 無矽靈</p>
               </div>
-              <div class="text_group">
+              <!-- <div class="text_group">
                 <h3>乳霜洗髮乳 (無矽靈)</h3>
                 <p>• 無矽靈讓頭皮及頭髮更健康</p>
                 <p>• 柔順亮澤的養髮好產品</p>
-              </div>
+              </div> -->
             </div>
             <div class="des_spec">
               <div class="spec_item">
                 <img src="asset/p1_spec1.png" alt="">
               </div>
               <div class="spec_item">
-                <img src="asset/p1_spec2.png" alt="">
+                <img src="asset/p1_spec3.png" alt="">
               </div>
               <div class="spec_item">
                 <img src="asset/p1_spec5.png" alt="">
@@ -326,7 +332,102 @@
     </section>
     <section class="sale" id="sale">
       <div class="section_title sale_title">銷售通路</div>
-      <div class="sale_content"></div>
+      <!-- <div class="sale_content"></div> -->
+      <div class="sale_wrapper">
+        <div class="sale_img_top"></div>  
+        <div class="sale_img_bottom">
+          <div class="sale_content_wrapper">
+            <img src="./asset/棉花田.png" class="sale_img sale_img1">
+            <a href="http://www.gohappy.com.tw/shopping/1/s/12/?sid=12&WT.ma_id=amart_F1_3&utm_source=referral&utm_medium=amart&utm_campaign=amart_F1_3" class="sale_button">前往購物 ></a>
+          </div>
+          <div class="sale_content_wrapper">
+            <img src="./asset/pchome.png" class="sale_img sale_img2">
+            <a href="http://shopping.pchome.com.tw/" class="sale_button">前往購物 ></a>
+          </div>
+          <div class="sale_content_wrapper">
+            <img src="./asset/momo.png" class="sale_img sale_img3">
+            <a href="https://www.momoshop.com.tw/main/Main.jsp" class="sale_button">前往購物 ></a>
+          </div>
+        </div>  
+      </div>
+      <style type="text/css">
+        .sale_wrapper,.sale_img_top{
+          width: 1062px;
+        }
+        .sale_wrapper{
+          height: 186px;
+          margin: 0 auto;
+          margin-top: 50px;
+        }
+        .sale_img{
+          width : 176px;
+          height: 40px;
+          margin-bottom: 22px;
+        }
+        .sale_img_top{
+          background: url("./asset/sale_top.png");
+          background-repeat: no-repeat;
+          height: 66px;
+        }
+        .sale_img_bottom{
+          display: flex;
+          justify-content: center;
+          margin-top: 53px;
+        }
+        .sale_content_wrapper{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 0 24px;
+        }
+        .sale_button{
+          width: 122px;
+          height: 28px;
+          background-image: radial-gradient(50% 88%, #F39EB2 50%, #FFBEBA 100%);
+          border-radius: 65px;
+          color: white;
+          border: 1px solid #F39EB2;
+          text-align: center;
+          line-height: 26px;
+        }
+        @media screen and (max-width: 375px) {
+          .sale_wrapper{
+            margin-top: 10px;
+            width: 147px;
+          }
+          .sale_img_top{
+            background: url("./asset/sale_top_rwd.png");
+            background-repeat: no-repeat;
+            width: 147px;
+            height: 253px;
+          }
+          .sale_img_bottom{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 0;
+          }
+          .sale_img2{
+            padding: 10px 12px 8px;
+          }
+          .sale_img3{
+            padding: 15px 0;
+          }
+          .sale_img{
+            width: 147px;
+            height: 47px;
+            margin-bottom: 12px;
+          }
+          .sale_content_wrapper{
+            margin-bottom: 17px;
+          }
+          .sale {
+            height: 636px;
+          }
+        }
+        
+
+      </style>
     </section>
     <section class="default_height page_bg winners" id="winners">
       <div class="section_title winners_title">得獎名單</div>
@@ -341,6 +442,7 @@
         <div class="open">
           <div class="winners_group group1">
             <div class="grid gift gift1">
+              <img src="./asset/gift1_bg.png" class="gift_banner">
               <div class="gift_name">
                 <div class="left">頭獎<p>3名</p></div>
                 <div class="border"></div>
@@ -374,6 +476,7 @@
           </div>
           <div class="winners_group group2">
             <div class="grid gift gift2">
+              <img src="./asset/gift2_bg.png" class="gift_banner">
               <div class="gift_name">
                 <div class="left">貳獎<p>10名</p></div>
                 <div class="border"></div>
@@ -449,6 +552,7 @@
           </div>
           <div class="winners_group group3">
             <div class="grid gift gift3">
+              <img src="./asset/gift3_bg.png" class="gift_banner">
               <div class="gift_name">
                 <div class="left">參獎<p>30名</p></div>
                 <div class="border"></div>

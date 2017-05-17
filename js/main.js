@@ -18,7 +18,20 @@ $(window).scroll(function(){
   }
 });
 
+function minidemo(x) {
+
+
+}
+
 $(function(){
+
+  $('#nav .hvr-back-pulse').click(function(){
+      $(this).removeClass().addClass('magictime puffOut');
+  
+      var wait = window.setTimeout( function(){
+        $('#nav .magictime.puffOut').removeClass().addClass('hvr-back-pulse')}, 1500 );
+  });
+
   // scroll to top
   $("#totop").click(function(){
     $("body,html").animate({scrollTop:0},1000);
@@ -150,7 +163,8 @@ function input_register(){
       console.log(placeholder);
   });
 }
-
+  
+  //pink_color_shadow
   // Change product content
   var product = [];
   // milk 乳霜洗髮乳
@@ -160,34 +174,38 @@ function input_register(){
       'item1':{
         'name': 'milk 乳霜洗髮乳-清潤型',
         'type_name': '洗髮乳清潤型',
-        'des': '<h2>milk 乳霜洗髮乳-清潤型</h2><text_group><h3>全天候的滋養呵護</h3><p>• 告別乾枯、絕對滋潤</p><p>• 讓肌膚及秀髮凍齡</p></text_group><text_group><h3>乳霜洗髮乳 (無矽靈)</h3><p>• 無矽靈讓頭皮及頭髮更健康</p><p>• 柔順亮澤的養髮好產品</p></text_group>',
+        'des': '<h2>milk <span class="pink_color_shadow">乳霜洗髮乳-清潤型</span></h2><text_group><h3>全天候的滋養呵護</h3><p>• 告別乾枯、絕對滋潤</p><p>• 讓秀髮凍齡</p><p>• 無矽靈</p></text_group><!--<text_group><h3>乳霜洗髮乳 (無矽靈)</h3><p>• 無矽靈讓頭皮及頭髮更健康</p><p>• 柔順亮澤的養髮好產品</p></text_group>-->',
         'img': 'asset/p1-1.png',
-        'spec': ['spec1','spec2','spec5','spec4'],
-        'type': ['洗髮乳-清潤型', '沐浴乳-清潤型', '洗髮乳-滋潤型', '沐浴乳-滋潤型']
+        'spec': ['spec1','spec3','spec5','spec4'],
+        //'type': ['洗髮乳-清潤型', '沐浴乳-清潤型', '洗髮乳-滋潤型', '沐浴乳-滋潤型']
+        'type': ['沐浴乳-滋潤型','沐浴乳-清潤型','洗髮乳-滋潤型','洗髮乳-清潤型']
       },
       'item2':{
         'name': 'milk 乳霜沐浴乳-清潤型',
         'type_name': '沐浴乳清潤型',
-        'des': '<h2>milk 乳霜沐浴乳-清潤型</h2><text_group><h3>全天候的滋養呵護</h3><p>• 告別乾枯、絕對滋潤</p><p>• 讓肌膚及秀髮凍齡</p></text_group><text_group><h3>乳霜沐浴乳</h3><p>• 乳清蛋白+乳霜加倍滋潤</p><p>• 洗後光滑不緊繃</p></text_group>',
+        'des': '<h2>milk <span class="pink_color_shadow">乳霜沐浴乳-清潤型</span></span></h2><text_group><h3>全天候的滋養呵護</h3><p>• 告別乾枯、絕對滋潤</p><p>• 讓肌膚凍齡</p></text_group><!--<text_group><h3>乳霜沐浴乳</h3><p>• 乳清蛋白+乳霜加倍滋潤</p><p>• 洗後光滑不緊繃</p></text_group>-->',
         'img': 'asset/p1-2.png',
-        'spec': ['spec1','spec6'],
+        'spec': ['spec1','spec10','spec6'],
         'type': ['洗髮乳-清潤型', '沐浴乳-清潤型', '洗髮乳-滋潤型', '沐浴乳-滋潤型']
+        //'type': ['沐浴乳-滋潤型','沐浴乳-清潤型','洗髮乳-滋潤型','洗髮乳-清潤型']
       },
       'item3':{
         'name': 'milk 乳霜洗髮乳-滋潤型',
         'type_name': '洗髮乳滋潤型',
-        'des': '<h2>milk 乳霜洗髮乳-滋潤型</h2><text_group><h3>全天候的滋養呵護</h3><p>• 告別乾枯、絕對滋潤</p><p>• 讓肌膚及秀髮凍齡</p></text_group><text_group><h3>乳霜洗髮乳 (無矽靈)</h3><p>• 無矽靈讓頭皮及頭髮更健康</p><p>• 柔順亮澤的養髮好產品</p></text_group>',
+        'des': '<h2>milk <span class="pink_color_shadow">乳霜洗髮乳-滋潤型<span></h2><text_group><h3>全天候的滋養呵護</h3><p>• 告別乾枯、絕對滋潤</p><p>• 讓秀髮凍齡</p><p>• 無矽靈</p></text_group><!--<text_group><h3>乳霜洗髮乳 (無矽靈)</h3><p>• 無矽靈讓頭皮及頭髮更健康</p><p>• 柔順亮澤的養髮好產品</p></text_group>-->',
         'img': 'asset/p1-3.png',
-        'spec': ['spec1','spec2','spec5','spec4'],
+        'spec': ['spec1','spec3','spec5','spec4','spec2'],
         'type': ['洗髮乳-清潤型', '沐浴乳-清潤型', '洗髮乳-滋潤型', '沐浴乳-滋潤型']
+        //'type': ['沐浴乳-滋潤型','沐浴乳-清潤型','洗髮乳-滋潤型','洗髮乳-清潤型']
       },
       'item4':{
         'name': 'milk 乳霜沐浴乳-滋潤型',
         'type_name': '沐浴乳滋潤型',
-        'des': '<h2>milk 乳霜沐浴乳-滋潤型</h2><text_group><h3>全天候的滋養呵護</h3><p>• 告別乾枯、絕對滋潤</p><p>• 讓肌膚及秀髮凍齡</p></text_group><text_group><h3>乳霜洗髮乳 (無矽靈)</h3><p>• 乳清蛋白+乳霜加倍滋潤</p><p>• 洗後光滑不緊繃</p></text_group>',
+        'des': '<h2>milk <span class="pink_color_shadow">乳霜沐浴乳-滋潤型<span class="pink_color_shadow"></h2><text_group><h3>全天候的滋養呵護</h3><p>• 告別乾枯、絕對滋潤</p><p>• 讓肌膚凍齡</p></text_group><text_group><!--<h3>乳霜洗髮乳 (無矽靈)</h3>--><p>• 乳清蛋白+乳霜加倍滋潤</p><p>• 洗後光滑不緊繃</p></text_group>',
         'img': 'asset/p1-4.png',
-        'spec': ['spec1','spec6'],
+        'spec': ['spec1','spec10','spec12','spec6'],
         'type': ['洗髮乳-清潤型', '沐浴乳-清潤型', '洗髮乳-滋潤型', '沐浴乳-滋潤型']
+        //'type': ['沐浴乳-滋潤型','沐浴乳-清潤型','洗髮乳-滋潤型','洗髮乳-清潤型']
       }
     }
   };
@@ -198,7 +216,7 @@ function input_register(){
       'item1': {
         'name': '果酸沐浴乳',
         'type_name': '果酸沐浴乳',
-        'des': '<h2>果酸沐浴乳</h2><text_group><h3>真正寵愛的保濕因子</h3><p>• 超優質洗感、好沖不滑溜</p><p>• 保濕成分真正寵愛您</p></text_group><text_group><h3>果酸沐浴乳</h3><p>• 保濕柔膚因子、真正溫柔洗淨</p><p>• 維他命E及金盞花等萃取、細膩呵護肌膚</p></text_group>',
+        'des': '<h2 class="pink_color_shadow">果酸沐浴乳</h2><text_group><h3>真正寵愛的保濕因子</h3><p>• 超優質洗感、好沖不滑溜</p><p>• 保濕成分真正寵愛您</p></text_group><!--<text_group><h3>果酸沐浴乳</h3><p>• 保濕柔膚因子、真正溫柔洗淨</p><p>• 維他命E及金盞花等萃取、細膩呵護肌膚</p></text_group>-->',
         'img': 'asset/p2-1.png',
         'spec': ['spec1','spec6','spec7'],
         'type': ['果酸沐浴乳', '果酸洗髮乳 (無矽靈)']
@@ -206,9 +224,9 @@ function input_register(){
       'item2': {
         'name': '果酸沐浴乳',
         'type_name': '果酸洗髮乳',
-        'des': '<h2>果酸沐浴乳</h2><text_group><h3>真正寵愛的保濕因子</h3><p>• 超優質洗感、好沖不滑溜</p><p>• 保濕成分真正寵愛您</p></text_group><text_group><h3>果酸沐浴乳</h3><p>• 維他命E讓頭皮健康年輕</p><p>• 天然果酸讓頭髮柔順、減少分岔斷裂</p></text_group>',
+        'des': '<h2 class="pink_color_shadow">果酸沐浴乳</h2><text_group><h3>真正寵愛的保濕因子</h3><p>• 超優質洗感、好沖不滑溜</p><p>• 保濕成分真正寵愛您</p></text_group><text_group><h3>果酸沐浴乳</h3><p>• 維他命E讓頭皮健康年輕</p><p>• 天然果酸讓頭髮柔順、減少分岔斷裂</p></text_group>',
         'img': 'asset/p2-2.png',
-        'spec': ['spec2','spec6','spec3','spec7'],
+        'spec': ['spec2','spec3','spec7'],
         'type': ['果酸沐浴乳', '果酸洗髮乳 (無矽靈)']
       },
     }
@@ -220,17 +238,17 @@ function input_register(){
       'item1': {
         'name': '保濕化妝水',
         'type_name': '保濕化妝水',
-        'des': '<h2>保濕化妝水</h2><text_group><h3>超水嫩的保養推薦</h3><p>• 從肌底開始保濕再保濕</p><p>• 保養級玻尿酸補充並鎖住水分</p></text_group><text_group><h3>保濕步驟1~保濕化妝水</h3><p>• 當化妝水或濕敷都超好用</p><p>• 青春又亮白~特選綠茶及蘆薈萃取</p></text_group>',
+        'des': '<h2 class="pink_color_shadow">保濕化妝水</h2><text_group><h3>超水嫩的保養推薦</h3><p>• 從肌底開始保濕再保濕</p><p>• 保養級玻尿酸補充並鎖住水分</p></text_group><text_group><h3>保濕步驟1~保濕化妝水</h3><p>• 當化妝水或濕敷都超好用</p><p>• 青春又亮白~特選綠茶及蘆薈萃取</p></text_group>',
         'img': 'asset/p3-1.png',
-        'spec': ['spec1','spec8'],
+        'spec': ['spec11','spec8','spec9'],
         'type': ['保濕步驟1~保濕化妝水', '保濕步驟2~保濕柔膚乳']
       },
       'item2': {
         'name': '保濕柔膚乳',
         'type_name': '保濕柔膚乳',
-        'des': '<h2>保濕柔膚乳</h2><text_group><h3>超水嫩的保養推薦</h3><p>• 從肌底開始保濕再保濕</p><p>• 保養級玻尿酸補充並鎖住水分</p></text_group><text_group><h3>保濕步驟2~保濕柔膚乳</h3><p>• 保養級橄欖油、乳木果油好滋潤</p><p>• 豐富膠原蛋白讓肌膚超Q彈</p></text_group>',
+        'des': '<h2 class="pink_color_shadow">保濕柔膚乳</h2><text_group><h3>超水嫩的保養推薦</h3><p>• 從肌底開始保濕再保濕</p><p>• 保養級玻尿酸補充並鎖住水分</p></text_group><text_group><h3>保濕步驟2~保濕柔膚乳</h3><p>• 保養級橄欖油、乳木果油好滋潤</p><p>• 豐富膠原蛋白讓肌膚超Q彈</p></text_group>',
         'img': 'asset/p3-2.png',
-        'spec': ['spec1','spec9','spec6'],
+        'spec': ['spec11','spec9','spec6'],
         'type': ['保濕步驟1~保濕化妝水', '保濕步驟2~保濕柔膚乳']
       },
     }
@@ -242,7 +260,7 @@ function input_register(){
       'item1': {
         'name': '禪之喜悅沐浴乳',
         'type_name': '禪之喜悅沐浴乳',
-        'des': '<h2>禪之喜悅沐浴乳</h2><text_group><h3>靜心舒壓的沐浴時光</h3><p>• 舒緩放鬆的植物萃取</p><p>• 親膚保濕成分讓肌膚水嫩健康</p></text_group>',
+        'des': '<h2 class="pink_color_shadow">禪之喜悅沐浴乳</h2><text_group><h3>靜心舒壓的沐浴時光</h3><p>• 舒緩放鬆的植物萃取</p><p>• 親膚保濕成分讓肌膚水嫩健康</p></text_group>',
         'img': 'asset/p4-1.png',
         'spec': ['spec1','spec9','spec6'],
         'type': ['禪之喜悅沐浴乳']
@@ -256,34 +274,34 @@ function input_register(){
       'item1': {
         'name': '檀香洗髮乳',
         'type_name': '檀香洗髮乳',
-        'des': '<h2>檀香洗髮乳</h2><text_group><h3>健康修護的植物油及植萃</h3><p>• 暢銷經典產品、專為東方人設計</p><p>• 修護成分讓肌膚及頭皮健康</p></text_group><text_group><h3>乳霜洗髮乳 (無矽靈)</h3><p>• 荷荷芭油及當藥等植萃，讓秀髮免於吹風整燙傷害</p><p>• 酪梨油讓頭皮更健康</p></text_group>',
+        'des': '<h2 class="pink_color_shadow">檀香洗髮乳</h2><text_group><h3>健康修護的植物油及植萃</h3><p>• 暢銷經典產品、專為東方人設計</p><p>• 修護成分讓頭皮健康</p><p>• 無矽靈</p></text_group><!--<text_group><h3>乳霜洗髮乳 (無矽靈)</h3><p>• 荷荷芭油及當藥等植萃，讓秀髮免於吹風整燙傷害</p><p>• 酪梨油讓頭皮更健康</p></text_group>-->',
         'img': 'asset/p5-1.png',
-        'spec': ['spec1','spec9','spec4'],
-        'type': ['洗髮乳-檀香', '沐浴乳-檀香', '洗髮乳-山茶花油', '沐浴乳-乳木果油']
+        'spec': ['spec9','spec6','spec4'],
+        'type': ['檀香洗髮乳', '檀香沐浴乳', '檀香洗髮乳-山茶花油', '檀香沐浴乳-乳木果油']
       },
       'item2': {
         'name': '檀香沐浴乳',
         'type_name': '檀香沐浴乳',
-        'des': '<h2>檀香沐浴乳</h2><text_group><h3>健康修護的植物油及植萃</h3><p>• 暢銷經典產品、專為東方人設計</p><p>• 修護成分讓肌膚及頭皮健康</p></text_group><text_group><h3>檀香沐浴乳</h3><p>• 菩提樹、洋甘菊、小黃瓜等植萃，讓肌膚活力Q彈</p><p>• 親膚性配方，減緩肌膚乾裂</p></text_group>',
+        'des': '<h2 class="pink_color_shadow">檀香沐浴乳</h2><text_group><h3>健康修護的植物油及植萃</h3><p>• 暢銷經典產品、專為東方人設計</p><p>• 修護成分讓肌膚健康</p></text_group><!--<text_group><h3>檀香沐浴乳</h3><p>• 菩提樹、洋甘菊、小黃瓜等植萃，讓肌膚活力Q彈</p><p>• 親膚性配方，減緩肌膚乾裂</p></text_group>-->',
         'img': 'asset/p5-2.png',
-        'spec': ['spec1','spec6'],
-        'type': ['洗髮乳-檀香', '沐浴乳-檀香', '洗髮乳-山茶花油', '沐浴乳-乳木果油']
+        'spec': ['spec9','spec6'],
+        'type': ['檀香洗髮乳', '檀香沐浴乳', '檀香洗髮乳-山茶花油', '檀香沐浴乳-乳木果油']
       },
       'item3': {
         'name': '檀香洗髮乳',
-        'type_name': '檀香洗髮乳',
-        'des': '<h2>檀香洗髮乳</h2><text_group><h3>健康修護的植物油及植萃</h3><p>• 暢銷經典產品、專為東方人設計</p><p>• 修護成分讓肌膚及頭皮健康</p></text_group><text_group><h3>乳霜洗髮乳 (無矽靈)</h3><p>• 荷荷芭油及當藥等植萃，讓秀髮免於吹風整燙傷害</p><p>• 酪梨油讓頭皮更健康</p></text_group>',
+        'type_name': '檀香洗髮乳-山茶花油',
+        'des': '<h2 class="pink_color_shadow">檀香洗髮乳</h2><text_group><h3>健康修護的植物油及植萃</h3><p>• 暢銷經典產品、專為東方人設計</p><p>• 修護成分讓頭皮健康</p><p>• 無矽靈</p><p>• 特別添加山茶花油</p><p>• 荷荷芭油及當藥等植萃，讓秀髮免於吹風整燙傷害</p><p>• 酪梨油讓頭皮更健康</p></text_group><!--<text_group><h3>乳霜洗髮乳 (無矽靈)</h3><p>• 荷荷芭油及當藥等植萃，讓秀髮免於吹風整燙傷害</p><p>• 酪梨油讓頭皮更健康</p></text_group>-->',
         'img': 'asset/p5-3.png',
-        'spec': ['spec1','spec9','spec4'],
-        'type': ['洗髮乳-檀香', '沐浴乳-檀香', '洗髮乳-山茶花油', '沐浴乳-乳木果油']
+        'spec': ['spec9','spec3','spec5','spec4','spec2'],
+        'type': ['檀香洗髮乳', '檀香沐浴乳', '檀香洗髮乳-山茶花油', '檀香沐浴乳-乳木果油']
       },
       'item4': {
-        'name': '檀香沐浴乳',
+        'name': '檀香沐浴乳-乳木果油',
         'type_name': '檀香沐浴乳',
-        'des': '<h2>檀香沐浴乳</h2><text_group><h3>健康修護的植物油及植萃</h3><p>• 暢銷經典產品、專為東方人設計</p><p>• 修護成分讓肌膚及頭皮健康</p></text_group><text_group><h3>乳霜洗髮乳 (無矽靈)</h3><p>• 菩提樹、洋甘菊、小黃瓜等植萃，讓肌膚活力Q彈</p><p>• 親膚性配方，減緩肌膚乾裂</p></text_group>',
+        'des': '<h2 class="pink_color_shadow">檀香沐浴乳-乳木果油</h2><text_group><h3>健康修護的植物油及植萃</h3><p>• 暢銷經典產品、專為東方人設計</p><p>• 修護成分讓肌膚及頭皮健康</p><p>• 特別添加乳木果油</p><p>• 菩提樹、洋甘菊、小黃瓜等植萃，讓肌膚活力Q彈</p><p>• 親膚性配方，減緩肌膚乾裂</p></text_group><!--<text_group><h3>乳霜洗髮乳 (無矽靈)</h3><p>• 菩提樹、洋甘菊、小黃瓜等植萃，讓肌膚活力Q彈</p><p>• 親膚性配方，減緩肌膚乾裂</p></text_group>-->',
         'img': 'asset/p5-4.png',
-        'spec': ['spec1','spec6'],
-        'type': ['洗髮乳-檀香', '沐浴乳-檀香', '洗髮乳-山茶花油', '沐浴乳-乳木果油']
+        'spec': ['spec9','spec6','spec12'],
+        'type': ['檀香洗髮乳', '檀香沐浴乳', '檀香洗髮乳-山茶花油', '檀香沐浴乳-乳木果油']
       }
     }
   }
