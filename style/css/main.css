@@ -2314,7 +2314,8 @@ input[type="checkbox"] {
 }
 @media screen and (max-width: 375px) {
   .product_group .product_content .product_des .des_spec {
-    width: 190px;
+    /*width: 190px;*/
+    min-width: 190px;
     height: 40px;
     margin: 16px auto 0;
     justify-content: center;
