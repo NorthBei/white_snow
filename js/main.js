@@ -18,11 +18,6 @@ $(window).scroll(function(){
   }
 });
 
-function minidemo(x) {
-
-
-}
-
 $(function(){
 
   // $('#nav .hvr-back-pulse').click(function(){
@@ -101,6 +96,11 @@ $(function(){
     $('.register_content').css('height', 'auto');
     $('.send_register').css('margin-bottom', '30px');
     $('.receipt_input_group').append(receipt_input);
+
+    console.log($(".receipt_input").length );
+    if($(".receipt_input").length > 1){
+      $(".receipt_button.remove_receipt").removeClass("remove_receipt_hidden");
+    }
   });
 
   $('.remove_receipt').click(function(){
@@ -110,6 +110,9 @@ $(function(){
     if(input.length > 1){
       $(this).addClass("after_click");
       input.last().remove();
+    }
+    if($(".receipt_input").length == 1){
+      $(".receipt_button.remove_receipt").addClass("remove_receipt_hidden");
     }
   });
 
@@ -143,7 +146,10 @@ $(function(){
     console.info('Action:', e.action);
     console.info('Text:', e.text);
     console.info('Trigger:', e.trigger);
-
+    $("#copy_mail_finish").removeClass("waiting_copy");
+    setTimeout( function(){
+      $("#copy_mail_finish").addClass('waiting_copy')
+    }, 1500 );
     e.clearSelection();
 });
 

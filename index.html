@@ -119,6 +119,7 @@
       <div class="grid gift gift1 hvr-sweep-to-right">
         <img src="./asset/gold.png" class="gift_banner">
         <div class="gift_name">
+          <h3 class="title">抽中萬元購物金讓媽咪去血拼</h3>
           <div class="left">頭獎<p>3名</p></div>
           <div class="border"></div>
           <div class="right">購物金 <br>NT$10000元</div>
@@ -128,6 +129,7 @@
       <div class="grid gift gift2 hvr-sweep-to-right">
         <img src="./asset/sliver.png" class="gift_banner">
         <div class="gift_name">
+          <h3 class="title">抽中愛天然洗衣精幫媽咪洗衣服</h3>
           <div class="left">貳獎<p>10名</p></div>
           <div class="border"></div>
           <div class="right washer">白雪愛天然洗衣精6瓶<br>(市價NT$1014元)</div>
@@ -137,6 +139,7 @@
       <div class="grid gift gift3 hvr-sweep-to-right">
         <img src="./asset/copper.png" class="gift_banner">
         <div class="gift_name">
+          <h3 class="title">抽中哈根達斯券帶媽咪去吃冰淇淋</h3>
           <div class="left">參獎<p>30名</p></div>
           <div class="border"></div>
           <div class="right dozs">Häagen-Dazs外帶冰淇淋<br>迷你杯(100ml)禮券乙張<br>(市價NT$100元)
@@ -230,7 +233,7 @@
             <input type="text" class="receipt_input" name="receipt" placeholder="請輸入發票編號" onfocus="this.placeholder=''" onblur="this.placeholder = '請輸入發票編號'">
           </div>
           <button type="button" class="receipt_button add_receipt"></button>
-          <button type="button" class="receipt_button remove_receipt"></button>
+          <button type="button" class="receipt_button remove_receipt remove_receipt_hidden"></button>
         </div>
         <div class="check">
           <input type="checkbox">
@@ -456,6 +459,7 @@
             <div class="grid gift gift1">
               <img src="./asset/gold.png" class="gift_banner">
               <div class="gift_name">
+                <h3 class="title">帶媽咪去血拼</h3>
                 <div class="left">頭獎<p>3名</p></div>
                 <div class="border"></div>
                 <div class="right">購物金 <br>NT$10000元</div>
@@ -490,6 +494,7 @@
             <div class="grid gift gift2">
               <img src="./asset/sliver.png" class="gift_banner">
               <div class="gift_name">
+                <h3 class="title">幫媽咪洗衣服</h3>
                 <div class="left">貳獎<p>10名</p></div>
                 <div class="border"></div>
                 <div class="right washer">白雪愛天然洗衣精6瓶<br>(市價NT$1014元)</div>
@@ -566,6 +571,7 @@
             <div class="grid gift gift3">
               <img src="./asset/copper.png" class="gift_banner">
               <div class="gift_name">
+                <h3 class="title">陪媽咪去吃冰</h3>
                 <div class="left">參獎<p>30名</p></div>
                 <div class="border"></div>
                 <div class="right dozs">Häagen-Dazs外帶冰淇淋<br>迷你杯(100ml)禮券乙張<br>(市價NT$100元)
@@ -790,7 +796,9 @@
       </div>
       <div class="social">
         <a class="social_icon fb" href="https://www.facebook.com/snowwhite1954/" target="_blank"></a>
-        <button class="social_icon mail" id="copy_mail" data-clipboard-text="service@snowwhite.com.tw"></button>
+        <button class="social_icon mail" id="copy_mail" data-clipboard-text="service@snowwhite.com.tw">
+          <div id="copy_mail_finish" class="waiting_copy">已複製</div>
+        </button>
       </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

@@ -89,6 +89,7 @@ body {
   background: url(../../asset/mail-icon.png) no-repeat;
   background-size: 44px 44px;
   margin-left: 15px;
+  position: relative;
 }
 
 nav {
@@ -1438,6 +1439,39 @@ input[type="checkbox"] {
   }
 }
 
+#copy_mail_finish{
+    position: absolute;
+    width: 70px;
+    height: 34px;
+    line-height: 34px;
+    color: #4a4a4a;
+    background: white;
+    top: -51px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.waiting_copy{
+  opacity: 0;
+}
+
+#copy_mail_finish:after{
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: white transparent transparent transparent;
+  
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .grid.gift{
   position: relative;;
 }
@@ -1451,6 +1485,22 @@ input[type="checkbox"] {
   height: 100%;
   width: 65%;
   position: absolute;
+}
+
+.gift_name .title{
+/* 抽中萬元購物金讓媽咪去血拼: */
+  font-size: 36px;
+  color: #FFFFFF;
+  letter-spacing: 0.56px;
+  text-shadow: 0 2px 3px rgba(0,0,0,0.50);
+  position: absolute;
+  top: 20px;
+}
+@media screen and (max-width: 375px) {
+  .gift_name .title{
+    font-size: 14px;
+    top: 2px;
+  }
 }
 
 .about .grid.gift.gift1 {
@@ -1843,6 +1893,11 @@ input[type="checkbox"] {
   right: -68px;
   top: 0;
   right: 17px;
+}
+
+.register_content .remove_receipt_hidden{
+  opacity: 0;
+  visibility: hidden;
 }
 @media screen and (max-width: 375px) {
   .register_content .remove_receipt {
