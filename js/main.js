@@ -25,12 +25,12 @@ function minidemo(x) {
 
 $(function(){
 
-  $('#nav .hvr-back-pulse').click(function(){
-      $(this).removeClass().addClass('magictime puffOut');
+  // $('#nav .hvr-back-pulse').click(function(){
+  //     $(this).removeClass().addClass('magictime puffOut');
   
-      var wait = window.setTimeout( function(){
-        $('#nav .magictime.puffOut').removeClass().addClass('hvr-back-pulse')}, 1500 );
-  });
+  //     var wait = window.setTimeout( function(){
+  //       $('#nav .magictime.puffOut').removeClass().addClass('hvr-back-pulse')}, 1500 );
+  // });
 
   // scroll to top
   $("#totop").click(function(){

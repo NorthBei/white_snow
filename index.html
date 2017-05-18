@@ -8,7 +8,7 @@
     <title>White Snow</title>
     <link rel="stylesheet" href="style/css/hover.css">
     <link rel="stylesheet" href="style/css/main.css">
-    <link rel="stylesheet" href="style/css/magic.min.css">
+    <!-- <link rel="stylesheet" href="style/css/magic.min.css"> -->
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -55,12 +55,24 @@
          <a href="" class="scroll" data-link="#hero"><div class="logo"></div></a>
         <ul>
           <li class="close" id="close_menu"></li>
-          <li class="hvr-back-pulse"><a href="" data-link="#about" class="scroll">活動辦法</a></li>
-          <li class="hvr-back-pulse"><a href="" data-link="#notice" class="scroll">注意事項</a></li>
-          <li class="hvr-back-pulse"><a href="" data-link="#register" class="scroll">登入活動</a></li>
-          <li class="hvr-back-pulse"><a href="" data-link="#product" class="scroll">白雪商品</a></li>
-          <li class="hvr-back-pulse"><a href="" data-link="#sale" class="scroll">銷售通路</a></li>
-          <li class="hvr-back-pulse"><a href="" data-link="#winners" class="scroll">得獎名單</a></li>
+          <li class="nav_list"><a href="" data-link="#about" class="scroll">活動辦法</a></li>
+          <li class="nav_list"><a href="" data-link="#notice" class="scroll">注意事項</a></li>
+          <li class="nav_list"><a href="" data-link="#register" class="scroll">登入發票</a></li>
+          <li class="nav_list"><a href="" data-link="#product" class="scroll">白雪商品</a></li>
+          <li class="nav_list"><a href="" data-link="#sale" class="scroll">銷售通路</a></li>
+          <li class="nav_list"><a href="" data-link="#winners" class="scroll">得獎名單</a></li>
+          <style type="text/css">
+            .nav_list:hover{
+              font-weight: bold;
+              background: white;
+            }
+            .nav_list:hover a{
+              color: #F7AAB5;
+            }
+            .nav_list{
+             transition: background 0.5s ease-in-out;
+            }
+          </style>
           <li class="social">
             <a class="social_icon fb" href="#" target="_blank"></a>
             <button class="social_icon mail" id="copy_mail" data-clipboard-text="my@mail.com"></button>
@@ -105,7 +117,7 @@
         </div>
       </div>
       <div class="grid gift gift1 hvr-sweep-to-right">
-        <img src="./asset/gift1_bg.png" class="gift_banner">
+        <img src="./asset/gold.png" class="gift_banner">
         <div class="gift_name">
           <div class="left">頭獎<p>3名</p></div>
           <div class="border"></div>
@@ -114,7 +126,7 @@
         <img src="asset/gift1.png" alt="" class="gift_img money">
       </div>
       <div class="grid gift gift2 hvr-sweep-to-right">
-        <img src="./asset/gift2_bg.png" class="gift_banner">
+        <img src="./asset/sliver.png" class="gift_banner">
         <div class="gift_name">
           <div class="left">貳獎<p>10名</p></div>
           <div class="border"></div>
@@ -123,7 +135,7 @@
         <img src="asset/gift2.png" alt="" class="gift_img washer">
       </div>
       <div class="grid gift gift3 hvr-sweep-to-right">
-        <img src="./asset/gift3_bg.png" class="gift_banner">
+        <img src="./asset/copper.png" class="gift_banner">
         <div class="gift_name">
           <div class="left">參獎<p>30名</p></div>
           <div class="border"></div>
@@ -338,15 +350,15 @@
         <div class="sale_img_bottom">
           <div class="sale_content_wrapper">
             <img src="./asset/棉花田.png" class="sale_img sale_img1">
-            <a href="http://www.gohappy.com.tw/shopping/1/s/12/?sid=12&WT.ma_id=amart_F1_3&utm_source=referral&utm_medium=amart&utm_campaign=amart_F1_3" class="sale_button">前往購物 ></a>
+            <a target="_blank" href="http://www.gohappy.com.tw/shopping/1/s/12/?sid=12&WT.ma_id=amart_F1_3&utm_source=referral&utm_medium=amart&utm_campaign=amart_F1_3" class="sale_button">前往購物 ></a>
           </div>
           <div class="sale_content_wrapper">
             <img src="./asset/pchome.png" class="sale_img sale_img2">
-            <a href="http://shopping.pchome.com.tw/" class="sale_button">前往購物 ></a>
+            <a target="_blank" href="http://shopping.pchome.com.tw/" class="sale_button">前往購物 ></a>
           </div>
           <div class="sale_content_wrapper">
             <img src="./asset/momo.png" class="sale_img sale_img3">
-            <a href="https://www.momoshop.com.tw/main/Main.jsp" class="sale_button">前往購物 ></a>
+            <a target="_blank" href="https://www.momoshop.com.tw/main/Main.jsp" class="sale_button">前往購物 ></a>
           </div>
         </div>  
       </div>
@@ -442,7 +454,7 @@
         <div class="open">
           <div class="winners_group group1">
             <div class="grid gift gift1">
-              <img src="./asset/gift1_bg.png" class="gift_banner">
+              <img src="./asset/gold.png" class="gift_banner">
               <div class="gift_name">
                 <div class="left">頭獎<p>3名</p></div>
                 <div class="border"></div>
@@ -476,7 +488,7 @@
           </div>
           <div class="winners_group group2">
             <div class="grid gift gift2">
-              <img src="./asset/gift2_bg.png" class="gift_banner">
+              <img src="./asset/sliver.png" class="gift_banner">
               <div class="gift_name">
                 <div class="left">貳獎<p>10名</p></div>
                 <div class="border"></div>
@@ -552,7 +564,7 @@
           </div>
           <div class="winners_group group3">
             <div class="grid gift gift3">
-              <img src="./asset/gift3_bg.png" class="gift_banner">
+              <img src="./asset/copper.png" class="gift_banner">
               <div class="gift_name">
                 <div class="left">參獎<p>30名</p></div>
                 <div class="border"></div>
@@ -777,8 +789,8 @@
         <p class="company_copyright">Copyright © 2017 BLANCHE NEIGE ENTERPRISE CO., LTD. All rights reserved.</p>
       </div>
       <div class="social">
-        <a class="social_icon fb" href="#" target="_blank"></a>
-        <button class="social_icon mail" id="copy_mail" data-clipboard-text="my@mail.com"></button>
+        <a class="social_icon fb" href="https://www.facebook.com/snowwhite1954/" target="_blank"></a>
+        <button class="social_icon mail" id="copy_mail" data-clipboard-text="service@snowwhite.com.tw"></button>
       </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

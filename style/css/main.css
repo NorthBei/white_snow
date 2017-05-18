@@ -1449,9 +1449,8 @@ input[type="checkbox"] {
 }
 .gift_banner{
   height: 100%;
-  width: 50%;
+  width: 65%;
   position: absolute;
-  left: 35px;
 }
 
 .about .grid.gift.gift1 {
@@ -2865,6 +2864,7 @@ footer {
   justify-content: space-between;
   padding: 0 80px 0 40px;
   position: relative;
+  padding-left: 0;
 }
 @media screen and (max-width: 375px) {
   footer {
@@ -2878,7 +2878,8 @@ footer .logo {
   height: 40px;
   background: url(../../asset/logo.png) no-repeat;
   background-size: 102px 40px;
-  margin-left: 40px;
+  /*margin-left: 40px;*/
+  margin-left: 5.5vw;
 }
 @media screen and (max-width: 375px) {
   footer .logo {
