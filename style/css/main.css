@@ -1486,6 +1486,7 @@ input[type="checkbox"] {
   height: 100%;
   width: 65%;
   position: absolute;
+  top:0;
 }
 
 .gift_name .title{
