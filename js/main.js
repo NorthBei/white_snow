@@ -123,12 +123,16 @@ $(function(){
         scrollTop: height
     }, 500);
   });
-
+  var heroHeight = $("#hero").height();
   if($(window).width() < 380){
 
     var lastScrollTop = 0;
     $(window).scroll(function(event){
       var st = $(this).scrollTop();
+
+      if(st < heroHeight){
+        return;
+      }
       if (st > lastScrollTop){
          // downscroll code
          $('nav').css("transform","translateY(-100%)");

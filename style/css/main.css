@@ -352,6 +352,7 @@ input[type="checkbox"] {
   box-sizing: content-box;
   position: relative;
   margin-top: 4px;
+  margin-right: 10px;
 }
 
 .bubble {
@@ -1412,7 +1413,7 @@ input[type="checkbox"] {
 }
 .about .grid.two_grid .method_des .date_group .date_item_group .date_item_group_item {
   flex-basis: 50%;
-  height: 74px;
+  /*height: 74px;*/
   font-size: 22px;
   display: flex;
   flex-direction: column;
@@ -1504,7 +1505,7 @@ input[type="checkbox"] {
 @media screen and (max-width: 375px) {
   .gift_name .title{
     font-size: 12px;
-    top: 2px;
+    top: -23px;
   }
 }
 
