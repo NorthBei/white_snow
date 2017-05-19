@@ -32,21 +32,22 @@ $(function(){
     $("body,html").animate({scrollTop:0},1000);
   });
   //
-  $('#nav a[class=scroll]').click(function(event){
-    event.preventDefault()
-    var id = $(this).attr("data-link");
+  $('#nav .nav_list').click(function(event){
+    event.preventDefault();
+    var id = $(this).find("a[class=scroll]").attr("data-link");
+    console.log($(this));
     var scroll_length = $(id).offset().top;
     //console.log(id,scroll_length);
     $("body,html").animate({scrollTop:scroll_length},1000);
   });
 
-  $('#nav a[class=scroll]').click(function(event){
-    event.preventDefault()
-    var id = $(this).attr("data-link");
-    var scroll_length = $(id).offset().top;
-    // console.log(id,scroll_length);
-    $("body,html").animate({scrollTop:scroll_length},1000);
-  });
+  // $('#nav a[class=scroll]').click(function(event){
+  //   event.preventDefault()
+  //   var id = $(this).attr("data-link");
+  //   var scroll_length = $(id).offset().top;
+  //   // console.log(id,scroll_length);
+  //   $("body,html").animate({scrollTop:scroll_length},1000);
+  // });
 
   $('.hero .rigester').click(function(){
     event.preventDefault()
@@ -180,7 +181,7 @@ function input_register(){
       'item1':{
         'name': 'milk 乳霜沐浴乳-滋潤型',
         'type_name': '沐浴乳滋潤型',
-        'des': '<h2>milk <span class="pink_color_shadow">乳霜沐浴乳-滋潤型<span class="pink_color_shadow"></h2><text_group><h3>全天候的滋養呵護</h3><p>• 告別乾枯、絕對滋潤</p><p>• 讓肌膚凍齡</p></text_group><text_group><!--<h3>乳霜洗髮乳 (無矽靈)</h3>--><p>• 乳清蛋白+乳霜加倍滋潤</p><p>• 洗後光滑不緊繃</p></text_group>',
+        'des': '<h2>milk <span class="pink_color_shadow">乳霜沐浴乳-滋潤型<span class="pink_color_shadow"></h2><text_group><h3>全天候的滋養呵護</h3><p>• 告別乾枯、絕對滋潤</p><p>• 讓肌膚凍齡</p><p>• 乳清蛋白+乳霜加倍滋潤</p><p>• 洗後光滑不緊繃</p></text_group><!--<text_group><h3>乳霜洗髮乳 (無矽靈)</h3><p>• 乳清蛋白+乳霜加倍滋潤</p><p>• 洗後光滑不緊繃</p></text_group>-->',
         'img': 'asset/p1-4.png',
         'spec': ['spec1','spec10','spec12','spec6'],
         //'type': ['洗髮乳-清潤型', '沐浴乳-清潤型', '洗髮乳-滋潤型', '沐浴乳-滋潤型']

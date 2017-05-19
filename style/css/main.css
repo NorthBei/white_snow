@@ -642,6 +642,7 @@ input[type="checkbox"] {
   color: white;
   text-align: center;
   align-items: center;
+  position: relative;
 }
 @media screen and (max-width: 375px) {
   .grid.gift .gift_name {
@@ -1494,11 +1495,14 @@ input[type="checkbox"] {
   letter-spacing: 0.56px;
   text-shadow: 0 2px 3px rgba(0,0,0,0.50);
   position: absolute;
-  top: 20px;
+  /*top: 20px;*/
+  top: -64px;
+  width: 100%;
+  text-align: center;
 }
 @media screen and (max-width: 375px) {
   .gift_name .title{
-    font-size: 14px;
+    font-size: 12px;
     top: 2px;
   }
 }
@@ -2280,6 +2284,7 @@ input[type="checkbox"] {
     height: auto;
     margin-top: 11px;
     flex-direction: column;
+    min-height: 410px;
   }
 }
 .product_group .product_content .product_section_title {
@@ -2306,9 +2311,13 @@ input[type="checkbox"] {
 @media screen and (max-width: 375px) {
   .product_group .product_content .product_des {
     width: 332px;
-    height: 110px;
+    /*height: 110px;*/
     margin: 32px auto 0;
     order: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
   }
 }
 .product_group .product_content .product_des .des_text {
@@ -2324,6 +2333,7 @@ input[type="checkbox"] {
     width: 100%;
     flex-direction: row;
     justify-content: space-around;
+        justify-content: space-between;
   }
 }
 .product_group .product_content .product_des .des_text h2 {
@@ -2373,6 +2383,18 @@ input[type="checkbox"] {
     height: 40px;
     margin: 16px auto 0;
     justify-content: center;
+    margin-right: 0;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 0;
+    justify-content: flex-start;
+    height: 127px;
+    max-width: 80px;
+    min-width: initial;
+    transform: rotateY(180deg);
+    height: 150px;
   }
 }
 .product_group .product_content .product_des .des_spec .spec_item {
@@ -2387,6 +2409,8 @@ input[type="checkbox"] {
     height: 40px;
     margin-right: 7px;
     overflow: hidden;
+    transform: rotateY(180deg);
+    margin-bottom: 7px;
   }
   .product_group .product_content .product_des .des_spec .spec_item:last-child {
     margin: 0;
