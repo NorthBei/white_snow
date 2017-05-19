@@ -1387,7 +1387,7 @@ input[type="checkbox"] {
     height: 80px;
     margin: 22px 0 0 2px;
     margin: 0;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 }
 .about .grid.two_grid .method_des .date_group .date_item {
@@ -1415,7 +1415,7 @@ input[type="checkbox"] {
 }
 .about .grid.two_grid .method_des .date_group .gap {
   margin-top: 18px;
-  margin-top: 8px;
+  margin-top: 5px;
 }
 .about .grid.two_grid .method_des .date_group .date_item_group {
   display: flex;
