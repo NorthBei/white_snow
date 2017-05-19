@@ -49,6 +49,7 @@ a {
 
 .page_bg:before {
   position: absolute;
+  top: 0;
   left: 0;
   content: "";
   width: 100%;
