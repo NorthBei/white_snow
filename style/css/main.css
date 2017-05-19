@@ -919,10 +919,10 @@ input[type="checkbox"] {
 @media screen and (max-width: 375px) {
   .hero .hero_title {
     width: 338px;
-    /*height: 68px;*/
+    height: 68px;
     font-size: 46px;
     letter-spacing: 2px;
-    margin-top: 64px;
+    margin-top: 63px;
   }
 }
 .hero .hero_title::after {
@@ -961,7 +961,6 @@ input[type="checkbox"] {
     width: 152px;
     height: 82px;
     margin-top: 6px;
-    margin-top: -30px;
   }
 }
 .hero .during .during_item {
