@@ -1550,6 +1550,9 @@ input[type="checkbox"] {
 .about .gift3.hvr-sweep-to-right:before{
   background:linear-gradient(253deg, #CCA74E, #775B23);
 }
+.about .hvr-sweep-to-right:before{
+    border-radius: 10px;
+}
 
 .notice {
   position: relative;
