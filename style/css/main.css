@@ -1300,6 +1300,13 @@ input[type="checkbox"] {
 @media screen and (max-width: 375px) {
   .about .grid.two_grid.date .method_des {
     height: calc(79% - 4px);
+    
+    display: flex;
+    flex: 1;
+    margin-bottom: 3px;
+    flex-direction: row;
+    align-items: flex-end;
+    height:initial;
   }
 }
 .about .grid.two_grid .method_title {
@@ -1347,6 +1354,7 @@ input[type="checkbox"] {
   justify-content: center;
   align-items: flex-start;
   line-height: 37px;
+  width: 50%
 }
 @media screen and (max-width: 375px) {
   .about .grid.two_grid .method_des .date_group {
@@ -1365,6 +1373,13 @@ input[type="checkbox"] {
 .about .grid.two_grid .method_des .date_group.right {
   width: 267px;
   margin-left: 127px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0;
+  margin-bottom: 11px;
+  width: 50%;
 }
 @media screen and (max-width: 375px) {
   .about .grid.two_grid .method_des .date_group.right {
@@ -1420,6 +1435,7 @@ input[type="checkbox"] {
   font-size: 22px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 7px;
 }
 .about .grid.two_grid .method_des .date_group .date_item_group .date_item_group_item:nth-of-type(2) {
   flex-grow: 2;
