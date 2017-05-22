@@ -422,9 +422,33 @@ function input_register(){
 })
 
 // Date count
-var startDate = new Date(2017,5,1,00,00);
-var endDate = new Date(2017,6,31,23,59);
-var spantime = (endDate - startDate)/1000;
+var ONE_DAY = 1000 * 60 * 60 * 24;  // 1天的毫秒數
+var ONE_HOUR = 1000 * 60 * 60;  // 1小時的毫秒數
+var ONE_MIN = 1000 * 60; // 1分鐘的毫秒數
+var ONE_SEC = 1000;   // 1秒的毫秒數
+var nowDate = new Date();
+//console.log(nowDate.getFullYear()+","+nowDate.getMonth()+","+nowDate.getDate()+","+nowDate.getHours()+","+nowDate.getMinutes());
+//var startDate = new Date(2017,5,23,23,59);
+//var startDate = new Date(nowDate.getFullYear(),(nowDate.getMonth()+1),nowDate.getDate(),nowDate.getHours(),nowDate.getMinutes(),nowDate.getSeconds());
+//console.log(startDate);
+var endDate = new Date(2017,5,31,23,59);
+//var spantime = (endDate - startDate)/1000;
+
+//var diff = endDate - startDate;
+// var leftDays = Math.floor(diff/ONE_DAY);
+// if(leftDays > 0) diff = diff - (leftDays * ONE_DAY);
+
+// var leftHours = Math.floor(diff/ONE_HOUR);
+// if(leftHours > 0) diff = diff - (leftHours * ONE_HOUR);
+
+// var leftMins = Math.floor(diff/ONE_MIN);
+// if(leftMins >0) diff = diff - (leftMins * ONE_MIN);
+
+// var leftSecs = Math.floor(diff/ONE_SEC);
+
+//console.log("兩個時間差距為%d天%d小時,%d分,%d秒",leftDays,leftHours,leftMins,leftSecs);
+
+
 window.onload = function(){
   // console.log(getString(startDate));
   // console.log(getString(endDate));
@@ -446,24 +470,61 @@ function getString(dt){
 }
 
 function cal(){
-  spantime --;
-  var d = Math.floor(spantime / (24 * 3600));
-  var h = Math.floor((spantime % (24*3600))/3600);
-  var m = Math.floor((spantime % 3600)/(60));
-  var s = Math.floor(spantime%60);
-  str = d + "天 " + h + "時 " + m + "分 " + s + "秒 ";
+  // spantime --;
+  // var d = Math.floor(spantime / (24 * 3600));
+  // var h = Math.floor((spantime % (24*3600))/3600);
+  // var m = Math.floor((spantime % 3600)/(60));
+  // var s = Math.floor(spantime%60);
+  //str = d + "天 " + h + "時 " + m + "分 " + s + "秒 ";  
+  var nowDate = new Date();
+  var startDate = new Date(nowDate.getFullYear(),(nowDate.getMonth()+1),nowDate.getDate(),nowDate.getHours(),nowDate.getMinutes(),nowDate.getSeconds());
+  //var startDate = new Date(2017,5,31,21,59)
+  //console.log(startDate);
+  //var endDate = new Date(2017,5,31,23,59);
 
-  $('#d_1').html(d.toString()[0]);
-  $('#d_2').html(d.toString()[1]);
-  $('#h_1').html(h.toString()[0]);
-  $('#h_2').html(h.toString()[1]);
-  $('#m_1').html(m.toString()[0]);
-  $('#m_2').html(m.toString()[1]);
-  $('#s_1').html(s.toString()[0]);
-  $('#s_2').html(s.toString()[1]);
+  var diff = endDate - startDate;
+  console.log(diff);
+  var leftDays = Math.floor(diff/ONE_DAY);
+  if(leftDays > 0) diff = diff - (leftDays * ONE_DAY);
+
+  var leftHours = Math.floor(diff/ONE_HOUR);
+  if(leftHours > 0) diff = diff - (leftHours * ONE_HOUR);
+
+  var leftMins = Math.floor(diff/ONE_MIN);
+  if(leftMins >0) diff = diff - (leftMins * ONE_MIN);
+
+  var leftSecs = Math.floor(diff/ONE_SEC);
+  
+  leftHours = pad(leftHours,2);
+  leftMins = pad(leftMins,2);
+  leftSecs = pad(leftSecs,2);
+
+  //console.log("兩個時間差距為%d天%s小時,%s分,%s秒",leftDays,leftHours,leftMins,leftSecs);
+
+  $('#d_1').html(0);
+  $('#d_2').html(leftDays.toString());
+  $('#h_1').html(leftHours.toString()[0]);
+  $('#h_2').html(leftHours.toString()[1]);
+  $('#m_1').html(leftMins.toString()[0]);
+  $('#m_2').html(leftMins.toString()[1]);
+  $('#s_1').html(leftSecs.toString()[0]);
+  $('#s_2').html(leftSecs.toString()[1]);
+
+  // $('#d_1').html(d.toString()[0]);
+  // $('#d_2').html(d.toString()[1]);
+  // $('#h_1').html(h.toString()[0]);
+  // $('#h_2').html(h.toString()[1]);
+  // $('#m_1').html(m.toString()[0]);
+  // $('#m_2').html(m.toString()[1]);
+  // $('#s_1').html(s.toString()[0]);
+  // $('#s_2').html(s.toString()[1]);
 }
 // Date count end
-
+function pad(num, size) {
+    var s = num.toString();
+    while (s.length < size) s = "0" + s;
+    return s;
+}
 // 登入發票
 function showerror() {
   $('.register input').removeClass('error');
@@ -506,7 +567,7 @@ $('.send_register').click(function(){
   //   $('.register_content .info .info_group.email').addClass('showerrow');
   //   $('.register_content .receipt_input_group').addClass('showerrow');
   // };
-
+  var isReceiptError = false;
   for(var i=0;i<receipt.length;i++){
     if(receipt.eq(i).val() == ""){
       receipt.eq(i).addClass('error');
@@ -514,21 +575,29 @@ $('.send_register').click(function(){
     }
     else {
       receipt.eq(i).removeClass('error');
+      isReceiptError = true;
     }
   }
 
   if (name == "") {
     $('#user_name').addClass('error');
     $('.register_content .info .info_group.name').addClass('showerrow');
+    return;
   };
   if (phone=="") {
     $('#user_tel').addClass('error');
     $('.register_content .info .info_group.phone').addClass('showerrow');
+    return;
   };
   if (email=="") {
     $('#user_mail').addClass('error');
     $('.register_content .info .info_group.email').addClass('showerrow');
+    return;
   };
+
+  if(!isReceiptError){
+    return;
+  }
   // if (receipt_input=="") {
   //   console.log("11");
   //   $('.receipt_input').addClass('error');
@@ -536,23 +605,27 @@ $('.send_register').click(function(){
   //   if(screenWidth <= 375)
   //     return
   // };
-  console.log(receipt_array);
-
+  var receipts = {}
+  receipts["receipts"] = receipt_array
+  console.log(receipts);
+  console.log(JSON.stringify(receipts));
   // post receipt
-  // $.ajax({
-  //     url: "",
-  //     type: "POST",
-  //     data: JSON.stringify({ paramName: receipt_array }),
-  //     success: function(msg) {
-  //       console.log("Success");
-  //         // var response = JSON.parse(msg)
-  //         // console.log(response.success);
-  //     },
-  //     error: function(xhr, ajaxOptions, thrownError) {
-  //         alert(xhr.status);
-  //         alert(thrownError);
-  //     }
-  // });
+  $.ajax({
+      url: "./ReceiptHandler",
+      type: "POST",
+      contentType : "application/x-www-form-urlencoded; charset=UTF-8",
+			dataType : "json",
+      data:"json="+JSON.stringify(receipts),
+      success: function(msg) {
+        console.log("Success");
+          // var response = JSON.parse(msg)
+          // console.log(response.success);
+      },
+      error: function(xhr, ajaxOptions, thrownError) {
+          console.log(xhr.status);
+          console.log(thrownError);
+      }
+  });
   // post receipt End
 // 登入發票 End
 
