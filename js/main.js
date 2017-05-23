@@ -235,7 +235,7 @@ function input_register(){
       'item2': {
         'name': '果酸沐浴乳',
         'type_name': '果酸洗髮乳',
-        'des': '<h2 class="pink_color_shadow">果酸沐浴乳</h2><text_group><h3>真正寵愛的保濕因子</h3><p>• 超優質洗感、好沖不滑溜</p><p>• 保濕成分真正寵愛您</p></text_group><text_group><h3>果酸沐浴乳</h3><p>• 維他命E讓頭皮健康年輕</p><p>• 天然果酸讓頭髮柔順、減少分岔斷裂</p></text_group>',
+        'des': '<h2 class="pink_color_shadow">果酸洗髮乳</h2><text_group><h3>真正寵愛的保濕因子</h3><p>• 超優質洗感、好沖不滑溜</p><p>• 保濕成分真正寵愛您</p><!--</text_group><text_group><h3>果酸沐浴乳</h3>--><p>• 維他命E讓頭皮健康年輕</p><p>• 天然果酸讓頭髮柔順、減少分岔斷裂</p><p>• 無矽靈</p><!--</text_group>-->',
         'img': 'asset/p2-2.png',
         'spec': ['spec2','spec3','spec7'],
         'type': ['果酸沐浴乳', '果酸洗髮乳 (無矽靈)']
@@ -310,7 +310,7 @@ function input_register(){
       'item4': {
         'name': '檀香洗髮乳',
         'type_name': '檀香洗髮乳-山茶花油',
-        'des': '<h2 class="pink_color_shadow">檀香洗髮乳</h2><text_group><h3>健康修護的植物油及植萃</h3><p>• 暢銷經典產品、專為東方人設計</p><p>• 修護成分讓頭皮健康</p><p>• 無矽靈</p><p>• 特別添加山茶花油</p><p>• 荷荷芭油及當藥等植萃，讓秀髮免於吹風整燙傷害</p><p>• 酪梨油讓頭皮更健康</p></text_group><!--<text_group><h3>乳霜洗髮乳 (無矽靈)</h3><p>• 荷荷芭油及當藥等植萃，讓秀髮免於吹風整燙傷害</p><p>• 酪梨油讓頭皮更健康</p></text_group>-->',
+        'des': '<h2 class="pink_color_shadow">檀香洗髮乳-山茶花油</h2><text_group><h3>健康修護的植物油及植萃</h3><p>• 暢銷經典產品、專為東方人設計</p><p>• 修護成分讓頭皮健康</p><p>• 無矽靈</p><p>• 特別添加山茶花油</p><p>• 荷荷芭油及當藥等植萃，讓秀髮免於吹風整燙傷害</p><p>• 酪梨油讓頭皮更健康</p></text_group><!--<text_group><h3>乳霜洗髮乳 (無矽靈)</h3><p>• 荷荷芭油及當藥等植萃，讓秀髮免於吹風整燙傷害</p><p>• 酪梨油讓頭皮更健康</p></text_group>-->',
         'img': 'asset/p5-3.png',
         'spec': ['spec9','spec3','spec5','spec4','spec2'],
         'type': ['檀香沐浴乳','檀香洗髮乳', '檀香沐浴乳-乳木果油','檀香洗髮乳-山茶花油']
@@ -620,6 +620,14 @@ $('.send_register').click(function(){
         console.log("Success");
           // var response = JSON.parse(msg)
           // console.log(response.success);
+
+          if(msg["status"] == "ok"){
+            $('#user_name').val("");
+            $('#user_tel').val("");
+            $('#user_mail').val("");
+            $('.receipt_input').val("");//.val();
+            alert("抽獎資料已成功送出")
+          }
       },
       error: function(xhr, ajaxOptions, thrownError) {
           console.log(xhr.status);
