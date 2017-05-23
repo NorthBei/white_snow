@@ -483,7 +483,7 @@ function cal(){
   //var endDate = new Date(2017,5,31,23,59);
 
   var diff = endDate - startDate;
-  console.log(diff);
+  //console.log(diff);
   var leftDays = Math.floor(diff/ONE_DAY);
   if(leftDays > 0) diff = diff - (leftDays * ONE_DAY);
 
@@ -567,35 +567,45 @@ $('.send_register').click(function(){
   //   $('.register_content .info .info_group.email').addClass('showerrow');
   //   $('.register_content .receipt_input_group').addClass('showerrow');
   // };
-  var isReceiptError = false;
+  var isReceiptError,isNameError,isPhoneError,isEmailError = false;
   for(var i=0;i<receipt.length;i++){
     if(receipt.eq(i).val() == ""){
       receipt.eq(i).addClass('error');
       $('.register_content .receipt_input_group').addClass('showerrow');
+      isReceiptError = true;
     }
     else {
       receipt.eq(i).removeClass('error');
-      isReceiptError = true;
+      isReceiptError = false;
     }
   }
 
   if (name == "") {
     $('#user_name').addClass('error');
     $('.register_content .info .info_group.name').addClass('showerrow');
-    return;
-  };
+    isNameError = true;
+  }
+  else{   
+    isNameError = false;
+  }
   if (phone=="") {
     $('#user_tel').addClass('error');
     $('.register_content .info .info_group.phone').addClass('showerrow');
-    return;
-  };
+    isPhoneError = true;
+  }
+  else{   
+    isPhoneError = false;
+  }
   if (email=="") {
     $('#user_mail').addClass('error');
     $('.register_content .info .info_group.email').addClass('showerrow');
-    return;
-  };
+    isEmailError = true;
+  }
+  else{   
+    isEmailError = false;
+  }
 
-  if(!isReceiptError){
+  if(isReceiptError || isNameError || isEmailError || isPhoneError){
     return;
   }
   // if (receipt_input=="") {
@@ -618,6 +628,12 @@ $('.send_register').click(function(){
       data:"json="+JSON.stringify(receipts),
       success: function(msg) {
         console.log("Success");
+        if(msg["status"] == "ok"){
+            $('#user_name').val("");
+            $('#user_tel').val("");
+            $('#user_mail').val("");
+            $('.receipt_input').val("");
+        }
           // var response = JSON.parse(msg)
           // console.log(response.success);
 
