@@ -235,7 +235,7 @@ function input_register(){
       'item2': {
         'name': '果酸沐浴乳',
         'type_name': '果酸洗髮乳',
-        'des': '<h2 class="pink_color_shadow">果酸洗髮乳</h2><text_group><h3>真正寵愛的保濕因子</h3><p>• 超優質洗感、好沖不滑溜</p><p>• 保濕成分真正寵愛您</p><!--</text_group><text_group><h3>果酸沐浴乳</h3>--><p>• 維他命E讓頭皮健康年輕</p><p>• 天然果酸讓頭髮柔順、減少分岔斷裂</p><p>• 無矽靈</p><!--</text_group>-->',
+        'des': '<h2 class="pink_color_shadow">果酸洗髮乳</h2><text_group><!--<h3>真正寵愛的保濕因子</h3><p>• 超優質洗感、好沖不滑溜</p><p>• 保濕成分真正寵愛您</p>--><!--</text_group><text_group><h3>果酸沐浴乳</h3>--><p>• 維他命E讓頭皮健康年輕</p><p>• 天然果酸讓頭髮柔順、減少分岔斷裂</p><p>• 無矽靈</p><!--</text_group>-->',
         'img': 'asset/p2-2.png',
         'spec': ['spec2','spec3','spec7'],
         'type': ['果酸沐浴乳', '果酸洗髮乳 (無矽靈)']
@@ -608,6 +608,22 @@ $('.send_register').click(function(){
   if(isReceiptError || isNameError || isEmailError || isPhoneError){
     return;
   }
+
+  var isCheck1 = $(".check>input[type=checkbox]").eq(0).prop('checked');
+  var isCheck2 = $(".check>input[type=checkbox]").eq(1).prop('checked');
+
+  if(isCheck1 == false){
+    $(".check").eq(0).css("color","#F5515F");
+  }
+
+  if(isCheck2 == false){
+    $(".check").eq(1).css("color","#F5515F");
+  }
+
+  if(!isCheck1 || !isCheck2){
+    return;
+  }
+  
   // if (receipt_input=="") {
   //   console.log("11");
   //   $('.receipt_input').addClass('error');

@@ -1267,6 +1267,8 @@ input[type="checkbox"] {
   z-index: 1;
   height: 222px;
   font-family: "微軟正黑體";
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (max-width: 375px) {
   .about .grid.two_grid.method {
@@ -1277,7 +1279,9 @@ input[type="checkbox"] {
   height: 31%;
 }
 .about .grid.two_grid.method .method_des {
-  height: calc(66% - 3px);
+  /*height: calc(66% - 3px); */
+  flex: 1;
+  margin-bottom: 3px;
 }
 @media screen and (max-width: 375px) {
   .about .grid.two_grid.method .method_des {
