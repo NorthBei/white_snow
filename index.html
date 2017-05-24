@@ -25,6 +25,26 @@
 
     ga('create', 'UA-98024261-1', 'auto');
     ga('send', 'pageview');
+
+    window.addEventListener('load',function(){
+      $('.rigester').click(function(){
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Button',
+          eventAction: 'Click',
+          eventLabel: '登入發票'
+        });
+      });
+
+      $('.send_register').click(function(){
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Button',
+          eventAction: 'Click',
+          eventLabel: '確認送出'
+        });
+      });
+    });
   </script>
   </head>
   <body>

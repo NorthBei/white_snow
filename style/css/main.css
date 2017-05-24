@@ -2636,11 +2636,14 @@ input[type="checkbox"] {
   }
 }
 .winners.is-active {
-  height: 2341px;
+  /*得獎名單得獎名單得獎名單得獎名單得獎名單得獎名單得獎名單得獎名單得獎名單得獎名單*/
+  /*height: 2341px;*/
+  /*display: none;*/
 }
 @media screen and (max-width: 375px) {
+  /*得獎名單得獎名單得獎名單得獎名單得獎名單得獎名單得獎名單得獎名單得獎名單得獎名單*/
   .winners.is-active {
-    height: 1304px;
+    /*height: 1304px;*/
   }
 }
 .winners.is-active .winners_content {

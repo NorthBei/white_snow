@@ -457,7 +457,8 @@ window.onload = function(){
   // winners is active 已開獎
   var winners;
   // 如果已經開獎 winners = true
-  winners = true;
+  /*得獎名單得獎名單得獎名單得獎名單得獎名單得獎名單得獎名單得獎名單得獎名單得獎名單*/
+  winners = false;
   if(winners){
     $('#winners').addClass('is-active');
     $('.not_open').css('display','none');
@@ -669,4 +670,4 @@ $('.send_register').click(function(){
   // post receipt End
 // 登入發票 End
 
-})
+});
