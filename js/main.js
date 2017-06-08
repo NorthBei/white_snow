@@ -68,7 +68,7 @@ $(function(){
   var has_active = false;
   $('#time_count').click(function(){
     has_active = $('#time_count').hasClass('active');
-    console.log(has_active);
+    //console.log(has_active);
 
     if(has_active){
       $('#time_count').removeClass('active');
@@ -171,7 +171,7 @@ function input_register(){
       var ele = $(this);
       var placeholder = ele.data("placeholder");
       ele.attr("placeholder",placeholder);
-      console.log(placeholder);
+      //console.log(placeholder);
   });
 }
   
@@ -431,7 +431,7 @@ var nowDate = new Date();
 //var startDate = new Date(2017,5,23,23,59);
 //var startDate = new Date(nowDate.getFullYear(),(nowDate.getMonth()+1),nowDate.getDate(),nowDate.getHours(),nowDate.getMinutes(),nowDate.getSeconds());
 //console.log(startDate);
-var endDate = new Date(2017,5,31,23,59);
+var endDate = new Date(2017,7,31,23,59);
 //var spantime = (endDate - startDate)/1000;
 
 //var diff = endDate - startDate;
@@ -496,14 +496,15 @@ function cal(){
 
   var leftSecs = Math.floor(diff/ONE_SEC);
   
+  leftDays = pad(leftDays,2);
   leftHours = pad(leftHours,2);
   leftMins = pad(leftMins,2);
   leftSecs = pad(leftSecs,2);
 
   //console.log("兩個時間差距為%d天%s小時,%s分,%s秒",leftDays,leftHours,leftMins,leftSecs);
 
-  $('#d_1').html(0);
-  $('#d_2').html(leftDays.toString());
+  $('#d_1').html(leftDays.toString()[0]);
+  $('#d_2').html(leftDays.toString()[1]);
   $('#h_1').html(leftHours.toString()[0]);
   $('#h_2').html(leftHours.toString()[1]);
   $('#m_1').html(leftMins.toString()[0]);
