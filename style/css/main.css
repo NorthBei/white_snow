@@ -894,6 +894,7 @@ input[type="checkbox"] {
 
 .default_height {
   height: 900px;
+  height: 1200px;
 }
 
 .hero {
@@ -1596,6 +1597,7 @@ input[type="checkbox"] {
 @media screen and (max-width: 375px) {
   .notice {
     height: 450px;
+    height: 550px;
   }
 }
 .notice_title {
@@ -1634,6 +1636,7 @@ input[type="checkbox"] {
 .notice_content {
   width: 1111px;
   height: 369px;
+  height: 669px;
   margin-top: 100px;
   color: white;
   font-size: 28px;
@@ -1646,6 +1649,7 @@ input[type="checkbox"] {
   .notice_content {
     width: 340px;
     height: 198px;
+    height: 298px;
     font-size: 12px;
     line-height: 18px;
     letter-spacing: 0.6px;
