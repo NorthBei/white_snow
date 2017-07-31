@@ -502,14 +502,14 @@ function cal(){
 
   //console.log("兩個時間差距為%d天%s小時,%s分,%s秒",leftDays,leftHours,leftMins,leftSecs);
 
-  $('#d_1').html(0);
-  $('#d_2').html(leftDays.toString());
-  $('#h_1').html(leftHours.toString()[0]);
-  $('#h_2').html(leftHours.toString()[1]);
-  $('#m_1').html(leftMins.toString()[0]);
-  $('#m_2').html(leftMins.toString()[1]);
-  $('#s_1').html(leftSecs.toString()[0]);
-  $('#s_2').html(leftSecs.toString()[1]);
+  // $('#d_1').html(0);
+  // $('#d_2').html(leftDays.toString());
+  // $('#h_1').html(leftHours.toString()[0]);
+  // $('#h_2').html(leftHours.toString()[1]);
+  // $('#m_1').html(leftMins.toString()[0]);
+  // $('#m_2').html(leftMins.toString()[1]);
+  // $('#s_1').html(leftSecs.toString()[0]);
+  // $('#s_2').html(leftSecs.toString()[1]);
 
   // $('#d_1').html(d.toString()[0]);
   // $('#d_2').html(d.toString()[1]);
@@ -538,6 +538,8 @@ function showerror() {
 $('.register input').focus(showerror);
 
 $('.send_register').click(function(){
+  alert("不好意思，活動已結束，敬請期待下次的活動，謝謝！");
+  return;
   var receipt_input;
   var receipt_array = [];
   var name = $('#user_name').val();
