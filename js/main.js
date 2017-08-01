@@ -87,7 +87,7 @@ $(function(){
 
   // add receipt input
   $('.add_receipt').click(function(){
-    var receipt_input = $('<input type="text" class="receipt_input" name="receipt" placeholder="請輸入發票號碼" onfocus=this.placeholder="" onblur=this.placeholder="請輸入發票編號">');
+    var receipt_input = $('<input type="text" class="receipt_input" name="receipt" placeholder="請輸入發票號碼" onfocus=this.placeholder="" onblur=this.placeholder="請輸入發票編號" readonly>');
     $(this).addClass("after_click");
     receipt_input.focus(showerror);
     $('.remove_receipt').addClass("after_click");
@@ -540,7 +540,7 @@ function showerror() {
 $('.register input').focus(showerror);
 
 $('.send_register').click(function(){
-  alert("不好意思，活動已結束，敬請期待下次的活動，謝謝！");
+  alert("活動已結束");
   return;
   var receipt_input;
   var receipt_array = [];

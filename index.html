@@ -140,9 +140,35 @@
       </nav>
       <h1 class="hero_title">寵愛媽咪多重送</h1>
       <div class="during">
-        <div class="during_item from"></div>
+        <!-- <div class="during_item from"></div>
         <div class="right_arrow"></div>
-        <div class="during_item to"></div>
+        <div class="during_item to"></div> -->
+        <h1 class="activity_end">活動已結束</h1>
+        <h1 class="activity_end">將於8/4公佈得獎名單</h1>
+        <style type="text/css">
+          .activity_end{
+            color: #E1495C;
+            margin: 0 auto;
+          }
+          .hero .hero_title{
+            font-size: 35px;
+          }
+          .hero .during{
+            width: 100%;
+            font-size: 50px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+          }
+          @media screen and (max-width: 550px) {
+            .hero .hero_title{
+              font-size: 27px;
+            }
+            .hero .during{
+              font-size: 24px;
+            }
+          }
+        </style>
       </div>
       <div class="hero_product">
         <a href="#product" class="scroll hero_product_item milk" data-id="p1"></a>
@@ -344,7 +370,7 @@
           <div class="receipt_title">發票編號</div>
           <div class="receipt_input_group">
             <!-- <input type="text" class="receipt_input" name="receipt" placeholder="請輸入發票編號" onfocus="this.placeholder=''" onblur="this.placeholder = '請輸入發票編號'"> -->
-            <input type="text" class="receipt_input" name="receipt" placeholder="請輸入發票編號" onfocus="this.placeholder=''" onblur="this.placeholder = '請輸入發票編號'">
+            <input type="text" class="receipt_input" name="receipt" placeholder="請輸入發票編號" onfocus="this.placeholder=''" onblur="this.placeholder = '請輸入發票編號'" readonly>
           </div>
           <button type="button" class="receipt_button add_receipt"></button>
           <button type="button" class="receipt_button remove_receipt remove_receipt_hidden"></button>
@@ -357,15 +383,15 @@
         <div class="info">
           <div class="info_group name">
             <div class="receipt_title">真實姓名</div>
-            <input type="text" id="user_name" class="info_input name" placeholder="輸入姓名（必填）" onfocus="this.placeholder=''" onblur="this.placeholder = '輸入姓名（必填）'">
+            <input type="text" id="user_name" class="info_input name" placeholder="輸入姓名（必填）" onfocus="this.placeholder=''" onblur="this.placeholder = '輸入姓名（必填）'" readonly>
           </div>
           <div class="info_group phone">
             <div class="receipt_title">手機</div>
-            <input type="text" id="user_tel" class="info_input phone" placeholder="輸入手機號碼（必填）" onfocus="this.placeholder=''" onblur="this.placeholder = '輸入手機號碼（必填）'">
+            <input type="text" id="user_tel" class="info_input phone" placeholder="輸入手機號碼（必填）" onfocus="this.placeholder=''" onblur="this.placeholder = '輸入手機號碼（必填）'" readonly>
           </div>
           <div class="info_group email">
             <div class="receipt_title">Email</div>
-            <input type="text" id="user_mail" class="info_input email" placeholder="請輸入Email（必填）" onfocus="this.placeholder=''" onblur="this.placeholder = '請輸入Email（必填）'">
+            <input type="text" id="user_mail" class="info_input email" placeholder="請輸入Email（必填）" onfocus="this.placeholder=''" onblur="this.placeholder = '請輸入Email（必填）'" readonly>
           </div>
         </div>
         <div class="check">
