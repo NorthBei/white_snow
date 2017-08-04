@@ -2637,10 +2637,12 @@ input[type="checkbox"] {
 .winners {
   position: relative;
   overflow: hidden;
+  height: inherit;
+  padding-bottom: 100px;
 }
 @media screen and (max-width: 375px) {
   .winners {
-    height: 560px;
+    /*height: 560px;*/
   }
 }
 .winners.is-active {
@@ -2705,6 +2707,7 @@ input[type="checkbox"] {
   }
 }
 .winners_content .not_open {
+  display: none;
   width: 100%;
   height: 454px;
   margin-top: 144px;
@@ -2751,14 +2754,14 @@ input[type="checkbox"] {
   height: 100%;
 }
 .winners_content .open {
-  display: none;
+  
   width: 100%;
-  height: 2019px;
+  /*height: 2019px;*/
   margin-top: 72px;
 }
 @media screen and (max-width: 375px) {
   .winners_content .open {
-    height: 1227px;
+    /*height: 1227px;*/
     margin-top: 24px;
   }
 }
@@ -2794,6 +2797,7 @@ input[type="checkbox"] {
 }
 .winners_content .open .winners_group.group2 {
   height: 609px;
+  /*height: 669px;*/
   background: linear-gradient(253deg, #CCCCCC, #737373);
 }
 @media screen and (max-width: 375px) {
@@ -2815,12 +2819,14 @@ input[type="checkbox"] {
   }
 }
 .winners_content .open .winners_group.group3 {
-  height: 882px;
+  /*height: 882px;*/
+  height: 1192px;
   background: linear-gradient(253deg, #a49164, #4a3d25);
 }
 @media screen and (max-width: 375px) {
   .winners_content .open .winners_group.group3 {
-    height: 598px;
+    /*height: 598px;*/
+    height: 958px;
   }
 }
 .winners_content .open .winners_group.group3 .gift3 {
@@ -2875,6 +2881,7 @@ input[type="checkbox"] {
 }
 .winners_content .open .winners_list.list2 {
   height: 271px;
+  /*height: 331px;*/
 }
 @media screen and (max-width: 375px) {
   .winners_content .open .winners_list.list2 {
@@ -2882,11 +2889,14 @@ input[type="checkbox"] {
   }
 }
 .winners_content .open .winners_list.list3 {
-  height: 544px;
+  /*height: 544px;*/
+  height: 854px;
 }
 @media screen and (max-width: 375px) {
   .winners_content .open .winners_list.list3 {
-    height: 484px;
+    /*height: 484px;*/
+    /*height: 744px;*/
+    height: 844px;
   }
 }
 .winners_content .open .winners_list .list_content {
@@ -2908,7 +2918,8 @@ input[type="checkbox"] {
   height: 144px;
 }
 .winners_content .open .winners_list .list_content.list3 {
-  height: 432px;
+  /*height: 432px;*/
+  height: 844px;
 }
 .winners_content .open .winners_list .list_content .winners_content {
   height: 53px;
